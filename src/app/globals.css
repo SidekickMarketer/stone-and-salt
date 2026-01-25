@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
+/* Stone & Salt Brand Colors */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --slate: #2A2A2A;
+  --eucalyptus: #B3C3AD;
+  --sun-ochre: #D5A056;
+  --soft-cream: #F6F4F1;
+
+  --background: var(--soft-cream);
+  --foreground: var(--slate);
 }
 
 @theme inline {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-slate: var(--slate);
+  --color-eucalyptus: var(--eucalyptus);
+  --color-sun-ochre: var(--sun-ochre);
+  --color-soft-cream: var(--soft-cream);
+
+  /* Fonts */
+  --font-sans: var(--font-open-sans), system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Base styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--slate);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--sun-ochre);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: var(--eucalyptus);
+  color: var(--slate);
 }
