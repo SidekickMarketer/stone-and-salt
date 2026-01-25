@@ -25,8 +25,18 @@ export function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-soft-cream/95 backdrop-blur-sm border-b border-slate/10">
-      <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <>
+      {/* Seasonal Banner */}
+      <div className="bg-slate text-white py-2 px-4 text-center text-sm">
+        <span className="font-medium">Now booking 2026 snow removal contracts</span>
+        <span className="mx-2 text-white/40">|</span>
+        <a href="/services/snow-removal" className="text-sun-ochre hover:text-sun-ochre/80 font-medium">
+          Reserve your spot →
+        </a>
+      </div>
+
+      <header className="sticky top-0 z-50 bg-soft-cream/95 backdrop-blur-sm border-b border-slate/10">
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -170,5 +180,22 @@ export function Header() {
         )}
       </nav>
     </header>
+
+    {/* Sticky Mobile Call Button */}
+    <a
+      href="tel:+15135550123"
+      className="lg:hidden fixed bottom-6 right-6 z-50 bg-sun-ochre text-white p-4 rounded-full shadow-lg hover:bg-sun-ochre/90 transition-colors"
+      aria-label="Call us"
+    >
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+        />
+      </svg>
+    </a>
+    </>
   );
 }

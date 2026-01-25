@@ -99,6 +99,34 @@ export default function SnowRemovalPage() {
         </div>
       </section>
 
+      {/* Emergency Contact Banner */}
+      <section className="py-6 bg-eucalyptus/20 border-y border-eucalyptus/30">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-full bg-eucalyptus/30 flex items-center justify-center">
+                <svg className="w-5 h-5 text-slate" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <p className="font-semibold text-slate">24/7 Snow Emergency Line</p>
+                <p className="text-sm text-slate/70">Contract clients: Call anytime during snow events</p>
+              </div>
+            </div>
+            <a
+              href="tel:+15135550123"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate text-white font-semibold rounded-md hover:bg-slate/90 transition-colors"
+            >
+              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              (513) 555-0123
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Value Prop */}
       <section className="py-20 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

@@ -1,6 +1,7 @@
 import { Hero } from "@/sections/Hero";
 import { Services } from "@/sections/Services";
 import { WhyUs } from "@/sections/WhyUs";
+import { BeforeAfter } from "@/sections/BeforeAfter";
 import { Areas } from "@/sections/Areas";
 import { Testimonials } from "@/sections/Testimonials";
 import { CTA } from "@/sections/CTA";
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Services />
       <WhyUs />
+      <BeforeAfter />
       <Areas />
       <Testimonials />
       <CTA
