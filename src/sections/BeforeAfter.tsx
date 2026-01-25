@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { FadeIn } from "@/components/FadeIn";
 
 const projects = [
   {
@@ -38,7 +39,8 @@ export function BeforeAfter() {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-12">
           {projects.map((project, index) => (
-            <div key={index} className="group">
+            <FadeIn key={index} delay={index * 200}>
+              <div className="group">
               {/* Before/After Images */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate/10">
@@ -71,17 +73,20 @@ export function BeforeAfter() {
               </h3>
               <p className="text-sm text-sun-ochre font-medium mt-1">{project.location}</p>
               <p className="text-slate/70 mt-2">{project.description}</p>
-            </div>
+              </div>
+            </FadeIn>
           ))}
         </div>
 
         {/* CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-slate/70 mb-4">
-            Ready to transform your property?
-          </p>
-          <Button href="/contact">Get a Free Quote</Button>
-        </div>
+        <FadeIn delay={400}>
+          <div className="mt-16 text-center">
+            <p className="text-slate/70 mb-4">
+              Your property could be next. Let&apos;s talk about what you have in mind.
+            </p>
+            <Button href="/contact">Get a Free Quote</Button>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

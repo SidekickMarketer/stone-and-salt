@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FadeIn } from "@/components/FadeIn";
 
 const services = [
   {
@@ -71,12 +72,12 @@ export function Services() {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-8">
-          {services.map((service) => (
-            <Link
-              key={service.title}
-              href={service.href}
-              className="group bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate/5"
-            >
+          {services.map((service, index) => (
+            <FadeIn key={service.title} delay={index * 100}>
+              <Link
+                href={service.href}
+                className="group block bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-slate/5"
+              >
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-eucalyptus/20 flex items-center justify-center text-slate group-hover:bg-sun-ochre group-hover:text-white transition-colors">
                   {service.icon}
@@ -106,7 +107,8 @@ export function Services() {
                   </div>
                 </div>
               </div>
-            </Link>
+              </Link>
+            </FadeIn>
           ))}
         </div>
       </div>
