@@ -5,14 +5,14 @@ const projects = [
     title: "Paver Patio with Fire Pit",
     location: "Mason, OH",
     beforeImage: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80",
+    afterImage: "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=600&q=80",
     description: "Transformed unused backyard into an outdoor living area with paver patio and fire pit",
   },
   {
     title: "Backyard Hardscape",
     location: "Liberty Township, OH",
     beforeImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80",
+    afterImage: "https://images.unsplash.com/photo-1584738766473-61c083514bf4?auto=format&fit=crop&w=600&q=80",
     description: "Complete backyard transformation with natural stone walkway and patio",
   },
 ];
