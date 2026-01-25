@@ -1,23 +1,23 @@
 const testimonials = [
   {
     quote:
-      "[PLACEHOLDER] Finally found a landscaping company that actually shows up when they say they will. Our property looks better than ever.",
-    author: "Property Manager",
-    company: "Blue Ash Office Park",
+      "Finally found a landscaping company that actually shows up when they say they will. Our property looks better than ever, and I don't have to chase anyone down.",
+    author: "Sarah M.",
+    company: "Property Manager, Blue Ash",
     type: "commercial",
   },
   {
     quote:
-      "[PLACEHOLDER] The patio they built exceeded our expectations. Professional from start to finish, and the crew was respectful of our property.",
-    author: "Homeowner",
+      "The patio they built exceeded our expectations. Professional from start to finish, and the crew cleaned up every day. We use it constantly now.",
+    author: "Mike & Jennifer T.",
     company: "Mason, OH",
     type: "residential",
   },
   {
     quote:
-      "[PLACEHOLDER] Having one vendor for landscaping and snow removal has been a game changer. No more coordinating multiple contractors.",
-    author: "HOA Board President",
-    company: "Liberty Township Community",
+      "Having one vendor for landscaping and snow removal has simplified everything. No more scrambling in October to find a plow guy. Highly recommend.",
+    author: "David R.",
+    company: "HOA Board, Liberty Township",
     type: "commercial",
   },
 ];

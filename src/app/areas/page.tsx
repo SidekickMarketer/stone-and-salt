@@ -91,27 +91,16 @@ export default function AreasPage() {
         </div>
       </section>
 
-      {/* Map Placeholder */}
+      {/* Map Section */}
       <section className="py-12 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="aspect-[16/9] max-w-4xl mx-auto bg-eucalyptus/10 rounded-2xl flex items-center justify-center">
-            <div className="text-center p-8">
-              <svg
-                className="w-16 h-16 mx-auto text-slate/30"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
-                />
-              </svg>
-              <p className="mt-4 text-slate/50">[Interactive Service Area Map]</p>
-              <p className="text-sm text-slate/40">Coming soon</p>
-            </div>
+          <div className="aspect-[16/9] max-w-4xl mx-auto bg-eucalyptus/10 rounded-2xl overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1600&q=80"
+              alt="Aerial view of Greater Cincinnati suburbs"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </section>
