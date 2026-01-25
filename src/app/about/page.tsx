@@ -87,8 +87,8 @@ export default function AboutPage() {
             <div className="aspect-[4/3] bg-eucalyptus/20 rounded-2xl overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1594498653385-d5172c532c00?auto=format&fit=crop&w=800&q=80"
-                alt="Landscaping crew at work"
+                src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80"
+                alt="Professional landscaping work in progress"
                 className="w-full h-full object-cover"
               />
             </div>

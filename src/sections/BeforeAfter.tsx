@@ -2,18 +2,18 @@ import { Button } from "@/components/Button";
 
 const projects = [
   {
-    title: "Paver Patio Installation",
+    title: "Paver Patio with Fire Pit",
     location: "Mason, OH",
-    beforeImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80",
-    description: "Transformed unused backyard space into an outdoor living area",
+    beforeImage: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80",
+    afterImage: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=600&q=80",
+    description: "Transformed unused backyard into an outdoor living area with paver patio and fire pit",
   },
   {
-    title: "Commercial Grounds",
-    location: "Blue Ash, OH",
-    beforeImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=600&q=80",
-    description: "Ongoing maintenance for corporate campus entrance",
+    title: "Backyard Hardscape",
+    location: "Liberty Township, OH",
+    beforeImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80",
+    afterImage: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=80",
+    description: "Complete backyard transformation with natural stone walkway and patio",
   },
 ];
 

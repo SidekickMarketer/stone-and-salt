@@ -171,12 +171,12 @@ export default function HardscapesPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80", alt: "Traditional backyard patio with seating" },
-              { src: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80", alt: "Classic brick paver patio" },
-              { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80", alt: "Stone walkway and landscaping" },
-              { src: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80", alt: "Outdoor living space with traditional design" },
-              { src: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=80", alt: "Patio with classic hardscape design" },
-              { src: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80", alt: "Traditional suburban backyard" },
+              { src: "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=800&q=80", alt: "Outdoor fire pit with stone seating" },
+              { src: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80", alt: "Paver patio with outdoor furniture" },
+              { src: "https://images.unsplash.com/photo-1584738766473-61c083514bf4?auto=format&fit=crop&w=800&q=80", alt: "Stone patio with landscaping" },
+              { src: "https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8?auto=format&fit=crop&w=800&q=80", alt: "Fire pit at dusk" },
+              { src: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80", alt: "Professional landscaping with stone walkway" },
+              { src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80", alt: "Suburban home with manicured landscape" },
             ].map((image, i) => (
               <div
                 key={i}
@@ -306,8 +306,8 @@ export default function HardscapesPage() {
             <div className="aspect-square bg-eucalyptus/20 rounded-2xl overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80"
-                alt="Professional patio installation"
+                src="https://images.unsplash.com/photo-1584738766473-61c083514bf4?auto=format&fit=crop&w=800&q=80"
+                alt="Professional stone patio installation"
                 className="w-full h-full object-cover"
               />
             </div>

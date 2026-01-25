@@ -97,8 +97,8 @@ export default function AreasPage() {
           <div className="aspect-[16/9] max-w-4xl mx-auto bg-eucalyptus/10 rounded-2xl overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1600&q=80"
-              alt="Aerial view of Greater Cincinnati suburbs"
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80"
+              alt="Suburban home with manicured lawn in Greater Cincinnati"
               className="w-full h-full object-cover"
             />
           </div>

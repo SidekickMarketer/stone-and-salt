@@ -78,8 +78,8 @@ export function Hero() {
             <div className="aspect-[4/3] rounded-2xl bg-eucalyptus/20 overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80"
-                alt="Traditional backyard patio with outdoor living space"
+                src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=80"
+                alt="Outdoor fire pit with stone seating area"
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
