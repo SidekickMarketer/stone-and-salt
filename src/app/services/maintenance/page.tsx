@@ -3,83 +3,110 @@ import { Button } from "@/components/Button";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Lawn Care & Maintenance | Cincinnati",
+  title: "Lawn & Landscape Maintenance | Cincinnati",
   description:
-    "Professional lawn care and grounds maintenance for Cincinnati homeowners. Consistent service, same crew, results you can count on.",
+    "Professional lawn care and landscape maintenance for Greater Cincinnati homes. Same crew, consistent quality, reliable service. Keep your property looking its best.",
   openGraph: {
-    title: "Lawn Care & Maintenance | Stone & Salt",
+    title: "Lawn & Landscape Maintenance | Stone & Salt",
     description:
-      "Professional lawn care and grounds maintenance for Cincinnati homeowners.",
+      "Professional lawn care and landscape maintenance for Greater Cincinnati homes.",
   },
 };
 
-const services = [
+const maintenanceServices = [
   {
-    title: "Lawn Mowing",
-    description: "Weekly or bi-weekly mowing with clean edges and clippings managed. Your lawn looks sharp, every visit.",
+    title: "Weekly Lawn Care",
+    description: "Mowing, edging, and blowing. Consistent cut quality every week from the same crew who knows your property.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      </svg>
+    ),
   },
   {
-    title: "Fertilization Programs",
-    description: "Seasonal fertilization and weed control to keep your lawn healthy and green through the growing season.",
+    title: "Spring Cleanup",
+    description: "Debris removal, bed preparation, first mow, and getting your property ready for the growing season.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Fall Cleanup",
+    description: "Leaf removal, final cut, bed cleanup, and winterization to protect your landscape investment.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+      </svg>
+    ),
   },
   {
     title: "Mulch & Bed Maintenance",
-    description: "Annual mulch refresh, bed edging, and weed management to keep landscape beds looking crisp.",
+    description: "Fresh mulch application, edge definition, weed management. Beds that look intentional, not neglected.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+      </svg>
+    ),
   },
   {
-    title: "Shrub & Hedge Trimming",
-    description: "Seasonal trimming to maintain shape and health. We know when to prune and how much to take.",
+    title: "Shrub Trimming",
+    description: "Proper pruning at the right time of year. Healthy, shaped plants that enhance your property.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" />
+      </svg>
+    ),
   },
   {
-    title: "Spring & Fall Cleanup",
-    description: "Comprehensive seasonal cleanup including leaf removal, bed prep, and debris clearing.",
-  },
-  {
-    title: "Irrigation Monitoring",
-    description: "Seasonal startup, winterization, and routine checks to keep your system running efficiently.",
+    title: "Fertilization Programs",
+    description: "Seasonal fertilization and weed control tailored to Cincinnati soil and climate conditions.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
   },
 ];
 
 const packages = [
   {
     name: "Essential",
-    price: "$275",
-    frequency: "/month",
-    description: "Core maintenance for properties up to 1/2 acre",
+    description: "Basic lawn care for homeowners who want reliable service without extras",
+    price: "From $175/month",
     features: [
-      "Weekly mowing (April-October)",
-      "Edge trimming",
-      "Spring & fall cleanup",
-      "Basic weed control",
+      "Weekly mowing & edging",
+      "Blowing of hard surfaces",
+      "Spring cleanup",
+      "Fall cleanup",
     ],
     popular: false,
   },
   {
     name: "Complete",
-    price: "$425",
-    frequency: "/month",
-    description: "Full-service care for properties up to 1 acre",
+    description: "Full-service maintenance for properties that demand attention to detail",
+    price: "From $325/month",
     features: [
       "Everything in Essential",
-      "Fertilization program (5 applications)",
       "Mulch refresh (annual)",
       "Shrub trimming (2x/year)",
-      "Bed maintenance",
+      "Bed weed management",
+      "Seasonal color rotation",
     ],
     popular: true,
   },
   {
-    name: "Estate",
-    price: "Custom",
-    frequency: "pricing",
-    description: "Comprehensive care for larger properties",
+    name: "Premium",
+    description: "White-glove service for discerning homeowners",
+    price: "From $500/month",
     features: [
       "Everything in Complete",
-      "Custom service frequency",
-      "Irrigation management",
-      "Snow removal integration",
+      "Fertilization program",
+      "Aeration & overseeding",
+      "Irrigation monitoring",
       "Priority scheduling",
-      "Dedicated crew assignment",
+      "Snow removal integration",
     ],
     popular: false,
   },
@@ -87,29 +114,34 @@ const packages = [
 
 const faqs = [
   {
+    question: "What's included in weekly lawn care?",
+    answer:
+      "Weekly lawn care includes mowing at proper height for the season, string-trimming around obstacles and beds, edging along hardscapes, and blowing debris from driveways and walkways.",
+  },
+  {
     question: "Do I get the same crew every time?",
     answer:
-      "Yes. Crew consistency is important to us. You'll see the same faces on your property, and they'll learn your property's specific needs. If there's ever a crew change, we'll let you know.",
+      "Yes. Consistency is core to our approach. Your property is assigned to a specific crew who learns your preferences and maintains the same standards every visit.",
   },
   {
-    question: "What day will you come?",
+    question: "When does the season start and end?",
     answer:
-      "We schedule consistent service days for each property. You'll know which day to expect us, and we stick to that schedule. Weather delays are communicated proactively.",
+      "In Greater Cincinnati, regular service typically runs mid-March through mid-November. Fall cleanup extends into December depending on leaf drop. We adjust based on actual conditions.",
   },
   {
-    question: "What if I'm not happy with a service visit?",
+    question: "Can I bundle this with snow removal?",
     answer:
-      "Call us. We'll send a crew back within 48 hours to address any issues. Our goal is for you to be satisfied with every visit, not just most of them.",
+      "Absolutely. Many clients appreciate having one vendor for grounds and snow. You get priority scheduling for snow service and simplified billing.",
   },
   {
-    question: "Can I add or remove services?",
+    question: "How do you handle billing?",
     answer:
-      "Absolutely. We build maintenance programs around what you actually need. Start with the basics and add services over time, or customize from day one.",
+      "Monthly billing with consistent amounts — no surprise invoices. You know what you're paying each month, and we deliver consistent service.",
   },
   {
-    question: "Do you offer one-time services?",
+    question: "What if I need extra work done?",
     answer:
-      "We focus on maintenance relationships rather than one-off jobs. However, we do offer seasonal cleanup services for properties that may become ongoing clients.",
+      "One-off requests are easy. Need extra cleanup before a party? Additional plantings? Just let us know. We handle most requests without formal quotes.",
   },
 ];
 
@@ -118,25 +150,25 @@ export default function MaintenancePage() {
     <>
       {/* Hero */}
       <section className="bg-slate py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
-              Residential Maintenance
+              Lawn & Landscape
             </p>
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
-              Your property, treated like ours.
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Same crew. Every week. Finally.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
-              Professional lawn care and grounds maintenance with the consistency and attention your
-              home deserves. Same crew, same standards, every visit.
+              Same crew. Same standards. Every visit. Professional lawn care and landscape
+              maintenance for Greater Cincinnati homeowners who expect more.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Get a Free Quote
+                Get a Maintenance Quote
               </Button>
               <a
                 href="tel:+15135550123"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-white font-semibold hover:text-sun-ochre transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-white/80 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -154,25 +186,31 @@ export default function MaintenancePage() {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              What&apos;s Included
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
               Maintenance Services
             </h2>
             <p className="mt-4 text-lg text-slate/70">
-              Everything your property needs to look its best, delivered by a team that takes pride
-              in their work.
+              Everything your property needs to look its best, delivered by a crew who knows your
+              standards.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div key={service.title} className="bg-white rounded-xl p-6 shadow-sm">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {maintenanceServices.map((service) => (
+              <div key={service.title} className="bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-eucalyptus/20 flex items-center justify-center text-eucalyptus mb-4">
+                  {service.icon}
+                </div>
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-lg">
                   {service.title}
                 </h3>
-                <p className="mt-3 text-slate/70">{service.description}</p>
+                <p className="mt-2 text-slate/70">{service.description}</p>
               </div>
             ))}
           </div>
@@ -180,50 +218,49 @@ export default function MaintenancePage() {
       </section>
 
       {/* Packages */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
-              Maintenance Packages
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              Pricing
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              Service Packages
             </h2>
             <p className="mt-4 text-lg text-slate/70">
-              Clear pricing, predictable billing. Pick a package or let us customize one for your
-              property.
+              Straightforward pricing, no surprises. Choose what works for your property and budget.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {packages.map((pkg) => (
               <div
                 key={pkg.name}
-                className={`rounded-2xl p-8 ${
+                className={`rounded-2xl p-6 lg:p-8 ${
                   pkg.popular
-                    ? "bg-slate text-white ring-2 ring-sun-ochre"
+                    ? "bg-slate text-white ring-4 ring-sun-ochre shadow-card-hover"
                     : "bg-soft-cream"
                 }`}
               >
                 {pkg.popular && (
-                  <span className="inline-block px-3 py-1 text-xs font-semibold bg-sun-ochre text-white rounded-full mb-4">
+                  <p className="text-sun-ochre text-xs font-semibold uppercase tracking-wide mb-2">
                     Most Popular
-                  </span>
+                  </p>
                 )}
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-2xl">
                   {pkg.name}
                 </h3>
-                <div className="mt-4">
-                  <span className="text-4xl font-bold">{pkg.price}</span>
-                  <span className={pkg.popular ? "text-white/70" : "text-slate/70"}>
-                    {pkg.frequency}
-                  </span>
-                </div>
                 <p className={`mt-2 text-sm ${pkg.popular ? "text-white/70" : "text-slate/70"}`}>
                   {pkg.description}
+                </p>
+                <p className={`mt-4 text-2xl font-bold ${pkg.popular ? "text-sun-ochre" : "text-slate"}`}>
+                  {pkg.price}
                 </p>
                 <ul className="mt-6 space-y-3">
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <svg
-                        className={`w-5 h-5 flex-shrink-0 ${
+                        className={`w-5 h-5 flex-shrink-0 mt-0.5 ${
                           pkg.popular ? "text-eucalyptus" : "text-sun-ochre"
                         }`}
                         fill="currentColor"
@@ -235,51 +272,70 @@ export default function MaintenancePage() {
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className={pkg.popular ? "text-white/90" : "text-slate/70"}>
+                      <span className={`text-sm ${pkg.popular ? "text-white/90" : "text-slate/70"}`}>
                         {feature}
                       </span>
                     </li>
                   ))}
                 </ul>
-                <Button
-                  href="/contact"
-                  variant={pkg.popular ? "primary" : "outline"}
-                  className="w-full justify-center mt-8"
-                >
-                  Get Started
-                </Button>
+                <div className="mt-8">
+                  <Button
+                    href="/contact"
+                    variant={pkg.popular ? "primary" : "outline"}
+                    className={`w-full justify-center ${
+                      pkg.popular ? "bg-white text-slate hover:bg-white/90" : ""
+                    }`}
+                  >
+                    Get a Quote
+                  </Button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-center text-slate/60 text-sm">
+            Prices shown are starting points for typical ¼-acre residential properties.
+            Actual pricing based on property size, complexity, and specific needs.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16 lg:py-24 bg-eucalyptus/10">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              Why choose Stone & Salt?
+            </h2>
+            <p className="mt-6 text-lg text-slate/70 leading-relaxed">
+              The same crew servicing your property every time. They learn your preferences, maintain
+              consistent standards, and take ownership of results. That&apos;s the difference between
+              a vendor and a partner.
+            </p>
+          </div>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: "Same Crew", desc: "Your assigned team knows your property inside out" },
+              { title: "Consistent Quality", desc: "Same standards, same results, every visit" },
+              { title: "Clear Communication", desc: "Easy to reach when you need us" },
+              { title: "Year-Round Partner", desc: "Maintenance, hardscapes, and snow — one vendor" },
+            ].map((item) => (
+              <div key={item.title} className="bg-white rounded-xl p-6 shadow-card text-center">
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm text-slate/70">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Maintenance Matters */}
-      <section className="py-20 bg-eucalyptus/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
-              Maintenance is a relationship, not a transaction.
-            </h2>
-            <p className="mt-6 text-lg text-slate/70 leading-relaxed">
-              Anyone can mow a lawn. The difference is consistency, attention to detail, and
-              actually caring about the result. Our maintenance clients aren&apos;t just accounts
-              — they&apos;re properties we take pride in.
-            </p>
-            <p className="mt-4 text-lg text-slate/70 leading-relaxed">
-              When you see our truck pull up, you know exactly what you&apos;re getting: the same
-              crew who knows your property, the same standards every visit, and someone who answers
-              when you call.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate text-center mb-12">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">
               Frequently Asked Questions
             </h2>
             <div className="space-y-8">
@@ -297,8 +353,8 @@ export default function MaintenancePage() {
       </section>
 
       <CTA
-        title="Ready for consistent care?"
-        description="Get a customized maintenance quote for your property. We'll build a program that fits your needs and budget."
+        title="Ready to experience consistent service?"
+        description="Tell us about your property and we'll recommend the right maintenance package. Free consultations — we're adding limited new clients for spring."
       />
 
       {/* Service Schema */}
@@ -308,7 +364,7 @@ export default function MaintenancePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Lawn Care & Maintenance",
+            name: "Lawn & Landscape Maintenance",
             provider: {
               "@type": "LocalBusiness",
               name: "Stone & Salt",
@@ -324,8 +380,8 @@ export default function MaintenancePage() {
               geoRadius: "45 miles",
             },
             description:
-              "Professional lawn care and grounds maintenance for Cincinnati homeowners.",
-            serviceType: "Lawn Maintenance",
+              "Professional lawn care and landscape maintenance for Greater Cincinnati homes.",
+            serviceType: "Lawn Care",
           }),
         }}
       />

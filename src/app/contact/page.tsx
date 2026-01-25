@@ -39,10 +39,10 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="bg-slate py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-2xl">
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Let&apos;s talk about your property.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
@@ -54,12 +54,12 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Form */}
             <div>
-              <div className="bg-white rounded-2xl p-8 shadow-sm">
+              <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-card">
                 <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate mb-6">
                   Get a Free Quote
                 </h2>
@@ -94,7 +94,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-slate">Phone</h3>
                       <a
                         href="tel:+15135550123"
-                        className="text-lg text-sun-ochre font-semibold hover:text-sun-ochre/80 transition-colors"
+                        className="text-lg text-sun-ochre font-semibold hover:text-sun-ochre/80 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-sm"
                       >
                         (513) 555-0123
                       </a>
@@ -124,7 +124,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-slate">Email</h3>
                       <a
                         href="mailto:hello@stoneandsaltohio.com"
-                        className="text-sun-ochre hover:text-sun-ochre/80 transition-colors"
+                        className="text-sun-ochre hover:text-sun-ochre/80 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-sm"
                       >
                         hello@stoneandsaltohio.com
                       </a>
@@ -167,7 +167,7 @@ export default function ContactPage() {
               {/* Response Commitment */}
               <div className="bg-eucalyptus/10 rounded-xl p-6">
                 <div className="flex items-start gap-4">
-                  <div className="text-3xl font-bold text-sun-ochre">4hr</div>
+                  <div className="text-3xl font-bold text-gradient">4hr</div>
                   <div>
                     <h3 className="font-semibold text-slate">Response Commitment</h3>
                     <p className="text-sm text-slate/70 mt-1">
@@ -183,19 +183,19 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate text-center mb-12">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">
               Common Questions
             </h2>
             <div className="space-y-8">
               {faqs.map((faq, index) => (
                 <div key={index} className="border-b border-slate/10 pb-8">
-                  <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate">
+                  <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate text-lg">
                     {faq.question}
                   </h3>
-                  <p className="mt-3 text-slate/70">{faq.answer}</p>
+                  <p className="mt-3 text-slate/70 leading-relaxed">{faq.answer}</p>
                 </div>
               ))}
             </div>

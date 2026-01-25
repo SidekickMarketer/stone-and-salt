@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
@@ -77,10 +78,10 @@ export default function AreasPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="bg-slate py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Serving Greater Cincinnati
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
@@ -93,23 +94,26 @@ export default function AreasPage() {
 
       {/* Map Section */}
       <section className="py-12 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="aspect-[16/9] max-w-4xl mx-auto bg-eucalyptus/10 rounded-2xl overflow-hidden">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1600&q=80"
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="aspect-[16/9] max-w-4xl mx-auto bg-eucalyptus/10 rounded-2xl overflow-hidden relative">
+            <Image
+              src="/images/about-neighborhood.jpg"
               alt="Suburban home with manicured lawn in Greater Cincinnati"
-              className="w-full h-full object-cover"
+              fill
+              className="object-cover"
             />
           </div>
         </div>
       </section>
 
       {/* Core Areas */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="mb-12">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              Full Coverage
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
               Primary Service Areas
             </h2>
             <p className="mt-4 text-lg text-slate/70">
@@ -117,18 +121,18 @@ export default function AreasPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {coreAreas.map((area) => (
               <Link
                 key={area.slug}
                 href={`/areas/${area.slug}`}
-                className="group bg-soft-cream rounded-xl p-6 hover:bg-eucalyptus/10 transition-colors"
+                className="group bg-soft-cream rounded-xl p-6 hover:bg-eucalyptus/10 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2"
               >
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl group-hover:text-sun-ochre transition-colors">
                   {area.name}
                 </h3>
                 <p className="mt-3 text-slate/70">{area.description}</p>
-                <span className="mt-4 inline-flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                <span className="mt-4 inline-flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform min-h-[44px]">
                   View services
                   <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -141,10 +145,13 @@ export default function AreasPage() {
       </section>
 
       {/* Growth Areas */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="mb-12">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
+              Growing Presence
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
               Expanding Coverage
             </h2>
             <p className="mt-4 text-lg text-slate/70">
@@ -152,12 +159,12 @@ export default function AreasPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {growthAreas.map((area) => (
               <Link
                 key={area.slug}
                 href={`/areas/${area.slug}`}
-                className="group bg-white rounded-xl p-6 hover:bg-eucalyptus/10 transition-colors"
+                className="group bg-white rounded-xl p-6 hover:bg-eucalyptus/10 transition-all duration-300 hover:shadow-card focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2"
               >
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-lg group-hover:text-sun-ochre transition-colors">
                   {area.name}
@@ -170,8 +177,8 @@ export default function AreasPage() {
       </section>
 
       {/* Not Listed */}
-      <section className="py-16 bg-eucalyptus/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-12 lg:py-16 bg-eucalyptus/10">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate">
               Don&apos;t see your area listed?
@@ -183,7 +190,7 @@ export default function AreasPage() {
             <div className="mt-6">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sun-ochre font-semibold hover:text-sun-ochre/80 transition-colors"
+                className="inline-flex items-center gap-2 text-sun-ochre font-semibold hover:text-sun-ochre/80 transition-colors min-h-[44px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md px-2"
               >
                 Contact us to check availability
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

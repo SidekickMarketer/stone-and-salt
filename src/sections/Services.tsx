@@ -54,59 +54,61 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-20 lg:py-28 bg-soft-cream">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-16 lg:py-24 bg-soft-cream">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-3">
-            What We Do
-          </p>
-          <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-            Complete Outdoor Services
-          </h2>
-          <p className="mt-4 text-lg text-slate/70">
-            From spring landscaping to winter snow removal, we handle every season.
-            One team, one relationship, year-round results.
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              What We Do
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              Complete Outdoor Services
+            </h2>
+            <p className="mt-4 text-lg text-slate/70">
+              From spring landscaping to winter snow removal, we handle every season.
+              One team, one relationship, year-round results.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
           {services.map((service, index) => (
             <FadeIn key={service.title} delay={index * 100}>
               <Link
                 href={service.href}
-                className="group block bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-slate/5"
+                className="group block bg-white rounded-2xl p-6 lg:p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 border border-slate/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2"
               >
-              <div className="flex items-start gap-5">
-                <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-eucalyptus/20 flex items-center justify-center text-slate group-hover:bg-sun-ochre group-hover:text-white transition-colors">
-                  {service.icon}
-                </div>
-                <div className="flex-1">
-                  <h3 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-slate group-hover:text-sun-ochre transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="mt-2 text-slate/70 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {service.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className="inline-block px-3 py-1 text-xs font-medium bg-slate/5 text-slate/70 rounded-full"
-                      >
-                        {feature}
-                      </span>
-                    ))}
+                <div className="flex items-start gap-4 lg:gap-5">
+                  <div className="flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-eucalyptus/20 flex items-center justify-center text-slate group-hover:bg-sun-ochre group-hover:text-white transition-colors duration-300">
+                    {service.icon}
                   </div>
-                  <div className="mt-4 flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                    Learn More
-                    <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-slate group-hover:text-sun-ochre transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="mt-2 text-slate/70 leading-relaxed">
+                      {service.description}
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {service.features.map((feature) => (
+                        <span
+                          key={feature}
+                          className="inline-block px-3 py-1 text-xs font-medium bg-slate/5 text-slate/70 rounded-full"
+                        >
+                          {feature}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="mt-4 flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                      Learn More
+                      <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
               </Link>
             </FadeIn>
           ))}

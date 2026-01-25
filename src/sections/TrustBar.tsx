@@ -36,11 +36,14 @@ export function TrustBar() {
   ];
 
   return (
-    <section className="py-4 bg-slate border-b border-white/10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-2">
+    <section className="py-6 bg-slate border-b border-white/10">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
           {badges.map((badge) => (
-            <div key={badge.label} className="flex items-center gap-2 text-white/80">
+            <div 
+              key={badge.label} 
+              className="flex items-center gap-3 text-white/80 min-h-[44px] px-2"
+            >
               <span className="text-eucalyptus">{badge.icon}</span>
               <span className="text-sm font-medium">{badge.label}</span>
             </div>

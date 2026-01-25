@@ -66,13 +66,13 @@ export function WhyUs() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-eucalyptus/15">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+    <section className="py-16 lg:py-24 bg-eucalyptus/15">
+      <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <FadeIn>
             <div>
-              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-3">
+              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
                 Why Stone & Salt
               </p>
               <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
@@ -88,8 +88,23 @@ export function WhyUs() {
               </p>
 
               {/* Personal touch - owner commitment */}
-              <div className="mt-8 p-6 bg-white rounded-xl shadow-sm border border-eucalyptus/20">
+              {/* 
+                TODO: ADD OWNER PHOTO
+                Replace the placeholder icon below with a real headshot.
+                Save as /public/images/kyle-headshot.jpg (at least 200x200px)
+                Then uncomment the Image component and delete the SVG placeholder.
+              */}
+              <div className="mt-8 p-6 bg-white rounded-xl shadow-card border border-eucalyptus/20">
                 <div className="flex items-start gap-4">
+                  {/* TODO: Replace this placeholder with real headshot:
+                  <Image
+                    src="/images/kyle-headshot.jpg"
+                    alt="Kyle, Owner of Stone & Salt"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 rounded-full object-cover flex-shrink-0"
+                  />
+                  */}
                   <div className="w-12 h-12 rounded-full bg-eucalyptus/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-eucalyptus" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -102,7 +117,7 @@ export function WhyUs() {
                       I live in Liberty Township, my kids go to school here, and my reputation is built on
                       every job we do.&rdquo;
                     </p>
-                    <p className="text-sm font-medium text-sun-ochre mt-2">— The Owner</p>
+                    <p className="text-sm font-medium text-sun-ochre mt-2">— Kyle, Owner</p>
                   </div>
                 </div>
               </div>
@@ -110,10 +125,10 @@ export function WhyUs() {
           </FadeIn>
 
           {/* Reasons Grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
             {reasons.map((reason, index) => (
               <FadeIn key={reason.title} delay={index * 100}>
-                <div className="p-5 rounded-xl bg-white shadow-sm border border-eucalyptus/10 hover:border-eucalyptus/30 hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+                <div className="p-5 lg:p-6 rounded-xl bg-white shadow-card border border-eucalyptus/10 hover:border-eucalyptus/30 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 h-full">
                   <div className="w-10 h-10 rounded-lg bg-eucalyptus/20 flex items-center justify-center text-eucalyptus mb-4">
                     {reason.icon}
                   </div>

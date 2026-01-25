@@ -3,118 +3,112 @@ import { Button } from "@/components/Button";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
-  title: "Hardscape Installation | Patios, Walls & Outdoor Living | Cincinnati",
+  title: "Hardscapes & Patios | Cincinnati",
   description:
-    "Expert hardscape installation in Greater Cincinnati. Paver patios, retaining walls, outdoor kitchens, and custom outdoor living spaces. Built right the first time.",
+    "Custom hardscape design and installation for Greater Cincinnati homes. Patios, walkways, retaining walls, outdoor kitchens, and fire pits. Built right the first time.",
   openGraph: {
-    title: "Hardscape Installation | Stone & Salt",
+    title: "Hardscapes & Patios | Stone & Salt",
     description:
-      "Expert hardscape installation in Greater Cincinnati. Patios, retaining walls, and outdoor living spaces.",
+      "Custom hardscape design and installation for Greater Cincinnati homes.",
   },
 };
 
 const services = [
   {
-    title: "Fire Pits & Fireplaces",
-    description:
-      "The centerpiece of outdoor living. Custom fire features with stone seat walls, gas or wood-burning options. Extend your season into fall and winter.",
-    price: "Starting at $3,500",
-    featured: true,
-  },
-  {
-    title: "Natural Stone Patios",
-    description:
-      "Premium bluestone, travertine, and flagstone installations. The natural elegance that distinguishes the finest homes in Indian Hill, Montgomery, and Mason.",
-    price: "Starting at $28/sf installed",
-    featured: true,
-  },
-  {
     title: "Paver Patios",
     description:
-      "Custom patios designed for how you actually use your outdoor space. Quality pavers, proper installation, results that last decades.",
-    price: "Starting at $18/sf installed",
-    featured: false,
+      "Transform your backyard into a true outdoor living space. From simple entertaining areas to elaborate multi-level designs.",
+    priceRange: "$8,000 - $35,000+",
   },
   {
-    title: "Outdoor Kitchens",
+    title: "Walkways & Paths",
     description:
-      "Complete outdoor cooking spaces with built-in grills, stone veneer counters, and storage. Designed for Cincinnati weather.",
-    price: "Starting at $15,000",
-    featured: false,
+      "Connect your spaces with beautiful, functional walkways. From front entrance paths to garden trails.",
+    priceRange: "$2,500 - $12,000",
   },
   {
     title: "Retaining Walls",
     description:
-      "Structural walls that solve drainage and grade issues while creating terraced outdoor rooms. Engineered for longevity.",
-    price: "Based on project scope",
-    featured: false,
+      "Solve drainage issues and create usable space on sloped properties. Functional engineering meets aesthetic design.",
+    priceRange: "$5,000 - $25,000+",
   },
   {
-    title: "Pergolas & Shade Structures",
+    title: "Outdoor Kitchens",
     description:
-      "Defined outdoor rooms with architectural interest. Wood, vinyl, or aluminum options to match your home style.",
-    price: "Starting at $8,000",
-    featured: false,
+      "Full outdoor cooking spaces with built-in grills, counters, and storage. Entertain in style.",
+    priceRange: "$15,000 - $50,000+",
+  },
+  {
+    title: "Fire Pits & Fireplaces",
+    description:
+      "Extend your outdoor season with a custom fire feature. Wood-burning or gas options available.",
+    priceRange: "$3,500 - $20,000",
+  },
+  {
+    title: "Driveways",
+    description:
+      "Make an impression from the street. Paver driveways that outperform and outlast traditional concrete.",
+    priceRange: "$15,000 - $40,000+",
   },
 ];
 
 const process = [
   {
     step: "1",
-    title: "Consultation",
+    title: "Initial Consultation",
     description:
-      "We meet at your property to understand what you want, how you'll use the space, and what matters most to you. No sales pressure — just a conversation.",
+      "We walk your property together. You share your vision, we share ideas and identify what's possible. No charge, no obligation.",
   },
   {
     step: "2",
     title: "Design & Proposal",
     description:
-      "We create a design concept and detailed proposal with clear pricing. You'll know exactly what you're getting and what it costs before any work begins.",
+      "We create a detailed proposal with scope, timeline, and fixed pricing. You know exactly what you're getting before we start.",
   },
   {
     step: "3",
-    title: "Installation",
+    title: "Construction",
     description:
-      "Our crew handles the build from start to finish. Same team, consistent quality, respectful of your property. We clean up every day.",
+      "Our crew executes the plan. Same team from start to finish, daily cleanup, clear communication throughout.",
   },
   {
     step: "4",
-    title: "Final Walkthrough",
+    title: "Walkthrough & Warranty",
     description:
-      "We walk the completed project with you to make sure every detail meets your expectations. The job isn't done until you're satisfied.",
+      "Final walkthrough together. We document everything and provide warranty information. Your satisfaction is guaranteed.",
   },
 ];
 
 const faqs = [
   {
-    question: "What's your minimum project size?",
-    answer:
-      "We focus on projects of $25,000 and above for residential hardscape installations. This allows us to dedicate the attention and crew time needed to deliver exceptional results. For smaller projects, we're happy to recommend other qualified contractors.",
-  },
-  {
     question: "How long does a typical patio project take?",
     answer:
-      "Most patio installations take 1-3 weeks depending on size and complexity. We'll give you a clear timeline during the proposal phase. Weather can affect scheduling, but we communicate proactively about any changes.",
+      "Most patio projects take 5-10 days depending on size and complexity. We'll provide a specific timeline during the proposal phase. Weather can impact scheduling, but we build buffer into our estimates.",
   },
   {
     question: "What materials do you work with?",
     answer:
-      "We work with a range of quality materials including concrete pavers, natural stone, brick, and manufactured stone. We'll recommend materials based on your aesthetic preferences, budget, and how the space will be used.",
+      "We work primarily with pavers (Belgard, Unilock, Techo-Bloc), natural stone, and concrete block for walls. We'll recommend materials based on your aesthetic goals, budget, and the demands of the specific application.",
   },
   {
     question: "Do you handle permits?",
     answer:
-      "Yes. We handle all necessary permits as part of the project. Most patio and wall projects don't require permits, but when they do (typically for larger walls or structures), we manage the process.",
+      "Yes. We handle all required permits and inspections. Some projects (especially retaining walls) require engineering approval. We manage the entire process.",
+  },
+  {
+    question: "What about drainage?",
+    answer:
+      "Proper drainage is built into every design. Hardscapes fail when water isn't managed correctly. We assess drainage during the initial consultation and incorporate solutions into every project.",
   },
   {
     question: "What warranty do you offer?",
     answer:
-      "We stand behind our work with a 2-year workmanship warranty. Material warranties vary by manufacturer but typically range from 25 years to lifetime. We only use materials with solid warranty backing.",
+      "We stand behind our work with a 5-year workmanship warranty. Paver manufacturers typically provide 25-year or lifetime product warranties. We'll explain both during the proposal.",
   },
   {
-    question: "Can you work with my existing landscaping?",
+    question: "When can I get on the schedule?",
     answer:
-      "Absolutely. We design hardscapes that integrate with your existing landscape, or we can update the softscape as part of a comprehensive outdoor transformation.",
+      "Our schedule varies by season. Spring and fall are busiest. Contact us early if you have a specific timeline in mind — we book quality projects 6-8 weeks out during peak season.",
   },
 ];
 
@@ -123,25 +117,26 @@ export default function HardscapesPage() {
     <>
       {/* Hero */}
       <section className="bg-slate py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
-              Residential Hardscapes
+              Hardscapes
             </p>
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
-              Outdoor living designed for how you entertain.
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              The patio you&apos;ve been putting off? Let&apos;s build it.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
-              Fire pits, natural stone patios, outdoor kitchens, and complete backyard transformations.
-              Custom designs for homes in Mason, Indian Hill, Montgomery, and Hyde Park.
+              Patios, walkways, retaining walls, and outdoor living spaces designed and built with
+              attention to detail. Quality materials, proper installation, results that last
+              decades.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Get a Free Quote
+                Get a Free Consultation
               </Button>
               <a
                 href="tel:+15135550123"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-white font-semibold hover:text-sun-ochre transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-white/80 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -158,102 +153,68 @@ export default function HardscapesPage() {
         </div>
       </section>
 
-      {/* Gallery Placeholder */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
-              Projects Across Greater Cincinnati
-            </h2>
-            <p className="mt-4 text-lg text-slate/70">
-              Fire pits, bluestone patios, outdoor kitchens, and complete backyard transformations.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { src: "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=800&q=80", alt: "Outdoor fire pit with stone seating" },
-              { src: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80", alt: "Paver patio with outdoor furniture" },
-              { src: "https://images.unsplash.com/photo-1584738766473-61c083514bf4?auto=format&fit=crop&w=800&q=80", alt: "Stone patio with landscaping" },
-              { src: "https://images.unsplash.com/photo-1533779283484-8ad4940aa3a8?auto=format&fit=crop&w=800&q=80", alt: "Fire pit at dusk" },
-              { src: "https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80", alt: "Professional landscaping with stone walkway" },
-              { src: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80", alt: "Suburban home with manicured landscape" },
-            ].map((image, i) => (
-              <div
-                key={i}
-                className="aspect-[4/3] bg-eucalyptus/20 rounded-xl overflow-hidden"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+      {/* Services Grid */}
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
               What We Build
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              Hardscape Services
             </h2>
             <p className="mt-4 text-lg text-slate/70">
-              From simple patios to complete outdoor living transformations, we handle projects that
-              deserve professional attention.
+              From simple walkways to complete outdoor living spaces, we handle projects of all
+              sizes with the same attention to detail.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
-              <div
-                key={service.title}
-                className={`rounded-xl p-8 ${
-                  service.featured
-                    ? "bg-eucalyptus/15 border-2 border-eucalyptus/30"
-                    : "bg-soft-cream"
-                }`}
-              >
-                {service.featured && (
-                  <p className="text-eucalyptus text-xs font-semibold uppercase tracking-wide mb-2">Most Popular</p>
-                )}
+              <div key={service.title} className="bg-white rounded-xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
                   {service.title}
                 </h3>
                 <p className="mt-3 text-slate/70">{service.description}</p>
-                <p className="mt-4 text-sun-ochre font-semibold text-sm">{service.price}</p>
+                <p className="mt-4 text-sm text-sun-ochre font-semibold">
+                  Typical range: {service.priceRange}
+                </p>
               </div>
             ))}
           </div>
+
+          <p className="mt-8 text-center text-slate/60 text-sm">
+            Price ranges are estimates based on typical projects. Final pricing depends on design
+            complexity, material selection, and site conditions.
+          </p>
         </div>
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-slate">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-3">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
               How We Work
             </p>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-white">
-              From idea to finished project
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              Our Process
             </h2>
-            <p className="mt-4 text-lg text-white/70">
-              A clear process that keeps you informed every step of the way.
+            <p className="mt-4 text-lg text-slate/70">
+              No surprises. You know what&apos;s happening at every step.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step) => (
-              <div key={step.step} className="relative">
-                <div className="text-6xl font-bold text-white/10 mb-4">{step.step}</div>
-                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-white text-xl">
-                  {step.title}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {process.map((item) => (
+              <div key={item.step} className="relative">
+                <div className="w-12 h-12 rounded-full bg-sun-ochre text-white flex items-center justify-center font-bold text-xl mb-4">
+                  {item.step}
+                </div>
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-lg">
+                  {item.title}
                 </h3>
-                <p className="mt-3 text-white/70">{step.description}</p>
+                <p className="mt-2 text-slate/70">{item.description}</p>
               </div>
             ))}
           </div>
@@ -261,65 +222,38 @@ export default function HardscapesPage() {
       </section>
 
       {/* Quality Commitment */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
-                Built right. No shortcuts.
-              </h2>
-              <p className="mt-6 text-lg text-slate/70 leading-relaxed">
-                A patio isn&apos;t just pavers on dirt. Proper installation means excavation,
-                compacted base, level screeding, and careful placement. It means drainage that
-                works, edges that don&apos;t shift, and a surface that stays flat for years.
-              </p>
-              <p className="mt-4 text-lg text-slate/70 leading-relaxed">
-                We take the time to do it right because we don&apos;t want to come back and fix it.
-                And neither do you.
-              </p>
-
-              <div className="mt-8 space-y-4">
-                {[
-                  "Proper excavation depth for your soil conditions",
-                  "Compacted aggregate base (not just gravel)",
-                  "Edge restraints that prevent shifting",
-                  "Proper slope for drainage away from structures",
-                  "Quality materials with manufacturer warranties",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <svg
-                      className="w-5 h-5 text-eucalyptus flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-slate">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="aspect-square bg-eucalyptus/20 rounded-2xl overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1584738766473-61c083514bf4?auto=format&fit=crop&w=800&q=80"
-                alt="Professional stone patio installation"
-                className="w-full h-full object-cover"
-              />
+      <section className="py-16 lg:py-24 bg-slate">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-white">
+              Built right the first time.
+            </h2>
+            <p className="mt-6 text-lg text-white/80 leading-relaxed">
+              Hardscapes fail when corners are cut: inadequate base preparation, poor drainage
+              planning, rushed installation. We take the time to do things properly because
+              rework isn&apos;t in our vocabulary.
+            </p>
+            <div className="mt-8 grid sm:grid-cols-3 gap-6">
+              {[
+                { label: "Proper Base Prep", desc: "6-8\" compacted base for lasting stability" },
+                { label: "Quality Materials", desc: "Premium pavers from trusted manufacturers" },
+                { label: "Drainage First", desc: "Water management built into every design" },
+              ].map((item) => (
+                <div key={item.label} className="bg-white/10 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300">
+                  <p className="font-semibold text-white">{item.label}</p>
+                  <p className="text-sm text-white/70 mt-1">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate text-center mb-12">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">
               Frequently Asked Questions
             </h2>
             <div className="space-y-8">
@@ -337,8 +271,8 @@ export default function HardscapesPage() {
       </section>
 
       <CTA
-        title="Ready to transform your backyard?"
-        description="Get a free quote for your hardscape project. We'll meet at your property and discuss design options, materials, and pricing."
+        title="Ready to transform your outdoor space?"
+        description="Schedule a free consultation. We book quality projects 6-8 weeks out during peak season — spring spots are filling fast."
       />
 
       {/* Service Schema */}
@@ -348,7 +282,7 @@ export default function HardscapesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Hardscape Installation",
+            name: "Hardscapes & Patios",
             provider: {
               "@type": "LocalBusiness",
               name: "Stone & Salt",
@@ -364,7 +298,7 @@ export default function HardscapesPage() {
               geoRadius: "45 miles",
             },
             description:
-              "Expert hardscape installation in Greater Cincinnati. Paver patios, retaining walls, and outdoor living spaces.",
+              "Custom hardscape design and installation for Greater Cincinnati homes.",
             serviceType: "Hardscape Installation",
           }),
         }}

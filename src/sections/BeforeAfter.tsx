@@ -1,78 +1,101 @@
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { FadeIn } from "@/components/FadeIn";
 
+/*
+ * ============================================================
+ * TODO: REPLACE WITH REAL BEFORE/AFTER PHOTOS
+ * ============================================================
+ * These are stock photos. Replace with actual project photos.
+ * 
+ * For each project you need:
+ * - beforeImage: Photo of the yard BEFORE you started
+ * - afterImage: Photo of the completed project (same angle if possible)
+ * - title: What you built (be specific: "400 sq ft paver patio")
+ * - location: City only is fine for privacy
+ * - description: What the transformation was + timeline
+ * 
+ * Tip: Take before photos on every job starting now!
+ * Even phone photos work if lighting is decent.
+ * ============================================================
+ */
 const projects = [
   {
-    title: "Paver Patio with Fire Pit",
-    location: "Mason, OH",
-    beforeImage: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=600&q=80",
-    description: "Transformed unused backyard into an outdoor living area with paver patio and fire pit",
+    title: "650 sq ft Paver Patio + Custom Fire Pit", // TODO: Update with real project details
+    location: "Mason, OH", // TODO: Update with real location
+    beforeImage: "/images/before-backyard-1.jpg", // TODO: Replace with real before photo
+    afterImage: "/images/after-patio-firepit.jpg", // TODO: Replace with real after photo
+    description: "Overgrown grass lot → 650 sq ft Belgard paver patio with integrated fire pit and seating wall. Completed in 8 days.",
   },
   {
-    title: "Backyard Hardscape",
-    location: "Liberty Township, OH",
-    beforeImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1584738766473-61c083514bf4?auto=format&fit=crop&w=600&q=80",
-    description: "Complete backyard transformation with natural stone walkway and patio",
+    title: "Full Backyard Hardscape Renovation", // TODO: Update with real project details
+    location: "Liberty Township, OH", // TODO: Update with real location
+    beforeImage: "/images/before-backyard-2.jpg", // TODO: Replace with real before photo
+    afterImage: "/images/after-hardscape.jpg", // TODO: Replace with real after photo
+    description: "Sloped, unusable yard → multi-level Techo-Bloc patio with natural stone walkway and retaining wall. 12-day project.",
   },
 ];
 
 export function BeforeAfter() {
   return (
-    <section className="py-20 lg:py-28 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="py-16 lg:py-24 bg-white relative overflow-hidden">
+      {/* Subtle background */}
+      <div className="absolute inset-0 bg-grid opacity-30" />
+      
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-3">
-            Our Work
-          </p>
-          <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-            See the Transformation
-          </h2>
-          <p className="mt-4 text-lg text-slate/70">
-            Real projects from properties in Greater Cincinnati. Quality work that
-            speaks for itself.
-          </p>
-        </div>
+        <FadeIn>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              Our Work
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              See the Transformation
+            </h2>
+            <p className="mt-4 text-lg text-slate/70">
+              Real projects from properties in Greater Cincinnati. Quality work that
+              speaks for itself.
+            </p>
+          </div>
+        </FadeIn>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {projects.map((project, index) => (
             <FadeIn key={index} delay={index * 200}>
               <div className="group">
-              {/* Before/After Images */}
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate/10">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={project.beforeImage}
-                    alt={`${project.title} - Before`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute bottom-3 left-3 px-3 py-1 bg-slate/80 text-white text-xs font-medium rounded">
-                    Before
+                {/* Before/After Images */}
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-6">
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate/10">
+                    <Image
+                      src={project.beforeImage}
+                      alt={`${project.title} - Before`}
+                      fill
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                    <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-slate/80 backdrop-blur-sm text-white text-xs font-medium rounded-full">
+                      Before
+                    </div>
+                  </div>
+                  <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate/10">
+                    <Image
+                      src={project.afterImage}
+                      alt={`${project.title} - After`}
+                      fill
+                      className="object-cover transition-transform duration-700 hover:scale-105"
+                    />
+                    <div className="absolute bottom-3 left-3 px-3 py-1.5 bg-eucalyptus backdrop-blur-sm text-white text-xs font-medium rounded-full">
+                      After
+                    </div>
                   </div>
                 </div>
-                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-slate/10">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={project.afterImage}
-                    alt={`${project.title} - After`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute bottom-3 left-3 px-3 py-1 bg-eucalyptus text-white text-xs font-medium rounded">
-                    After
-                  </div>
-                </div>
-              </div>
 
-              {/* Project Info */}
-              <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
-                {project.title}
-              </h3>
-              <p className="text-sm text-sun-ochre font-medium mt-1">{project.location}</p>
-              <p className="text-slate/70 mt-2">{project.description}</p>
+                {/* Project Info */}
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-sun-ochre font-medium mt-1">{project.location}</p>
+                <p className="text-slate/70 mt-2">{project.description}</p>
               </div>
             </FadeIn>
           ))}
@@ -80,8 +103,8 @@ export function BeforeAfter() {
 
         {/* CTA */}
         <FadeIn delay={400}>
-          <div className="mt-16 text-center">
-            <p className="text-slate/70 mb-4">
+          <div className="mt-12 text-center">
+            <p className="text-slate/70 mb-6">
               Your property could be next. Let&apos;s talk about what you have in mind.
             </p>
             <Button href="/contact">Get a Free Quote</Button>

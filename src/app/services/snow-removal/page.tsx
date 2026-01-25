@@ -104,12 +104,12 @@ export default function SnowRemovalPage() {
     <>
       {/* Hero */}
       <section className="bg-slate py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
               Snow & Ice Services
             </p>
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Your lot cleared before your employees arrive.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
@@ -122,7 +122,7 @@ export default function SnowRemovalPage() {
               </Button>
               <a
                 href="tel:+15135550123"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-white font-semibold hover:text-sun-ochre transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-white/80 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -141,7 +141,7 @@ export default function SnowRemovalPage() {
 
       {/* Emergency Contact Banner */}
       <section className="py-6 bg-eucalyptus/20 border-y border-eucalyptus/30">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-eucalyptus/30 flex items-center justify-center">
@@ -156,7 +156,7 @@ export default function SnowRemovalPage() {
             </div>
             <a
               href="tel:+15135550123"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-slate text-white font-semibold rounded-md hover:bg-slate/90 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] bg-slate text-white font-semibold rounded-md hover:bg-slate/90 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -168,10 +168,13 @@ export default function SnowRemovalPage() {
       </section>
 
       {/* Trust Signals - What Property Managers Care About */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              Why Choose Us
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
               What Property Managers Need to Know
             </h2>
             <p className="mt-4 text-lg text-slate/70">
@@ -181,7 +184,7 @@ export default function SnowRemovalPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {trustSignals.map((signal) => (
-              <div key={signal.title} className="bg-white rounded-2xl p-6 shadow-sm">
+              <div key={signal.title} className="bg-white rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
                 <div className="w-12 h-12 rounded-xl bg-eucalyptus/20 flex items-center justify-center text-eucalyptus mb-4">
                   {signal.icon}
                 </div>
@@ -198,10 +201,13 @@ export default function SnowRemovalPage() {
       </section>
 
       {/* Commercial vs Residential */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              Our Services
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
               Commercial & Residential Snow Services
             </h2>
             <p className="mt-4 text-lg text-slate/70">
@@ -209,9 +215,9 @@ export default function SnowRemovalPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {/* Commercial */}
-            <div className="bg-slate rounded-2xl p-8 text-white">
+            <div className="bg-slate rounded-2xl p-6 lg:p-8 text-white">
               <p className="text-eucalyptus text-sm font-semibold uppercase tracking-wide mb-2">For Property Managers</p>
               <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-2xl mb-2">
                 Commercial Snow Management
@@ -221,7 +227,7 @@ export default function SnowRemovalPage() {
               </p>
               <ul className="space-y-3 mb-8">
                 {commercialServices.map((service) => (
-                  <li key={service} className="flex items-center gap-3">
+                  <li key={service} className="flex items-center gap-3 min-h-[32px]">
                     <svg className="w-5 h-5 text-eucalyptus flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -242,7 +248,7 @@ export default function SnowRemovalPage() {
             </div>
 
             {/* Residential */}
-            <div className="bg-eucalyptus/10 rounded-2xl p-8">
+            <div className="bg-eucalyptus/10 rounded-2xl p-6 lg:p-8">
               <p className="text-sun-ochre text-sm font-semibold uppercase tracking-wide mb-2">For Homeowners</p>
               <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-2xl text-slate mb-2">
                 Wake Up to a Clear Driveway
@@ -252,7 +258,7 @@ export default function SnowRemovalPage() {
               </p>
               <ul className="space-y-3 mb-8">
                 {residentialServices.map((service) => (
-                  <li key={service} className="flex items-center gap-3">
+                  <li key={service} className="flex items-center gap-3 min-h-[32px]">
                     <svg className="w-5 h-5 text-sun-ochre flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
@@ -276,13 +282,13 @@ export default function SnowRemovalPage() {
       </section>
 
       {/* Integration with Landscaping */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-3">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
               Year-Round Service
             </p>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
               One vendor. Every season.
             </h2>
             <p className="mt-6 text-lg text-slate/70 leading-relaxed">
@@ -301,10 +307,10 @@ export default function SnowRemovalPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate text-center mb-12">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">
               Frequently Asked Questions
             </h2>
             <div className="space-y-8">
@@ -323,7 +329,7 @@ export default function SnowRemovalPage() {
 
       <CTA
         title="Need snow service this season?"
-        description="We're still accepting commercial and residential contracts for the current winter season. Contact us for availability and pricing."
+        description="Limited winter contract spots remaining. Commercial and residential. Contact us now — we typically stop accepting new contracts by November 15."
       />
 
       {/* Service Schema */}

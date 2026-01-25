@@ -111,13 +111,13 @@ export default function CommercialGroundsPage() {
     <>
       {/* Hero */}
       <section className="bg-slate py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
               Commercial Services
             </p>
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
-              Grounds maintenance your property deserves.
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Stop chasing your landscaping company.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
               One vendor. Consistent quality. Year-round reliability. Serving office parks, retail centers,
@@ -129,7 +129,7 @@ export default function CommercialGroundsPage() {
               </Button>
               <a
                 href="tel:+15135550123"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-white font-semibold hover:text-sun-ochre transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-white/80 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -147,11 +147,11 @@ export default function CommercialGroundsPage() {
       </section>
 
       {/* Problem/Solution */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <div>
-              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
                 Managing vendors shouldn&apos;t be your full-time job.
               </h2>
               <p className="mt-6 text-lg text-slate/70 leading-relaxed">
@@ -165,7 +165,7 @@ export default function CommercialGroundsPage() {
                 crew, same standards, every visit.
               </p>
             </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
+            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-card">
               <h3 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-slate mb-6">
                 What Property Managers Tell Us
               </h3>
@@ -202,10 +202,13 @@ export default function CommercialGroundsPage() {
       </section>
 
       {/* Property Types */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              Who We Serve
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
               Properties We Serve
             </h2>
             <p className="mt-4 text-lg text-slate/70">
@@ -214,9 +217,9 @@ export default function CommercialGroundsPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service) => (
-              <div key={service.title} className="p-6 rounded-xl bg-soft-cream">
+              <div key={service.title} className="p-6 rounded-xl bg-soft-cream hover:bg-eucalyptus/10 transition-colors duration-300">
                 <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate text-lg">
                   {service.title}
                 </h3>
@@ -228,11 +231,14 @@ export default function CommercialGroundsPage() {
       </section>
 
       {/* What's Included */}
-      <section className="py-20 bg-eucalyptus/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 lg:py-24 bg-eucalyptus/10">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+                Comprehensive Care
+              </p>
+              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
                 Complete grounds care. Nothing falls through the cracks.
               </h2>
               <p className="mt-6 text-lg text-slate/70 leading-relaxed">
@@ -247,7 +253,7 @@ export default function CommercialGroundsPage() {
             <div>
               <ul className="grid sm:grid-cols-2 gap-4">
                 {included.map((item) => (
-                  <li key={item} className="flex items-center gap-3">
+                  <li key={item} className="flex items-center gap-3 min-h-[44px]">
                     <svg
                       className="w-5 h-5 text-eucalyptus flex-shrink-0"
                       fill="currentColor"
@@ -269,10 +275,13 @@ export default function CommercialGroundsPage() {
       </section>
 
       {/* Professional Standards */}
-      <section className="py-20 bg-slate">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-slate">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-white">
+            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
+              Our Standards
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-white">
               Professional Standards, Every Visit
             </h2>
             <p className="mt-4 text-lg text-white/70">
@@ -281,7 +290,7 @@ export default function CommercialGroundsPage() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {professionalStandards.map((standard) => (
-              <div key={standard.title} className="bg-white/10 rounded-xl p-6">
+              <div key={standard.title} className="bg-white/10 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300">
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-white text-lg">
                   {standard.title}
                 </h3>
@@ -295,10 +304,10 @@ export default function CommercialGroundsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate text-center mb-12">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">
               Frequently Asked Questions
             </h2>
             <div className="space-y-8">
@@ -317,7 +326,7 @@ export default function CommercialGroundsPage() {
 
       <CTA
         title="Get your commercial grounds quote"
-        description="We'll walk your property and build a customized plan that fits your needs and budget. Response within 4 hours."
+        description="We'll walk your property and build a customized plan that fits your needs and budget. Response within 4 hours — limited 2024 contract slots available."
       />
 
       {/* Service Schema */}

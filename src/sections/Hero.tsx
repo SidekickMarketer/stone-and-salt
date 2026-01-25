@@ -1,4 +1,8 @@
+"use client";
+
+import Image from "next/image";
 import { Button } from "@/components/Button";
+import { Animate } from "@/components/Animate";
 
 export function Hero() {
   return (
@@ -13,86 +17,95 @@ export function Hero() {
         />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Subtle radial glow */}
+      <div className="absolute inset-0 bg-gradient-to-br from-eucalyptus/5 via-transparent to-sun-ochre/5" />
+
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-8 py-20 lg:py-28">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div>
-            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
-              Greater Cincinnati&apos;s Year-Round Outdoor Partner
-            </p>
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-              Professional outdoor spaces.
-              <span className="block text-sun-ochre mt-2">Built right the first time.</span>
-            </h1>
-            <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-xl">
-              Landscaping, hardscapes, grounds maintenance, and snow removal — one reliable
-              team for every season. We show up when we say we will.
-            </p>
+            <Animate delay={0}>
+              <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
+                Greater Cincinnati&apos;s Year-Round Outdoor Partner
+              </p>
+            </Animate>
+            <Animate delay={100}>
+              <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Professional outdoor spaces.
+                <span className="block text-gradient mt-2">Built right the first time.</span>
+              </h1>
+            </Animate>
+            <Animate delay={200}>
+              <p className="mt-6 text-xl text-white/80 leading-relaxed max-w-xl">
+                Landscaping, hardscapes, grounds maintenance, and snow removal — one reliable
+                team for every season. We show up when we say we will.
+              </p>
+            </Animate>
 
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <Button href="/contact" size="lg">
-                Get a Free Quote
-              </Button>
-              <Button href="/services/commercial-grounds" variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-slate">
-                Commercial Services
-              </Button>
-            </div>
+            <Animate delay={300}>
+              <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                <Button href="/contact" size="lg">
+                  Get a Free Quote
+                </Button>
+                <Button 
+                  href="/services/commercial-grounds" 
+                  variant="outline" 
+                  size="lg" 
+                  className="border-white text-white hover:bg-white hover:text-slate focus-visible:outline-white"
+                >
+                  Commercial Services
+                </Button>
+              </div>
+            </Animate>
 
             {/* Trust Signals */}
-            <div className="mt-12 flex flex-wrap gap-8">
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-eucalyptus" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-white/80 text-sm">Licensed & Insured</span>
+            <Animate delay={400}>
+              <div className="mt-12 flex flex-wrap gap-6 sm:gap-8">
+                {[
+                  { label: "Licensed & Insured" },
+                  { label: "Year-Round Service" },
+                  { label: "Free Estimates" },
+                ].map((signal) => (
+                  <div key={signal.label} className="flex items-center gap-2 min-h-[44px]">
+                    <svg className="h-5 w-5 text-eucalyptus flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path
+                        fillRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                    <span className="text-white/80 text-sm font-medium">{signal.label}</span>
+                  </div>
+                ))}
               </div>
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-eucalyptus" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-white/80 text-sm">Year-Round Service</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="h-5 w-5 text-eucalyptus" fill="currentColor" viewBox="0 0 20 20">
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                <span className="text-white/80 text-sm">Free Estimates</span>
-              </div>
-            </div>
+            </Animate>
           </div>
 
           {/* Image/Visual */}
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-eucalyptus/20 overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1598902108854-10e335adac99?auto=format&fit=crop&w=1200&q=80"
+          {/* TODO: REPLACE hero-firepit.jpg with a real photo of YOUR best project */}
+          {/* Ideal: A stunning patio, fire pit, or hardscape you actually built */}
+          {/* Size: At least 1200px wide, landscape orientation */}
+          <Animate delay={200} className="relative">
+            <div className="aspect-[4/3] rounded-2xl bg-eucalyptus/20 overflow-hidden relative group">
+              <Image
+                src="/images/hero-firepit.jpg"
                 alt="Outdoor fire pit with stone seating area"
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                priority
               />
             </div>
-            {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 max-w-xs border-l-4 border-eucalyptus">
-              <p className="text-sun-ochre font-semibold text-lg">Four seasons. One call.</p>
+            {/* Floating card with animation */}
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-eucalyptus animate-float">
+              <p className="text-gradient font-semibold text-lg">Four seasons. One call.</p>
               <p className="text-slate/70 text-sm mt-1">
                 Stop coordinating multiple vendors. We handle it all.
               </p>
             </div>
             {/* Decorative accent */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-eucalyptus/30 rounded-full blur-2xl"></div>
-          </div>
+            <div className="absolute -top-4 -right-4 w-32 h-32 bg-eucalyptus/30 rounded-full blur-3xl"></div>
+            <div className="absolute -bottom-8 right-12 w-20 h-20 bg-sun-ochre/20 rounded-full blur-2xl"></div>
+          </Animate>
         </div>
       </div>
     </section>

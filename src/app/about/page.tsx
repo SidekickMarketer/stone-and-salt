@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import { Button } from "@/components/Button";
 import { CTA } from "@/sections/CTA";
 
@@ -41,9 +42,9 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="bg-slate py-20 lg:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Built different. On purpose.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
@@ -56,14 +57,14 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-3">
+              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
                 Our Story
               </p>
-              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
                 Started with a simple question: Why is this so hard?
               </h2>
               <div className="mt-6 space-y-4 text-lg text-slate/70 leading-relaxed">
@@ -73,23 +74,19 @@ export default function AboutPage() {
                   that don&apos;t show up, quality that varies wildly, calls that go to voicemail.
                 </p>
                 <p>
-                  Stone & Salt started with a commitment to do things differently. Not with
-                  flashier marketing or cheaper prices, but with the basics done right: show up when
-                  you say you will, do quality work, and actually answer the phone when clients
-                  call.
-                </p>
-                <p>
-                  We built a company around reliability because we believe that&apos;s what clients
-                  actually want. Not promises — results. Not excuses — solutions.
+                  Stone & Salt started with a commitment to do the basics right: show up when you
+                  say you will, do quality work, and actually answer the phone. Not promises —
+                  results. Not excuses — solutions.
                 </p>
               </div>
             </div>
-            <div className="aspect-[4/3] bg-eucalyptus/20 rounded-2xl overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80"
+            {/* TODO: REPLACE with real photo of your crew working on a project */}
+            <div className="aspect-[4/3] bg-eucalyptus/20 rounded-2xl overflow-hidden relative group">
+              <Image
+                src="/images/about-landscaping.jpg"
                 alt="Professional landscaping work in progress"
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
           </div>
@@ -97,10 +94,10 @@ export default function AboutPage() {
       </section>
 
       {/* The Name */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
               Why &ldquo;Stone & Salt&rdquo;?
             </h2>
             <p className="mt-6 text-lg text-slate/70 leading-relaxed">
@@ -114,27 +111,27 @@ export default function AboutPage() {
             </p>
             <p className="mt-4 text-lg text-slate/70 leading-relaxed">
               Together, they represent our commitment to year-round service. One team that handles
-              your property through every season. <span className="text-sun-ochre font-semibold">Four seasons. One call.</span>
+              your property through every season. <span className="text-gradient font-semibold">Four seasons. One call.</span>
             </p>
           </div>
         </div>
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-slate">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-3">
+      <section className="py-16 lg:py-24 bg-slate">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
               How We Work
             </p>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-white">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-white">
               Simple principles. Consistent execution.
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {values.map((value) => (
-              <div key={value.title} className="bg-white/5 rounded-xl p-8">
+              <div key={value.title} className="bg-white/5 rounded-xl p-6 lg:p-8 hover:bg-white/10 transition-colors duration-300">
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-white text-xl">
                   {value.title}
                 </h3>
@@ -146,24 +143,25 @@ export default function AboutPage() {
       </section>
 
       {/* Based Locally */}
-      <section className="py-20 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <div className="aspect-[4/3] bg-eucalyptus/20 rounded-2xl overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80"
+              {/* TODO: REPLACE with photo of a completed residential property you service */}
+              <div className="aspect-[4/3] bg-eucalyptus/20 rounded-2xl overflow-hidden relative group">
+                <Image
+                  src="/images/about-neighborhood.jpg"
                   alt="Suburban neighborhood in Greater Cincinnati"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-3">
+              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
                 Local Business
               </p>
-              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
                 Based in Liberty Township. Serving Greater Cincinnati.
               </h2>
               <div className="mt-6 space-y-4 text-lg text-slate/70 leading-relaxed">
@@ -173,14 +171,10 @@ export default function AboutPage() {
                   work.
                 </p>
                 <p>
-                  Our service area covers the communities within about 45 minutes of Liberty
-                  Township — Mason, West Chester, Blue Ash, Loveland, Indian Hill, and the
-                  surrounding areas. Close enough that we know the neighborhoods, the weather
-                  patterns, and the local expectations.
-                </p>
-                <p>
-                  When you work with Stone & Salt, you&apos;re working with your neighbors. We live
-                  here. Our kids go to school here. Our reputation is built right here.
+                  Our service area covers Mason, West Chester, Blue Ash, Loveland, Indian Hill, and
+                  surrounding communities — close enough that we know the neighborhoods, the weather
+                  patterns, and what local clients expect. When you work with us, you&apos;re working
+                  with neighbors who stake their reputation on every job.
                 </p>
               </div>
               <div className="mt-8">
@@ -192,8 +186,8 @@ export default function AboutPage() {
       </section>
 
       {/* Licensed & Insured */}
-      <section className="py-16 bg-eucalyptus/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-12 lg:py-16 bg-eucalyptus/10">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
               <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
@@ -204,14 +198,14 @@ export default function AboutPage() {
                 credentials your property requires.
               </p>
             </div>
-            <div className="flex flex-wrap gap-4">
-              <div className="px-4 py-2 bg-white rounded-lg text-sm font-medium text-slate">
+            <div className="flex flex-wrap gap-3">
+              <div className="px-4 py-3 min-h-[44px] bg-white rounded-lg text-sm font-medium text-slate flex items-center">
                 Ohio Nursery Stock License
               </div>
-              <div className="px-4 py-2 bg-white rounded-lg text-sm font-medium text-slate">
+              <div className="px-4 py-3 min-h-[44px] bg-white rounded-lg text-sm font-medium text-slate flex items-center">
                 Commercial Pesticide Applicator
               </div>
-              <div className="px-4 py-2 bg-white rounded-lg text-sm font-medium text-slate">
+              <div className="px-4 py-3 min-h-[44px] bg-white rounded-lg text-sm font-medium text-slate flex items-center">
                 $2M General Liability
               </div>
             </div>
