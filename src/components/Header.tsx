@@ -28,10 +28,11 @@ export function Header() {
     <>
       {/* Seasonal Banner */}
       <div className="bg-slate text-white py-2 px-4 text-center text-sm">
-        <span className="font-medium">Now booking 2026 snow removal contracts</span>
+        <span className="hidden sm:inline font-medium">Early bird spring scheduling now open</span>
+        <span className="sm:hidden font-medium">Spring scheduling open</span>
         <span className="mx-2 text-white/40">|</span>
-        <a href="/services/snow-removal" className="text-sun-ochre hover:text-sun-ochre/80 font-medium">
-          Reserve your spot →
+        <a href="/contact" className="text-sun-ochre hover:text-sun-ochre/80 font-medium">
+          Book now & save →
         </a>
       </div>
 

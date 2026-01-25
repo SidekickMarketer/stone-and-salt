@@ -14,21 +14,61 @@ export const metadata: Metadata = {
 };
 
 const commercialServices = [
-  "Parking lot plowing",
+  "Parking lot plowing & salting",
   "Sidewalk clearing",
-  "Salt and ice management",
-  "Emergency response",
-  "Documented service records",
-  "Seasonal contracts",
+  "GPS-tracked, timestamped documentation",
+  "24/7 emergency response",
+  "Pre-treatment & post-storm services",
+  "Seasonal contracts with guaranteed coverage",
 ];
 
 const residentialServices = [
   "Driveway clearing",
-  "Walkway and steps",
-  "Salt application",
-  "Seasonal contracts",
+  "Walkway, steps & porch",
+  "Ice melt application",
   "Priority scheduling",
-  "Same-day response",
+  "Wake up to a clear driveway",
+  "Seasonal or per-push pricing",
+];
+
+const trustSignals = [
+  {
+    title: "Fully Insured",
+    description: "General liability, workers' comp, and auto coverage. Your property can be added as additional insured.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Documented Service",
+    description: "GPS tracking, timestamped photos, and detailed service logs for every visit. Critical for slip-and-fall liability protection.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Response Guarantee",
+    description: "Plowing begins at 2\" accumulation. Sidewalks cleared before business hours. Your lot is ready when you arrive.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Local & Experienced",
+    description: "Based in Greater Cincinnati. We know these roads, these storms, and what your property needs to stay safe.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+  },
 ];
 
 const faqs = [
@@ -70,11 +110,11 @@ export default function SnowRemovalPage() {
               Snow & Ice Services
             </p>
             <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
-              Your lot cleared before you get there.
+              Your lot cleared before your employees arrive.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
-              Reliable snow and ice management for Greater Cincinnati. 24/7 response, professional
-              equipment, and the documentation your property needs.
+              Reliable snow and ice management for Greater Cincinnati. Fully insured, GPS-documented,
+              and ready 24/7. The professional service property managers trust.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
@@ -127,67 +167,32 @@ export default function SnowRemovalPage() {
         </div>
       </section>
 
-      {/* Value Prop */}
+      {/* Trust Signals - What Property Managers Care About */}
       <section className="py-20 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-sun-ochre/10 flex items-center justify-center text-sun-ochre mb-6">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
+              What Property Managers Need to Know
+            </h2>
+            <p className="mt-4 text-lg text-slate/70">
+              We understand what&apos;s at stake. Slip-and-fall liability, tenant complaints, insurance requirements.
+              Here&apos;s how we protect your property.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {trustSignals.map((signal) => (
+              <div key={signal.title} className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="w-12 h-12 rounded-xl bg-eucalyptus/20 flex items-center justify-center text-eucalyptus mb-4">
+                  {signal.icon}
+                </div>
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-lg">
+                  {signal.title}
+                </h3>
+                <p className="mt-2 text-sm text-slate/70 leading-relaxed">
+                  {signal.description}
+                </p>
               </div>
-              <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
-                24/7 Response
-              </h3>
-              <p className="mt-3 text-slate/70">
-                Snow doesn&apos;t wait for business hours. Neither do we. Our crews are ready when
-                winter weather hits, day or night.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-sun-ochre/10 flex items-center justify-center text-sun-ochre mb-6">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
-                Documented Service
-              </h3>
-              <p className="mt-3 text-slate/70">
-                Timestamped photos, service records, and material logs. The documentation you need
-                for liability protection.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <div className="w-12 h-12 rounded-xl bg-sun-ochre/10 flex items-center justify-center text-sun-ochre mb-6">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
-                Predictable Pricing
-              </h3>
-              <p className="mt-3 text-slate/70">
-                Seasonal contracts mean no budget surprises. Know your winter costs upfront, not
-                after the last storm.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -207,11 +212,12 @@ export default function SnowRemovalPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Commercial */}
             <div className="bg-slate rounded-2xl p-8 text-white">
+              <p className="text-eucalyptus text-sm font-semibold uppercase tracking-wide mb-2">For Property Managers</p>
               <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-2xl mb-2">
-                Commercial Properties
+                Commercial Snow Management
               </h3>
               <p className="text-white/70 mb-6">
-                Parking lots, sidewalks, and entrances cleared to keep your business running.
+                Office parks, retail centers, HOAs, and medical facilities. Cleared before your tenants arrive, documented for your records.
               </p>
               <ul className="space-y-3 mb-8">
                 {commercialServices.map((service) => (
@@ -237,11 +243,12 @@ export default function SnowRemovalPage() {
 
             {/* Residential */}
             <div className="bg-eucalyptus/10 rounded-2xl p-8">
+              <p className="text-sun-ochre text-sm font-semibold uppercase tracking-wide mb-2">For Homeowners</p>
               <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-2xl text-slate mb-2">
-                Residential Properties
+                Wake Up to a Clear Driveway
               </h3>
               <p className="text-slate/70 mb-6">
-                Driveways and walkways cleared so you can get on with your day.
+                No more early mornings with a shovel. Protect your family from slips and falls with professional snow removal.
               </p>
               <ul className="space-y-3 mb-8">
                 {residentialServices.map((service) => (
@@ -315,8 +322,8 @@ export default function SnowRemovalPage() {
       </section>
 
       <CTA
-        title="Get ready for winter"
-        description="Snow contracts book up fast. Lock in your spot now and have peace of mind when the first flakes fall."
+        title="Need snow service this season?"
+        description="We're still accepting commercial and residential contracts for the current winter season. Contact us for availability and pricing."
       />
 
       {/* Service Schema */}

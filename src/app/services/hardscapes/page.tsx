@@ -15,40 +15,46 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    title: "Paver Patios",
+    title: "Fire Pits & Fireplaces",
     description:
-      "Custom patios designed for how you actually use your outdoor space. Quality materials, proper installation, results that last.",
-    price: "Starting at $18/sf installed",
+      "The centerpiece of outdoor living. Custom fire features with stone seat walls, gas or wood-burning options. Extend your season into fall and winter.",
+    price: "Starting at $3,500",
+    featured: true,
   },
   {
-    title: "Retaining Walls",
+    title: "Natural Stone Patios",
     description:
-      "Structural walls that solve drainage and grade issues while adding visual interest. Engineered for longevity.",
-    price: "Based on project scope",
+      "Premium bluestone, travertine, and flagstone installations. The natural elegance that distinguishes the finest homes in Indian Hill, Montgomery, and Mason.",
+    price: "Starting at $28/sf installed",
+    featured: true,
+  },
+  {
+    title: "Paver Patios",
+    description:
+      "Custom patios designed for how you actually use your outdoor space. Quality pavers, proper installation, results that last decades.",
+    price: "Starting at $18/sf installed",
+    featured: false,
   },
   {
     title: "Outdoor Kitchens",
     description:
-      "Complete outdoor cooking spaces with built-in grills, counters, and storage. Designed for Cincinnati weather.",
+      "Complete outdoor cooking spaces with built-in grills, stone veneer counters, and storage. Designed for Cincinnati weather.",
     price: "Starting at $15,000",
+    featured: false,
   },
   {
-    title: "Fire Pits & Fireplaces",
+    title: "Retaining Walls",
     description:
-      "Wood-burning and gas fire features that extend your outdoor season. Custom designed to fit your space.",
-    price: "Starting at $3,500",
-  },
-  {
-    title: "Walkways & Steps",
-    description:
-      "Functional paths and entries that improve access while enhancing curb appeal. Safe, durable, attractive.",
+      "Structural walls that solve drainage and grade issues while creating terraced outdoor rooms. Engineered for longevity.",
     price: "Based on project scope",
+    featured: false,
   },
   {
     title: "Pergolas & Shade Structures",
     description:
-      "Defined outdoor rooms with architectural interest. Wood, vinyl, or aluminum options to match your home.",
+      "Defined outdoor rooms with architectural interest. Wood, vinyl, or aluminum options to match your home style.",
     price: "Starting at $8,000",
+    featured: false,
   },
 ];
 
@@ -123,11 +129,11 @@ export default function HardscapesPage() {
               Residential Hardscapes
             </p>
             <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
-              Outdoor spaces built right the first time.
+              Outdoor living designed for how you entertain.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
-              Patios, walkways, retaining walls, and outdoor living spaces. Expert design, quality
-              materials, and installation that lasts.
+              Fire pits, natural stone patios, outdoor kitchens, and complete backyard transformations.
+              Custom designs for homes in Mason, Indian Hill, Montgomery, and Hyde Park.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
@@ -157,10 +163,10 @@ export default function HardscapesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate">
-              Our Work
+              Projects Across Greater Cincinnati
             </h2>
             <p className="mt-4 text-lg text-slate/70">
-              Quality you can see. Results that last.
+              Fire pits, bluestone patios, outdoor kitchens, and complete backyard transformations.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
@@ -203,7 +209,17 @@ export default function HardscapesPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div key={service.title} className="bg-soft-cream rounded-xl p-8">
+              <div
+                key={service.title}
+                className={`rounded-xl p-8 ${
+                  service.featured
+                    ? "bg-eucalyptus/15 border-2 border-eucalyptus/30"
+                    : "bg-soft-cream"
+                }`}
+              >
+                {service.featured && (
+                  <p className="text-eucalyptus text-xs font-semibold uppercase tracking-wide mb-2">Most Popular</p>
+                )}
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
                   {service.title}
                 </h3>

@@ -59,6 +59,25 @@ const included = [
   "Monthly property walks",
 ];
 
+const professionalStandards = [
+  {
+    title: "Uniformed Crews",
+    description: "Branded trucks and uniformed crew members. Your tenants will always know who we are.",
+  },
+  {
+    title: "Consistent Teams",
+    description: "The same crew services your property every visit. They know your property and your expectations.",
+  },
+  {
+    title: "Documented Service",
+    description: "Service logs, photos, and regular reports. You'll always know what was done and when.",
+  },
+  {
+    title: "Responsive Communication",
+    description: "Direct line to your account manager. Calls returned within 4 hours, issues addressed immediately.",
+  },
+];
+
 const faqs = [
   {
     question: "How is commercial pricing structured?",
@@ -101,8 +120,8 @@ export default function CommercialGroundsPage() {
               Grounds maintenance your property deserves.
             </h1>
             <p className="mt-6 text-xl text-white/80 leading-relaxed">
-              One vendor. Consistent quality. Year-round reliability. We handle your grounds so you
-              can focus on your business.
+              One vendor. Consistent quality. Year-round reliability. Serving office parks, retail centers,
+              and HOAs across Blue Ash, Mason, West Chester, and Greater Cincinnati.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
@@ -245,6 +264,32 @@ export default function CommercialGroundsPage() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Standards */}
+      <section className="py-20 bg-slate">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-white">
+              Professional Standards, Every Visit
+            </h2>
+            <p className="mt-4 text-lg text-white/70">
+              The difference between a vendor and a partner is in the details.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {professionalStandards.map((standard) => (
+              <div key={standard.title} className="bg-white/10 rounded-xl p-6">
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-white text-lg">
+                  {standard.title}
+                </h3>
+                <p className="mt-2 text-sm text-white/70 leading-relaxed">
+                  {standard.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
