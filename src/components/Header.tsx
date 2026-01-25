@@ -108,7 +108,7 @@ export function Header() {
             >
               (513) 555-0123
             </a>
-            <Button href="/contact">Get a Quote</Button>
+            <Button href="/contact">Get a Free Quote</Button>
           </div>
 
           {/* Mobile menu button */}
@@ -174,7 +174,7 @@ export function Header() {
                 (513) 555-0123
               </a>
               <Button href="/contact" className="w-full justify-center">
-                Get a Quote
+                Get a Free Quote
               </Button>
             </div>
           </div>

@@ -155,11 +155,12 @@ export function ContactForm() {
       <div className="grid sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="propertyType" className="block text-sm font-medium text-slate mb-2">
-            Property Type
+            Property Type *
           </label>
           <select
             id="propertyType"
             name="propertyType"
+            required
             value={formState.propertyType}
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
@@ -174,11 +175,12 @@ export function ContactForm() {
         </div>
         <div>
           <label htmlFor="service" className="block text-sm font-medium text-slate mb-2">
-            Service Needed
+            Service Needed *
           </label>
           <select
             id="service"
             name="service"
+            required
             value={formState.service}
             onChange={handleChange}
             className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"

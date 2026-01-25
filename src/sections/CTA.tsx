@@ -24,7 +24,7 @@ export function CTA({
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Get a Quote
+                Get a Free Quote
               </Button>
               <a
                 href="tel:+15135550123"

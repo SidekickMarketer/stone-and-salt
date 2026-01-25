@@ -61,7 +61,7 @@ export default function ContactPage() {
             <div>
               <div className="bg-white rounded-2xl p-8 shadow-sm">
                 <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate mb-6">
-                  Request a Quote
+                  Get a Free Quote
                 </h2>
                 <ContactForm />
               </div>

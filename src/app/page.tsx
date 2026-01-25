@@ -1,8 +1,8 @@
 import { Hero } from "@/sections/Hero";
+import { TrustBar } from "@/sections/TrustBar";
 import { Services } from "@/sections/Services";
 import { WhyUs } from "@/sections/WhyUs";
 import { BeforeAfter } from "@/sections/BeforeAfter";
-import { Areas } from "@/sections/Areas";
 import { Testimonials } from "@/sections/Testimonials";
 import { CTA } from "@/sections/CTA";
 
@@ -10,14 +10,14 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <TrustBar />
       <Services />
       <WhyUs />
       <BeforeAfter />
-      <Areas />
       <Testimonials />
       <CTA
-        title="Let's talk about your property"
-        description="Whether you need year-round commercial care or a new backyard patio, we're here to help. Get a free quote today."
+        title="Get your free quote today"
+        description="Whether you need year-round commercial care or a new backyard patio, we respond within 4 hours. Limited spring availability remaining."
       />
 
       {/* LocalBusiness Schema */}

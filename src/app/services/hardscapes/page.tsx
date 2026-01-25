@@ -137,7 +137,7 @@ export default function HardscapesPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Schedule a Consultation
+                Get a Free Quote
               </Button>
               <a
                 href="tel:+15135550123"
@@ -337,8 +337,8 @@ export default function HardscapesPage() {
       </section>
 
       <CTA
-        title="Let's design your outdoor space"
-        description="Schedule a free consultation to discuss your project. We'll meet at your property and start turning your vision into a plan."
+        title="Ready to transform your backyard?"
+        description="Get a free quote for your hardscape project. We'll meet at your property and discuss design options, materials, and pricing."
       />
 
       {/* Service Schema */}

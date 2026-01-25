@@ -125,7 +125,7 @@ export default function CommercialGroundsPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Request a Proposal
+                Get a Free Quote
               </Button>
               <a
                 href="tel:+15135550123"
@@ -241,7 +241,7 @@ export default function CommercialGroundsPage() {
                 no surprise bills.
               </p>
               <div className="mt-8">
-                <Button href="/contact">Request a Proposal</Button>
+                <Button href="/contact">Get a Free Quote</Button>
               </div>
             </div>
             <div>
@@ -316,8 +316,8 @@ export default function CommercialGroundsPage() {
       </section>
 
       <CTA
-        title="Let's discuss your property"
-        description="Get a customized proposal for your commercial grounds. We'll walk your property and build a plan that fits your needs and budget."
+        title="Get your commercial grounds quote"
+        description="We'll walk your property and build a customized plan that fits your needs and budget. Response within 4 hours."
       />
 
       {/* Service Schema */}
