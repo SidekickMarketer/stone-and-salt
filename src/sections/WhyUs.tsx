@@ -64,7 +64,7 @@ export function WhyUs() {
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-white">
+    <section className="py-20 lg:py-28 bg-eucalyptus/15">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -85,7 +85,7 @@ export function WhyUs() {
             </p>
 
             {/* Stat callout */}
-            <div className="mt-8 p-6 bg-eucalyptus/10 rounded-xl">
+            <div className="mt-8 p-6 bg-white rounded-xl shadow-sm border border-eucalyptus/20">
               <div className="flex items-center gap-4">
                 <div className="flex-shrink-0">
                   <span className="text-4xl font-bold text-sun-ochre">4hr</span>
@@ -105,9 +105,9 @@ export function WhyUs() {
             {reasons.map((reason) => (
               <div
                 key={reason.title}
-                className="p-5 rounded-xl bg-soft-cream hover:bg-eucalyptus/10 transition-colors"
+                className="p-5 rounded-xl bg-white shadow-sm border border-eucalyptus/10 hover:border-eucalyptus/30 hover:shadow-md transition-all"
               >
-                <div className="w-10 h-10 rounded-lg bg-sun-ochre/10 flex items-center justify-center text-sun-ochre mb-4">
+                <div className="w-10 h-10 rounded-lg bg-eucalyptus/20 flex items-center justify-center text-eucalyptus mb-4">
                   {reason.icon}
                 </div>
                 <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate">

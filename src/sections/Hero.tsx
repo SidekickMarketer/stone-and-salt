@@ -84,12 +84,14 @@ export function Hero() {
               />
             </div>
             {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 max-w-xs">
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 max-w-xs border-l-4 border-eucalyptus">
               <p className="text-sun-ochre font-semibold text-lg">Four seasons. One call.</p>
               <p className="text-slate/70 text-sm mt-1">
                 Stop coordinating multiple vendors. We handle it all.
               </p>
             </div>
+            {/* Decorative accent */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-eucalyptus/30 rounded-full blur-2xl"></div>
           </div>
         </div>
       </div>

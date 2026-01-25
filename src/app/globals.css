@@ -3,9 +3,12 @@
 /* Stone & Salt Brand Colors */
 :root {
   --slate: #2A2A2A;
-  --eucalyptus: #B3C3AD;
+  --eucalyptus: #8FA685;
+  --eucalyptus-light: #B3C3AD;
   --sun-ochre: #D5A056;
-  --soft-cream: #F6F4F1;
+  --sun-ochre-bright: #E8B35A;
+  --soft-cream: #F8F6F2;
+  --warm-stone: #E8E4DD;
 
   --background: var(--soft-cream);
   --foreground: var(--slate);
@@ -17,8 +20,11 @@
   --color-foreground: var(--foreground);
   --color-slate: var(--slate);
   --color-eucalyptus: var(--eucalyptus);
+  --color-eucalyptus-light: var(--eucalyptus-light);
   --color-sun-ochre: var(--sun-ochre);
+  --color-sun-ochre-bright: var(--sun-ochre-bright);
   --color-soft-cream: var(--soft-cream);
+  --color-warm-stone: var(--warm-stone);
 
   /* Fonts */
   --font-sans: var(--font-open-sans), system-ui, sans-serif;
