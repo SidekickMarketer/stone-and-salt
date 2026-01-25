@@ -30,8 +30,8 @@ export function Hero() {
               </p>
             </Animate>
             <Animate delay={100}>
-              <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                Professional outdoor spaces.
+              <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+                <span className="text-white block">Professional outdoor spaces.</span>
                 <span className="block text-gradient mt-2">Built right the first time.</span>
               </h1>
             </Animate>
