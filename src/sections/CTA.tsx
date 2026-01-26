@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Animate } from "@/components/Animate";
 
@@ -87,14 +88,12 @@ export function CTA({
 
           <Animate delay={200}>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <Button
+              <Link
                 href="/contact"
-                variant="secondary"
-                size="lg"
-                className="bg-white text-sun-ochre hover:bg-white/90 shadow-lg"
+                className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-md bg-white text-sun-ochre hover:bg-white/90 shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/50"
               >
                 Get a Free Quote
-              </Button>
+              </Link>
               <a
                 href="tel:+15135550123"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 min-h-[52px] text-white font-semibold border-2 border-white rounded-md hover:bg-white hover:text-sun-ochre transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
