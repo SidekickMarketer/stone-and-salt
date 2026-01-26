@@ -1,98 +1,81 @@
 import { FadeIn } from "@/components/FadeIn";
 
-/*
- * ============================================================
- * TODO: REPLACE WITH REAL TESTIMONIALS
- * ============================================================
- * These are placeholder testimonials. Replace with real client feedback.
- * 
- * For each testimonial you need:
- * - quote: Their actual words (ask: "What would you tell someone considering us?")
- * - author: Full name (get permission to use)
- * - company: Their title/company or "Homeowner, [City]"
- * 
- * Best practice: Email past clients and ask for a quick review.
- * Even 3 genuine testimonials beats 10 fake ones.
- * ============================================================
- */
-const testimonials = [
+const promises = [
   {
-    quote:
-      "Finally found a landscaping company that actually shows up when they say they will. Our property looks better than ever, and I don't have to chase anyone down.",
-    author: "Sarah Mitchell", // TODO: Replace with real client name
-    company: "Property Manager, Anthem Blue Ash", // TODO: Replace with real company
-    type: "commercial",
+    title: "4-Hour Response Guarantee",
+    description:
+      "When you reach out, you'll hear back within 4 hours during business hours. No waiting days for a callback. Your time matters.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
   },
   {
-    quote:
-      "The patio they built exceeded our expectations. Professional from start to finish, and the crew cleaned up every day. We use it constantly now.",
-    author: "Mike & Jennifer Thompson", // TODO: Replace with real client name
-    company: "Homeowners, Mason", // TODO: Replace with real location
-    type: "residential",
+    title: "Clear, Upfront Pricing",
+    description:
+      "No surprises, no hidden fees. You'll know exactly what your project costs before we start. The quote is the price.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
   },
   {
-    quote:
-      "Having one vendor for landscaping and snow removal has simplified everything. No more scrambling in October to find a plow guy. Highly recommend.",
-    author: "David Reynolds", // TODO: Replace with real client name
-    company: "HOA President, Reserves at Liberty Township", // TODO: Replace with real HOA
-    type: "commercial",
+    title: "Done Right or We Fix It Free",
+    description:
+      "If something isn't right, we'll make it right at no extra cost. Our reputation depends on your satisfaction.",
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    ),
   },
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-16 lg:py-24 bg-warm-stone">
+    <section className="py-16 lg:py-24 bg-soft-cream">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
         {/* Header */}
         <FadeIn>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
-              Client Feedback
+              Our Commitment
             </p>
             <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-              What Our Clients Say
+              What We Promise
             </h2>
             <p className="mt-4 text-lg text-slate/70">
-              Our reputation is built on reliability, quality work, and treating every
-              property like our name depends on it — because it does.
+              We&apos;re a new company building our reputation one project at a time.
+              These aren&apos;t marketing claims — they&apos;re commitments we stand behind.
             </p>
           </div>
         </FadeIn>
 
-        {/* Testimonials Grid */}
+        {/* Promises Grid */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map((testimonial, index) => (
+          {promises.map((promise, index) => (
             <FadeIn key={index} delay={index * 150}>
               <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-card border border-slate/5 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 h-full flex flex-col">
-                {/* Stars */}
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className="w-5 h-5 text-sun-ochre"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+                {/* Icon */}
+                <div className="w-12 h-12 rounded-full bg-eucalyptus/10 flex items-center justify-center text-eucalyptus mb-4">
+                  {promise.icon}
                 </div>
 
-                {/* Quote */}
-                <blockquote className="text-slate/80 leading-relaxed flex-1">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
+                {/* Title */}
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-lg mb-3">
+                  {promise.title}
+                </h3>
 
-                {/* Author */}
-                <div className="mt-6 pt-6 border-t border-slate/10">
-                  <p className="font-semibold text-slate">{testimonial.author}</p>
-                  <p className="text-sm text-slate/60">{testimonial.company}</p>
-                </div>
+                {/* Description */}
+                <p className="text-slate/70 leading-relaxed flex-1">
+                  {promise.description}
+                </p>
               </div>
             </FadeIn>
           ))}
         </div>
-
       </div>
     </section>
   );

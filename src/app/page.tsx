@@ -5,6 +5,7 @@ import { WhyUs } from "@/sections/WhyUs";
 import { BeforeAfter } from "@/sections/BeforeAfter";
 import { Testimonials } from "@/sections/Testimonials";
 import { CTA } from "@/sections/CTA";
+import { BackToTop } from "@/components/BackToTop";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         title="Get your free quote today"
         description="Whether you need year-round commercial care or a new backyard patio, we respond within 4 hours. Limited spring availability remaining."
       />
+      <BackToTop />
 
       {/* LocalBusiness Schema */}
       <script

@@ -116,7 +116,7 @@ export function ChatWidget() {
         className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-300 ${
           isOpen
             ? "bg-slate text-white"
-            : "bg-eucalyptus text-white hover:bg-eucalyptus/90"
+            : "bg-sun-ochre text-white hover:bg-sun-ochre/90"
         }`}
         aria-label={isOpen ? "Close chat" : "Open chat"}
       >

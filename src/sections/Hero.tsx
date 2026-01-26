@@ -6,19 +6,16 @@ import { Animate } from "@/components/Animate";
 
 export function Hero() {
   return (
-    <section className="relative bg-slate overflow-hidden">
+    <section className="relative bg-soft-cream overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-[0.03]">
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232A2A2A' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
       </div>
-
-      {/* Subtle radial glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-eucalyptus/5 via-transparent to-sun-ochre/5" />
 
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-8 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -31,12 +28,14 @@ export function Hero() {
             </Animate>
             <Animate delay={100}>
               <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-white block">Professional outdoor spaces.</span>
-                <span className="block text-gradient mt-2">Built right the first time.</span>
+                <span className="text-slate block">Professional outdoor spaces.</span>
+                <span className="block text-gradient mt-2">
+                  <span className="headline-underline">Built right</span> the first time.
+                </span>
               </h1>
             </Animate>
             <Animate delay={200}>
-              <p className="mt-6 text-xl text-white/80 leading-relaxed max-w-xl">
+              <p className="mt-6 text-xl text-slate/70 leading-relaxed max-w-xl">
                 Landscaping, hardscapes, grounds maintenance, and snow removal — one reliable
                 team for every season. We show up when we say we will.
               </p>
@@ -47,11 +46,11 @@ export function Hero() {
                 <Button href="/contact" size="lg">
                   Get a Free Quote
                 </Button>
-                <Button 
-                  href="/services/commercial-grounds" 
-                  variant="outline" 
-                  size="lg" 
-                  className="border-white text-white hover:bg-white hover:text-slate focus-visible:outline-white"
+                <Button
+                  href="/services/commercial-grounds"
+                  variant="outline"
+                  size="lg"
+                  className="border-slate text-slate hover:bg-slate hover:text-white"
                 >
                   Commercial Services
                 </Button>
@@ -74,7 +73,7 @@ export function Hero() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="text-white/80 text-sm font-medium">{signal.label}</span>
+                    <span className="text-slate/70 text-sm font-medium">{signal.label}</span>
                   </div>
                 ))}
               </div>
@@ -102,10 +101,7 @@ export function Hero() {
                 Stop coordinating multiple vendors. We handle it all.
               </p>
             </div>
-            {/* Decorative accent */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 bg-eucalyptus/30 rounded-full blur-3xl"></div>
-            <div className="absolute -bottom-8 right-12 w-20 h-20 bg-sun-ochre/20 rounded-full blur-2xl"></div>
-          </Animate>
+            </Animate>
         </div>
       </div>
     </section>
