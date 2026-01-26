@@ -110,16 +110,16 @@ export default function CommercialGroundsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate py-20 lg:py-28">
+      <section className="bg-soft-cream py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
               Commercial Services
             </p>
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-slate leading-tight">
               Stop chasing your landscaping company.
             </h1>
-            <p className="mt-6 text-xl text-white/80 leading-relaxed">
+            <p className="mt-6 text-xl text-slate/70 leading-relaxed">
               One vendor. Consistent quality. Year-round reliability. Serving office parks, retail centers,
               and HOAs across Blue Ash, Mason, West Chester, and Greater Cincinnati.
             </p>
@@ -129,7 +129,7 @@ export default function CommercialGroundsPage() {
               </Button>
               <a
                 href="tel:+15135550123"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-white/80 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-slate/70 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path

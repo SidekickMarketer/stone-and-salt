@@ -39,13 +39,13 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate py-20 lg:py-28">
+      <section className="bg-soft-cream py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-2xl">
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-slate leading-tight">
               Let&apos;s talk about your property.
             </h1>
-            <p className="mt-6 text-xl text-white/80 leading-relaxed">
+            <p className="mt-6 text-xl text-slate/70 leading-relaxed">
               Tell us about your project or service needs. We respond within 4 hours during
               business hours.
             </p>

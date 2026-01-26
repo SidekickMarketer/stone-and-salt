@@ -12,7 +12,7 @@ interface CTAProps {
 export function CTA({
   variant = "primary",
   title = "Ready to get started?",
-  description = "Get a free, no-obligation quote for your property. We respond within 4 hours during business hours. Spring schedules are filling up.",
+  description = "Get a free, no-obligation quote for your property. We respond within 4 hours during business hours.",
 }: CTAProps) {
   if (variant === "secondary") {
     return (
@@ -114,7 +114,7 @@ export function CTA({
 
           <Animate delay={300}>
             <p className="mt-8 text-white/70 text-sm">
-              Free estimates • No obligation • Response within 4 hours • Limited spring availability
+              Free estimates • No obligation • Response within 4 hours
             </p>
           </Animate>
         </div>

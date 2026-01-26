@@ -41,13 +41,13 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate py-20 lg:py-28">
+      <section className="bg-soft-cream py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-slate leading-tight">
               Built different. On purpose.
             </h1>
-            <p className="mt-6 text-xl text-white/80 leading-relaxed">
+            <p className="mt-6 text-xl text-slate/70 leading-relaxed">
               Stone & Salt exists because too many property owners have been let down by
               landscaping companies that overpromise and underdeliver. We set out to build
               something better.
@@ -77,6 +77,11 @@ export default function AboutPage() {
                   Stone & Salt started with a commitment to do the basics right: show up when you
                   say you will, do quality work, and actually answer the phone. Not promises —
                   results. Not excuses — solutions.
+                </p>
+                <p>
+                  We&apos;re a new company, but our standards aren&apos;t. Every job we do builds our
+                  reputation — which means your project gets the attention it deserves, not just
+                  another slot in an overloaded schedule.
                 </p>
               </div>
             </div>

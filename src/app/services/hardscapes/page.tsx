@@ -108,7 +108,7 @@ const faqs = [
   {
     question: "When can I get on the schedule?",
     answer:
-      "Our schedule varies by season. Spring and fall are busiest. Contact us early if you have a specific timeline in mind — we book quality projects 6-8 weeks out during peak season.",
+      "Our schedule varies by season. Spring and fall tend to be busiest for hardscape work. Contact us early if you have a specific timeline in mind — we'll work with you to find the right timing for your project.",
   },
 ];
 
@@ -116,16 +116,16 @@ export default function HardscapesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate py-20 lg:py-28">
+      <section className="bg-soft-cream py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
-            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
               Hardscapes
             </p>
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-slate leading-tight">
               The patio you&apos;ve been putting off? Let&apos;s build it.
             </h1>
-            <p className="mt-6 text-xl text-white/80 leading-relaxed">
+            <p className="mt-6 text-xl text-slate/70 leading-relaxed">
               Patios, walkways, retaining walls, and outdoor living spaces designed and built with
               attention to detail. Quality materials, proper installation, results that last
               decades.
@@ -136,7 +136,7 @@ export default function HardscapesPage() {
               </Button>
               <a
                 href="tel:+15135550123"
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-white/80 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
+                className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-slate/70 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path
@@ -272,7 +272,7 @@ export default function HardscapesPage() {
 
       <CTA
         title="Ready to transform your outdoor space?"
-        description="Schedule a free consultation. We book quality projects 6-8 weeks out during peak season — spring spots are filling fast."
+        description="Schedule a free consultation. We'll walk your property, discuss your vision, and provide a detailed proposal."
       />
 
       {/* Service Schema */}
