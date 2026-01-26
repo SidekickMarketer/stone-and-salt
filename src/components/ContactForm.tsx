@@ -45,12 +45,18 @@ export function ContactForm() {
     setError("");
 
     try {
-      // In production, this would submit to an API endpoint
-      // For now, we'll simulate a successful submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Submit to Formspree
+      const response = await fetch("https://formspree.io/f/xkorbady", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formState),
+      });
 
-      // Log form data (replace with actual form submission)
-      console.log("Form submitted:", formState);
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
 
       // Track form submission in GA4
       if (typeof window !== "undefined" && typeof window.gtag === "function") {
