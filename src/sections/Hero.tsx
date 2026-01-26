@@ -29,8 +29,9 @@ export function Hero() {
             <Animate delay={100}>
               <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                 <span className="text-slate block">Professional outdoor spaces.</span>
-                <span className="block text-gradient mt-2">
-                  <span className="headline-underline">Built right</span> the first time.
+                <span className="block mt-2">
+                  <span className="text-sun-ochre headline-underline">Built right</span>
+                  <span className="text-gradient"> the first time.</span>
                 </span>
               </h1>
             </Animate>

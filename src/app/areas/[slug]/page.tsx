@@ -158,22 +158,22 @@ export default async function AreaPage({ params }: { params: PageParams }) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate py-20">
+      <section className="bg-soft-cream py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <Link
               href="/areas"
-              className="inline-flex items-center gap-2 text-eucalyptus hover:text-white transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-eucalyptus hover:text-sun-ochre transition-colors mb-6"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
               All Service Areas
             </Link>
-            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-white leading-tight">
+            <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-slate leading-tight">
               {area.name} Landscaping & Outdoor Services
             </h1>
-            <p className="mt-6 text-xl text-white/80 leading-relaxed">{area.description}</p>
+            <p className="mt-6 text-xl text-slate/70 leading-relaxed">{area.description}</p>
             <div className="mt-8">
               <Button href="/contact" size="lg">
                 Get a Free Quote
