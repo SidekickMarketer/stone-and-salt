@@ -52,6 +52,16 @@ export function ContactForm() {
       // Log form data (replace with actual form submission)
       console.log("Form submitted:", formState);
 
+      // Track form submission in GA4
+      if (typeof window !== "undefined" && typeof window.gtag === "function") {
+        window.gtag("event", "generate_lead", {
+          event_category: "Contact",
+          event_label: formState.service,
+          service_type: formState.service,
+          property_type: formState.propertyType,
+        });
+      }
+
       setIsSubmitted(true);
     } catch {
       setError("Something went wrong. Please try again or call us directly.");
