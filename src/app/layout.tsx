@@ -88,6 +88,16 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${openSans.variable} antialiased bg-soft-cream text-slate`}
       >
+        {/* Google Analytics 4 */}
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-SM66W3MPTS" strategy="afterInteractive" />
+        <Script id="ga4-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SM66W3MPTS');
+          `}
+        </Script>
         {/* Microsoft Clarity Analytics */}
         <Script id="clarity-script" strategy="afterInteractive">
           {`
