@@ -78,11 +78,6 @@ export default function AboutPage() {
                   say you will, do quality work, and actually answer the phone. Not promises —
                   results. Not excuses — solutions.
                 </p>
-                <p>
-                  We&apos;re a new company, but our standards aren&apos;t. Every job we do builds our
-                  reputation — which means your project gets the attention it deserves, not just
-                  another slot in an overloaded schedule.
-                </p>
               </div>
             </div>
             {/* TODO: REPLACE with real photo of your crew working on a project */}
