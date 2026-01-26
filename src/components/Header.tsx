@@ -4,6 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./Button";
 
+// Configure seasonal banner here - set to null to hide
+const SEASONAL_BANNER = {
+  message: "Early bird spring scheduling now open",
+  shortMessage: "Spring scheduling open",
+  ctaText: "Book now & save →",
+  ctaLink: "/contact",
+};
+
 const navigation = [
   {
     name: "Services",
@@ -23,18 +31,30 @@ const navigation = [
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [bannerDismissed, setBannerDismissed] = useState(false);
 
   return (
     <>
-      {/* Seasonal Banner */}
-      <div className="bg-slate text-white py-2 px-4 text-center text-sm">
-        <span className="hidden sm:inline font-medium">Early bird spring scheduling now open</span>
-        <span className="sm:hidden font-medium">Spring scheduling open</span>
-        <span className="mx-2 text-white/40">|</span>
-        <a href="/contact" className="text-sun-ochre hover:text-sun-ochre/80 font-medium">
-          Book now & save →
-        </a>
-      </div>
+      {/* Seasonal Banner - Dismissible */}
+      {SEASONAL_BANNER && !bannerDismissed && (
+        <div className="bg-slate text-white py-2 px-4 text-center text-sm relative">
+          <span className="hidden sm:inline font-medium">{SEASONAL_BANNER.message}</span>
+          <span className="sm:hidden font-medium">{SEASONAL_BANNER.shortMessage}</span>
+          <span className="mx-2 text-white/40">|</span>
+          <a href={SEASONAL_BANNER.ctaLink} className="text-sun-ochre hover:text-sun-ochre/80 font-medium">
+            {SEASONAL_BANNER.ctaText}
+          </a>
+          <button
+            onClick={() => setBannerDismissed(true)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-white/60 hover:text-white transition-colors"
+            aria-label="Dismiss banner"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      )}
 
       <header className="sticky top-0 z-50 bg-soft-cream/95 backdrop-blur-sm border-b border-slate/10">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
@@ -182,10 +202,10 @@ export function Header() {
       </nav>
     </header>
 
-    {/* Sticky Mobile Call Button */}
+    {/* Sticky Mobile Call Button - positioned left to not conflict with chat widget */}
     <a
       href="tel:+15135550123"
-      className="lg:hidden fixed bottom-6 right-6 z-50 bg-sun-ochre text-white p-4 rounded-full shadow-lg hover:bg-sun-ochre/90 transition-colors"
+      className="lg:hidden fixed bottom-6 left-6 z-50 bg-sun-ochre text-white p-4 rounded-full shadow-lg hover:bg-sun-ochre/90 transition-colors"
       aria-label="Call us"
     >
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

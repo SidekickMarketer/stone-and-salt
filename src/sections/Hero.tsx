@@ -95,8 +95,8 @@ export function Hero() {
                 priority
               />
             </div>
-            {/* Floating card with animation */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-eucalyptus animate-float">
+            {/* Floating card - static for professional feel */}
+            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-eucalyptus">
               <p className="text-gradient font-semibold text-lg">Four seasons. One call.</p>
               <p className="text-slate/70 text-sm mt-1">
                 Stop coordinating multiple vendors. We handle it all.

@@ -75,8 +75,8 @@ export function WhyUs() {
               <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
                 Why Stone & Salt
               </p>
-              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-                Reliability you can count on.
+              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold">
+                <span className="text-slate block">Reliability you can count on.</span>
                 <span className="block text-slate/70 mt-1">Every season.</span>
               </h2>
               <p className="mt-6 text-lg text-slate/70 leading-relaxed">
@@ -124,11 +124,11 @@ export function WhyUs() {
             </div>
           </FadeIn>
 
-          {/* Reasons Grid */}
+          {/* Reasons Grid - Show 3 on mobile, all 6 on larger screens */}
           <div className="grid sm:grid-cols-2 gap-4 lg:gap-6">
             {reasons.map((reason, index) => (
               <FadeIn key={reason.title} delay={index * 100}>
-                <div className="p-5 lg:p-6 rounded-xl bg-white shadow-card border border-eucalyptus/10 hover:border-eucalyptus/30 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 h-full">
+                <div className={`p-5 lg:p-6 rounded-xl bg-white shadow-card border border-eucalyptus/10 hover:border-eucalyptus/30 hover:shadow-card-hover transition-colors duration-300 h-full ${index >= 3 ? 'hidden sm:block' : ''}`}>
                   <div className="w-10 h-10 rounded-lg bg-eucalyptus/20 flex items-center justify-center text-eucalyptus mb-4">
                     {reason.icon}
                   </div>
