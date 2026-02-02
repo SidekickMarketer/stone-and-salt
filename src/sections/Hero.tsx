@@ -23,29 +23,29 @@ export function Hero() {
           <div>
             <Animate delay={0}>
               <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
-                Greater Cincinnati&apos;s Year-Round Outdoor Partner
+                Commercial Snow &amp; Grounds | Greater Cincinnati
               </p>
             </Animate>
             <Animate delay={100}>
               <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-slate block">Professional outdoor spaces.</span>
+                <span className="text-slate block">Your property cleared.</span>
                 <span className="block mt-2">
-                  <span className="text-sun-ochre headline-underline">Built right</span>
-                  <span className="text-gradient"> the first time.</span>
+                  <span className="text-sun-ochre headline-underline">Your grounds</span>
+                  <span className="text-gradient"> maintained.</span>
                 </span>
               </h1>
             </Animate>
             <Animate delay={200}>
               <p className="mt-6 text-xl text-slate/70 leading-relaxed max-w-xl">
-                Landscaping, hardscapes, grounds maintenance, and snow removal — one reliable
-                team for every season. We show up when we say we will.
+                Commercial snow removal and grounds maintenance for property managers
+                who need reliability. One vendor, year-round.
               </p>
             </Animate>
 
             <Animate delay={300}>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button href="/contact" size="lg">
-                  Get a Free Quote
+                <Button href="/snow-emergency" size="lg">
+                  Need Snow Service?
                 </Button>
                 <Button
                   href="/services/commercial-grounds"
@@ -53,7 +53,7 @@ export function Hero() {
                   size="lg"
                   className="border-slate text-slate hover:bg-slate hover:text-white"
                 >
-                  Commercial Services
+                  Commercial Grounds
                 </Button>
               </div>
             </Animate>
@@ -97,9 +97,9 @@ export function Hero() {
             </div>
             {/* Floating card - static for professional feel */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-eucalyptus">
-              <p className="text-gradient font-semibold text-lg">Four seasons. One call.</p>
+              <p className="text-gradient font-semibold text-lg">Snow now. Grounds in spring.</p>
               <p className="text-slate/70 text-sm mt-1">
-                Stop coordinating multiple vendors. We handle it all.
+                One vendor for your property, year-round.
               </p>
             </div>
             </Animate>

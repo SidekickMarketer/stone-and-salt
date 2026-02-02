@@ -37,11 +37,11 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
-              Greater Cincinnati&apos;s year-round outdoor partner. Professional landscaping,
-              hardscapes, and snow removal.
+              Commercial snow removal and grounds maintenance for Greater Cincinnati
+              property managers.
             </p>
             <p className="mt-4 text-lg font-semibold text-eucalyptus">
-              Four seasons. One call.
+              One vendor. Year-round.
             </p>
             <div className="mt-6">
               <a
