@@ -21,20 +21,20 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://stoneandsaltohio.com"),
   title: {
-    default: "Stone & Salt | Greater Cincinnati Landscaping, Hardscapes & Snow Removal",
+    default: "Stone & Salt | Commercial Snow Removal & Grounds | Cincinnati",
     template: "%s | Stone & Salt",
   },
   description:
-    "Year-round outdoor services for Greater Cincinnati. Professional landscaping, hardscape installation, grounds maintenance, and snow removal. Four seasons. One call.",
+    "Commercial snow removal and grounds maintenance for Greater Cincinnati property managers. 24/7 snow service, year-round grounds care. One vendor.",
   keywords: [
-    "landscaping Cincinnati",
-    "hardscape installation Cincinnati",
-    "snow removal Cincinnati",
-    "commercial landscaping Ohio",
-    "patio installation Cincinnati",
-    "landscape design Mason Ohio",
-    "grounds maintenance West Chester",
-    "Liberty Township landscaping",
+    "commercial snow removal Cincinnati",
+    "snow plowing Cincinnati",
+    "commercial grounds maintenance Ohio",
+    "property management snow removal",
+    "snow removal West Chester",
+    "commercial landscaping Mason Ohio",
+    "grounds maintenance Liberty Township",
+    "parking lot snow removal Cincinnati",
   ],
   authors: [{ name: "Stone & Salt" }],
   creator: "Stone & Salt",
@@ -43,22 +43,22 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://stoneandsaltohio.com",
     siteName: "Stone & Salt",
-    title: "Stone & Salt | Greater Cincinnati Landscaping, Hardscapes & Snow Removal",
+    title: "Stone & Salt | Commercial Snow Removal & Grounds | Cincinnati",
     description:
-      "Year-round outdoor services for Greater Cincinnati. Professional landscaping, hardscape installation, grounds maintenance, and snow removal.",
+      "Commercial snow removal and grounds maintenance for Greater Cincinnati property managers. One vendor, year-round.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Stone & Salt - Greater Cincinnati Landscaping",
+        alt: "Stone & Salt - Commercial Snow & Grounds Cincinnati",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stone & Salt | Greater Cincinnati Landscaping",
-    description: "Year-round outdoor services. Four seasons. One call.",
+    title: "Stone & Salt | Commercial Snow & Grounds",
+    description: "Commercial snow removal and grounds maintenance. One vendor, year-round.",
     images: ["/og-image.jpg"],
   },
   robots: {

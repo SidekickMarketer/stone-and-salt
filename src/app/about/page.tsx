@@ -6,11 +6,11 @@ import { CTA } from "@/sections/CTA";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Stone & Salt is Greater Cincinnati's year-round outdoor partner. Based in Liberty Township, we deliver professional landscaping, hardscapes, and snow removal with reliability you can count on.",
+    "Stone & Salt provides commercial snow removal and grounds maintenance in Greater Cincinnati. Based in Liberty Township, we deliver reliability property managers can count on.",
   openGraph: {
     title: "About Stone & Salt",
     description:
-      "Greater Cincinnati's year-round outdoor partner. Professional landscaping, hardscapes, and snow removal.",
+      "Commercial snow removal and grounds maintenance for Greater Cincinnati property managers.",
   },
 };
 

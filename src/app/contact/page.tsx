@@ -4,11 +4,11 @@ import { ContactForm } from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact Us | Get a Quote",
   description:
-    "Contact Stone & Salt for a free quote on landscaping, hardscapes, or snow removal in Greater Cincinnati. We respond within 4 hours during business hours.",
+    "Contact Stone & Salt for commercial snow removal or grounds maintenance in Greater Cincinnati. We respond within 4 hours during business hours.",
   openGraph: {
     title: "Contact Stone & Salt",
     description:
-      "Get a free quote on landscaping, hardscapes, or snow removal in Greater Cincinnati.",
+      "Get a quote on commercial snow removal or grounds maintenance in Greater Cincinnati.",
   },
 };
 
