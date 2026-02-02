@@ -1,20 +1,17 @@
 import Link from "next/link";
 
 const services = [
-  { name: "Commercial Grounds", href: "/services/commercial-grounds" },
-  { name: "Estate & Acreage", href: "/services/estate-maintenance" },
   { name: "Snow & Ice Removal", href: "/services/snow-removal" },
-  { name: "Residential Hardscapes", href: "/services/hardscapes" },
-  { name: "Lawn & Maintenance", href: "/services/maintenance" },
+  { name: "Commercial Grounds", href: "/services/commercial-grounds" },
 ];
 
 const areas = [
-  { name: "Liberty Township", href: "/areas/liberty-township" },
-  { name: "Mason", href: "/areas/mason" },
-  { name: "West Chester", href: "/areas/west-chester" },
-  { name: "Blue Ash", href: "/areas/blue-ash" },
-  { name: "Indian Hill", href: "/areas/indian-hill" },
-  { name: "View All Areas", href: "/areas" },
+  "Liberty Township",
+  "Mason",
+  "West Chester",
+  "Blue Ash",
+  "Indian Hill",
+  "& surrounding areas",
 ];
 
 const company = [
@@ -85,15 +82,10 @@ export function Footer() {
             <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-white mb-4">
               Service Areas
             </h3>
-            <ul className="space-y-3">
-              {areas.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-white/70 hover:text-white transition-colors"
-                  >
-                    {item.name}
-                  </Link>
+            <ul className="space-y-2">
+              {areas.map((area) => (
+                <li key={area} className="text-sm text-white/70">
+                  {area}
                 </li>
               ))}
             </ul>
