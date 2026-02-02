@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+/* Stone & Salt Brand Colors */
+:root {
+  --slate: #2A2A2A;
+  --eucalyptus: #8FA685;
+  --eucalyptus-light: #B3C3AD;
+  --sun-ochre: #D5A056;
+  --sun-ochre-bright: #E8B35A;
+  --soft-cream: #F8F6F2;
+  --warm-stone: #E8E4DD;
+
+  --background: var(--soft-cream);
+  --foreground: var(--slate);
+}
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-slate: var(--slate);
+  --color-eucalyptus: var(--eucalyptus);
+  --color-eucalyptus-light: var(--eucalyptus-light);
+  --color-sun-ochre: var(--sun-ochre);
+  --color-sun-ochre-bright: var(--sun-ochre-bright);
+  --color-soft-cream: var(--soft-cream);
+  --color-warm-stone: var(--warm-stone);
+
+  /* Fonts */
+  --font-sans: var(--font-open-sans), system-ui, sans-serif;
+  --font-heading: var(--font-montserrat), system-ui, sans-serif;
+}
+
+/* Base styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--slate);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--sun-ochre);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background: var(--eucalyptus);
+  color: var(--slate);
+}
+
+/* Subtle image hover zoom */
+.group:hover img {
+  transform: scale(1.02);
+}
+
+/* Soften transitions globally */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== SHADOWS ===== */
+/* Refined shadow scale - warm, layered, premium feel */
+.shadow-warm {
+  box-shadow: 0 4px 20px -2px rgba(42, 42, 42, 0.08);
+}
+
+.shadow-card {
+  box-shadow: 
+    0 1px 2px rgba(42, 42, 42, 0.04),
+    0 4px 12px rgba(42, 42, 42, 0.06);
+}
+
+.shadow-card-hover {
+  box-shadow: 
+    0 4px 8px rgba(42, 42, 42, 0.06),
+    0 16px 40px rgba(42, 42, 42, 0.12);
+}
+
+.shadow-glow {
+  box-shadow: 
+    0 0 40px rgba(213, 160, 86, 0.15),
+    0 0 80px rgba(213, 160, 86, 0.1);
+}
+
+/* ===== TYPOGRAPHY POLISH ===== */
+/* Tighter tracking on large headings for editorial feel */
+h1 {
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  letter-spacing: -0.01em;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, var(--sun-ochre) 0%, var(--sun-ochre-bright) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-eucalyptus {
+  background: linear-gradient(135deg, var(--eucalyptus) 0%, var(--eucalyptus-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== LINK ANIMATIONS ===== */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--sun-ochre);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ===== CARD INTERACTIONS ===== */
+.card-hover {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+}
+
+/* ===== BACKGROUND PATTERNS ===== */
+.bg-noise {
+  position: relative;
+}
+
+.bg-noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(42, 42, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 42, 42, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* ===== FLOATING ANIMATION ===== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ===== GLOW EFFECTS ===== */
+.glow-ochre {
+  position: relative;
+}
+
+.glow-ochre::before {
+  content: '';
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at center, rgba(213, 160, 86, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ===== IMAGE POLISH ===== */
+.img-hover {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-hover:hover {
+  transform: scale(1.03);
+  filter: brightness(1.05);
+}
+
+/* ===== HEADLINE UNDERLINE EFFECT ===== */
+.headline-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.headline-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0.1em;
+  left: 0;
+  width: 100%;
+  height: 0.2em;
+  background: var(--sun-ochre);
+  opacity: 0.3;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: underline-reveal 0.6s ease-out 0.8s forwards;
+}
+
+@keyframes underline-reveal {
+  to { transform: scaleX(1); }
+}

@@ -96,6 +96,24 @@ const areas: Record<
     zipCodes: ["45242"],
     neighborhoods: ["Downtown Montgomery", "Montgomery Woods"],
   },
+  "oxford": {
+    name: "Oxford",
+    description: "Home to Miami University and beautiful rural estates. Specializing in large property maintenance.",
+    longDescription:
+      "Oxford offers a unique mix of college-town charm and sprawling rural properties. Beyond the Miami University campus, the area features numerous large estates owned by faculty, professionals, and longtime residents. Many of these 10-30+ acre properties need professional maintenance that goes beyond what typical lawn services can handle. We specialize in estate and acreage maintenance for Oxford's larger properties.",
+    zone: "growth",
+    zipCodes: ["45056"],
+    neighborhoods: ["Miami University area", "Talawanda", "Rural Butler County"],
+  },
+  "waynesville": {
+    name: "Waynesville",
+    description: "Antique capital of the Midwest with beautiful rural estates. Estate and farm property maintenance.",
+    longDescription:
+      "Waynesville and the surrounding area between Cincinnati and Dayton features some of the region's most beautiful rural properties. Horse farms, large estates, and rural residential properties dot the landscape. These properties require professional maintenance with commercial-grade equipment — not a riding mower from the hardware store. We provide estate mowing, seasonal maintenance, and snow removal for Waynesville's larger properties.",
+    zone: "growth",
+    zipCodes: ["45068"],
+    neighborhoods: ["Waynesville", "Oregonia", "Corwin", "Rural Warren County"],
+  },
 };
 
 type PageParams = Promise<{ slug: string }>;
