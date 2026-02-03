@@ -237,3 +237,47 @@ h3 {
 @keyframes underline-reveal {
   to { transform: scaleX(1); }
 }
+
+/* ===== GLASSMORPHISM ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-dark {
+  background: rgba(42, 42, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== SECTION GRADIENTS ===== */
+/* Subtle warm gradient - cream to slightly warmer */
+.bg-gradient-warm {
+  background: linear-gradient(180deg, var(--soft-cream) 0%, var(--warm-stone) 100%);
+}
+
+/* Subtle cool gradient - with eucalyptus hint */
+.bg-gradient-cool {
+  background: linear-gradient(180deg, var(--soft-cream) 0%, rgba(143, 166, 133, 0.08) 100%);
+}
+
+/* Radial glow behind content */
+.bg-glow-center {
+  position: relative;
+}
+
+.bg-glow-center::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(213, 160, 86, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}

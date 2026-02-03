@@ -19,9 +19,9 @@ const faqs = [
       "We respond to all inquiries within 4 hours during business hours (Mon-Fri 7am-6pm, Sat 8am-2pm). If you reach out on a weekend evening or holiday, you'll hear from us first thing the next business day.",
   },
   {
-    question: "Do you provide free estimates?",
+    question: "How do consultations work?",
     answer:
-      "Yes. We provide free, no-obligation estimates for all services. For larger projects, we'll schedule a site visit to properly assess your needs before quoting.",
+      "We provide complimentary consultations for all commercial services. For larger projects, we'll schedule a site visit to properly assess your needs and provide an accurate quote.",
   },
   {
     question: "What areas do you serve?",
@@ -61,7 +61,7 @@ export default function ContactPage() {
             <div>
               <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-card">
                 <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate mb-6">
-                  Get a Free Quote
+                  Request a Consultation
                 </h2>
                 <ContactForm />
               </div>

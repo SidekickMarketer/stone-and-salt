@@ -64,7 +64,7 @@ export function Hero() {
                 {[
                   { label: "Licensed & Insured" },
                   { label: "Year-Round Service" },
-                  { label: "Free Estimates" },
+                  { label: "4-Hour Response" },
                 ].map((signal) => (
                   <div key={signal.label} className="flex items-center gap-2 min-h-[44px]">
                     <svg className="h-5 w-5 text-eucalyptus flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
@@ -95,8 +95,8 @@ export function Hero() {
                 priority
               />
             </div>
-            {/* Floating card - static for professional feel */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-eucalyptus">
+            {/* Floating card - glassmorphism for premium feel */}
+            <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-md rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-eucalyptus">
               <p className="text-gradient font-semibold text-lg">Snow now. Grounds in spring.</p>
               <p className="text-slate/70 text-sm mt-1">
                 One vendor for your property, year-round.

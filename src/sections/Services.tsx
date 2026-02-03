@@ -30,7 +30,7 @@ const services = [
 
 export function Services() {
   return (
-    <section className="py-16 lg:py-24 bg-soft-cream">
+    <section className="py-16 lg:py-24 bg-gradient-cool">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
         {/* Header */}
         <FadeIn>

@@ -66,7 +66,7 @@ export function WhyUs() {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-eucalyptus/15">
+    <section className="py-16 lg:py-24 bg-gradient-to-b from-eucalyptus/10 to-eucalyptus/20">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
@@ -94,7 +94,7 @@ export function WhyUs() {
                 Save as /public/images/kyle-headshot.jpg (at least 200x200px)
                 Then uncomment the Image component and delete the SVG placeholder.
               */}
-              <div className="mt-8 p-6 bg-white rounded-xl shadow-card border border-eucalyptus/20">
+              <div className="mt-8 p-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-card border border-eucalyptus/20">
                 <div className="flex items-start gap-4">
                   {/* TODO: Replace this placeholder with real headshot:
                   <Image
