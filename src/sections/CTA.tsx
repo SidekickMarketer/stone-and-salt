@@ -32,7 +32,7 @@ export function CTA({
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/contact" size="lg">
-                  Get Started
+                  Request a Quote
                 </Button>
                 <a
                   href="tel:+15135550123"
@@ -92,7 +92,7 @@ export function CTA({
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-md bg-white text-sun-ochre hover:bg-white/90 shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/50"
               >
-                Get Started
+                Request a Quote
               </Link>
               <a
                 href="tel:+15135550123"
