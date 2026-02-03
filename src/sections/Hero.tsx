@@ -82,14 +82,14 @@ export function Hero() {
           </div>
 
           {/* Image/Visual */}
-          {/* TODO: REPLACE hero-firepit.jpg with a real photo of YOUR best project */}
-          {/* Ideal: A stunning patio, fire pit, or hardscape you actually built */}
+          {/* TODO: REPLACE hero-firepit.jpg with a photo of YOUR snow removal work */}
+          {/* Ideal: Commercial parking lot being plowed, or a cleared property */}
           {/* Size: At least 1200px wide, landscape orientation */}
           <Animate delay={200} className="relative">
             <div className="aspect-[4/3] rounded-2xl bg-eucalyptus/20 overflow-hidden relative group">
               <Image
                 src="/images/hero-firepit.jpg"
-                alt="Outdoor fire pit with stone seating area"
+                alt="Professional commercial snow and grounds maintenance services"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority

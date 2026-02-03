@@ -17,8 +17,8 @@ export default function Home() {
       <BeforeAfter />
       <Testimonials />
       <CTA
-        title="Get your free quote today"
-        description="Whether you need year-round commercial care or a new backyard patio, we respond within 4 hours."
+        title="Ready to get started?"
+        description="Whether you need commercial snow service or year-round grounds care, we respond within 4 hours."
       />
       <BackToTop />
 
