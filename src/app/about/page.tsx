@@ -185,34 +185,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Licensed & Insured */}
-      <section className="py-12 lg:py-16 bg-eucalyptus/10">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl">
-                Licensed & Insured
-              </h3>
-              <p className="mt-2 text-slate/70">
-                Fully licensed in Ohio with comprehensive liability coverage. We carry the
-                credentials your property requires.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <div className="px-4 py-3 min-h-[44px] bg-white rounded-lg text-sm font-medium text-slate flex items-center">
-                Ohio Nursery Stock License
-              </div>
-              <div className="px-4 py-3 min-h-[44px] bg-white rounded-lg text-sm font-medium text-slate flex items-center">
-                Commercial Pesticide Applicator
-              </div>
-              <div className="px-4 py-3 min-h-[44px] bg-white rounded-lg text-sm font-medium text-slate flex items-center">
-                $2M General Liability
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <CTA
         title="Let's work together"
         description="Ready to experience what reliable service actually looks like? Let's talk about your property."
