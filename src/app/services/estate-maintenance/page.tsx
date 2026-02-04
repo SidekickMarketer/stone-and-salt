@@ -69,22 +69,18 @@ const services = [
   {
     name: "Estate Mowing",
     description: "Large-capacity mowing for properties 10+ acres. Bi-weekly service April through October.",
-    price: "From $150/acre",
   },
   {
     name: "Seasonal Cleanup",
     description: "Spring debris removal, fall leaf management, and property preparation for each season.",
-    price: "Custom quote",
   },
   {
     name: "Fence Line & Edge Work",
     description: "Trimming and maintenance along fence lines, tree lines, and property boundaries.",
-    price: "Add-on service",
   },
   {
     name: "Snow Removal",
     description: "Winter driveway clearing for long private drives. Priority scheduling for estate clients.",
-    price: "From $150/hr",
   },
 ];
 
@@ -279,8 +275,7 @@ export default function EstateMowingPage() {
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-lg mb-2">
                   {service.name}
                 </h3>
-                <p className="text-sm text-slate/70 mb-4">{service.description}</p>
-                <p className="text-sun-ochre font-semibold">{service.price}</p>
+                <p className="text-sm text-slate/70">{service.description}</p>
               </div>
             ))}
           </div>

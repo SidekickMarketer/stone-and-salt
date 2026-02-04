@@ -80,7 +80,7 @@ const faqs = [
   {
     question: "Do you offer seasonal contracts or per-push pricing?",
     answer:
-      "Both. Commercial clients typically prefer seasonal contracts for budget predictability. Residential clients can choose seasonal ($550-$850) or per-push pricing. We'll recommend what makes sense for your situation.",
+      "Both. Commercial clients typically prefer seasonal contracts for budget predictability. Residential clients can choose seasonal or per-push pricing. We'll recommend what makes sense for your situation.",
   },
   {
     question: "What triggers a service visit?",
@@ -240,7 +240,7 @@ export default function SnowRemovalPage() {
                 ))}
               </ul>
               <p className="text-sm text-white/60 mb-4">
-                Seasonal contracts from $5,000 - $25,000 depending on lot size
+                Contact us for a custom quote based on your property
               </p>
               <Button href="/contact" className="w-full justify-center">
                 Request Commercial Quote
@@ -271,7 +271,7 @@ export default function SnowRemovalPage() {
                 ))}
               </ul>
               <p className="text-sm text-slate/60 mb-4">
-                Seasonal contracts from $550 - $850 for most residential properties
+                Seasonal and per-push options available
               </p>
               <Button href="/contact" variant="secondary" className="w-full justify-center">
                 Request Residential Quote

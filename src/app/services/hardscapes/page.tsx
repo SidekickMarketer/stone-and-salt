@@ -18,37 +18,31 @@ const services = [
     title: "Paver Patios",
     description:
       "Transform your backyard into a true outdoor living space. From simple entertaining areas to elaborate multi-level designs.",
-    priceRange: "$8,000 - $35,000+",
   },
   {
     title: "Walkways & Paths",
     description:
       "Connect your spaces with beautiful, functional walkways. From front entrance paths to garden trails.",
-    priceRange: "$2,500 - $12,000",
   },
   {
     title: "Retaining Walls",
     description:
       "Solve drainage issues and create usable space on sloped properties. Functional engineering meets aesthetic design.",
-    priceRange: "$5,000 - $25,000+",
   },
   {
     title: "Outdoor Kitchens",
     description:
       "Full outdoor cooking spaces with built-in grills, counters, and storage. Entertain in style.",
-    priceRange: "$15,000 - $50,000+",
   },
   {
     title: "Fire Pits & Fireplaces",
     description:
       "Extend your outdoor season with a custom fire feature. Wood-burning or gas options available.",
-    priceRange: "$3,500 - $20,000",
   },
   {
     title: "Driveways",
     description:
       "Make an impression from the street. Paver driveways that outperform and outlast traditional concrete.",
-    priceRange: "$15,000 - $40,000+",
   },
 ];
 
@@ -176,17 +170,10 @@ export default function HardscapesPage() {
                   {service.title}
                 </h3>
                 <p className="mt-3 text-slate/70">{service.description}</p>
-                <p className="mt-4 text-sm text-sun-ochre font-semibold">
-                  Typical range: {service.priceRange}
-                </p>
               </div>
             ))}
           </div>
 
-          <p className="mt-8 text-center text-slate/60 text-sm">
-            Price ranges are estimates based on typical projects. Final pricing depends on design
-            complexity, material selection, and site conditions.
-          </p>
         </div>
       </section>
 

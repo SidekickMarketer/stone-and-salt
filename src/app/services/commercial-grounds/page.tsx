@@ -82,7 +82,7 @@ const faqs = [
   {
     question: "How is commercial pricing structured?",
     answer:
-      "We provide annual contracts with predictable monthly billing. No surprise invoices. Your budget stays consistent, and service levels stay high. Contracts typically range from $12,000 to $60,000 annually depending on property size and service frequency.",
+      "We provide annual contracts with predictable monthly billing. No surprise invoices. Your budget stays consistent, and service levels stay high. Contact us for a custom quote based on your property size and service needs.",
   },
   {
     question: "Can you handle multiple properties?",

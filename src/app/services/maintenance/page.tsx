@@ -74,7 +74,6 @@ const packages = [
   {
     name: "Essential",
     description: "Basic lawn care for homeowners who want reliable service without extras",
-    price: "From $175/month",
     features: [
       "Weekly mowing & edging",
       "Blowing of hard surfaces",
@@ -86,7 +85,6 @@ const packages = [
   {
     name: "Complete",
     description: "Full-service maintenance for properties that demand attention to detail",
-    price: "From $325/month",
     features: [
       "Everything in Essential",
       "Mulch refresh (annual)",
@@ -99,7 +97,6 @@ const packages = [
   {
     name: "Premium",
     description: "White-glove service for discerning homeowners",
-    price: "From $500/month",
     features: [
       "Everything in Complete",
       "Fertilization program",
@@ -253,9 +250,6 @@ export default function MaintenancePage() {
                 <p className={`mt-2 text-sm ${pkg.popular ? "text-white/70" : "text-slate/70"}`}>
                   {pkg.description}
                 </p>
-                <p className={`mt-4 text-2xl font-bold ${pkg.popular ? "text-sun-ochre" : "text-slate"}`}>
-                  {pkg.price}
-                </p>
                 <ul className="mt-6 space-y-3">
                   {pkg.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
@@ -294,8 +288,7 @@ export default function MaintenancePage() {
           </div>
 
           <p className="mt-8 text-center text-slate/60 text-sm">
-            Prices shown are starting points for typical ¼-acre residential properties.
-            Actual pricing based on property size, complexity, and specific needs.
+            Pricing based on property size, complexity, and specific needs. Contact us for a custom quote.
           </p>
         </div>
       </section>
