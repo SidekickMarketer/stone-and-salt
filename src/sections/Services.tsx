@@ -3,6 +3,18 @@ import { FadeIn } from "@/components/FadeIn";
 
 const services = [
   {
+    title: "Commercial Grounds",
+    description:
+      "Consistent, professional care for corporate campuses, office parks, retail centers, and HOA common areas. One vendor, one invoice, year-round reliability.",
+    href: "/services/commercial-grounds",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+    features: ["Corporate Campuses", "Office Parks", "HOA Communities", "Retail Centers"],
+  },
+  {
     title: "Snow & Ice Removal",
     description:
       "24/7 response when winter hits. Documented service, professional equipment, and the reliability your property needs. Your lot cleared before you get there.",
@@ -15,16 +27,40 @@ const services = [
     features: ["24/7 Response", "Commercial & Residential", "Salt & Ice Management", "Documented Service"],
   },
   {
-    title: "Commercial Grounds",
+    title: "Residential Hardscapes",
     description:
-      "Consistent, professional care for corporate campuses, office parks, retail centers, and HOA common areas. One vendor, one invoice, year-round reliability.",
-    href: "/services/commercial-grounds",
+      "Patios, walkways, retaining walls, and outdoor living spaces. Expert design, quality materials, and results that last. Built right the first time.",
+    href: "/services/hardscapes",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
       </svg>
     ),
-    features: ["Corporate Campuses", "Office Parks", "HOA Communities", "Retail Centers"],
+    features: ["Paver Patios", "Retaining Walls", "Outdoor Kitchens", "Fire Pits"],
+  },
+  {
+    title: "Lawn & Maintenance",
+    description:
+      "Professional grounds care that maintains your property's curb appeal. Same crew, same standards, every visit. Your property gets treated like our name depends on it.",
+    href: "/services/maintenance",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+      </svg>
+    ),
+    features: ["Lawn Care", "Seasonal Cleanup", "Mulching & Beds", "Irrigation"],
+  },
+  {
+    title: "Estate & Acreage",
+    description:
+      "Large property maintenance for estates, farms, and rural homes. Commercial equipment for 10-30+ acre properties. Your land deserves more than a guy with a riding mower.",
+    href: "/services/estate-maintenance",
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+    ),
+    features: ["10+ Acre Properties", "Oxford & Waynesville", "Bi-Weekly Mowing", "Year-Round Care"],
   },
 ];
 

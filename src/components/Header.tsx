@@ -6,10 +6,10 @@ import { Button } from "./Button";
 
 // Configure seasonal banner here - set to null to hide
 const SEASONAL_BANNER = {
-  message: "Snow coming? We're ready. 24/7 commercial snow service.",
-  shortMessage: "24/7 snow service",
-  ctaText: "Get on the schedule →",
-  ctaLink: "/snow-emergency",
+  message: "Early bird spring scheduling now open",
+  shortMessage: "Spring scheduling open",
+  ctaText: "Book now & save →",
+  ctaLink: "/contact",
 };
 
 const navigation = [
@@ -17,10 +17,14 @@ const navigation = [
     name: "Services",
     href: "#",
     submenu: [
-      { name: "Snow & Ice Removal", href: "/services/snow-removal" },
       { name: "Commercial Grounds", href: "/services/commercial-grounds" },
+      { name: "Estate & Acreage", href: "/services/estate-maintenance" },
+      { name: "Snow & Ice Removal", href: "/services/snow-removal" },
+      { name: "Residential Hardscapes", href: "/services/hardscapes" },
+      { name: "Lawn & Maintenance", href: "/services/maintenance" },
     ],
   },
+  { name: "Areas We Serve", href: "/areas" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];

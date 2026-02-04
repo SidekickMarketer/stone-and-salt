@@ -1,17 +1,20 @@
 import Link from "next/link";
 
 const services = [
-  { name: "Snow & Ice Removal", href: "/services/snow-removal" },
   { name: "Commercial Grounds", href: "/services/commercial-grounds" },
+  { name: "Estate & Acreage", href: "/services/estate-maintenance" },
+  { name: "Snow & Ice Removal", href: "/services/snow-removal" },
+  { name: "Residential Hardscapes", href: "/services/hardscapes" },
+  { name: "Lawn & Maintenance", href: "/services/maintenance" },
 ];
 
 const areas = [
-  "Liberty Township",
-  "Mason",
-  "West Chester",
-  "Blue Ash",
-  "Indian Hill",
-  "& surrounding areas",
+  { name: "Liberty Township", href: "/areas/liberty-township" },
+  { name: "Mason", href: "/areas/mason" },
+  { name: "West Chester", href: "/areas/west-chester" },
+  { name: "Blue Ash", href: "/areas/blue-ash" },
+  { name: "Indian Hill", href: "/areas/indian-hill" },
+  { name: "View All Areas", href: "/areas" },
 ];
 
 const company = [
@@ -37,11 +40,11 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
-              Commercial snow removal and grounds maintenance for Greater Cincinnati
-              property managers.
+              Greater Cincinnati&apos;s year-round outdoor partner. Professional landscaping,
+              hardscapes, and snow removal.
             </p>
             <p className="mt-4 text-lg font-semibold text-eucalyptus">
-              One vendor. Year-round.
+              Four seasons. One call.
             </p>
             <div className="mt-6">
               <a
@@ -82,10 +85,15 @@ export function Footer() {
             <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-white mb-4">
               Service Areas
             </h3>
-            <ul className="space-y-2">
-              {areas.map((area) => (
-                <li key={area} className="text-sm text-white/70">
-                  {area}
+            <ul className="space-y-3">
+              {areas.map((item) => (
+                <li key={item.name}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-white/70 hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>

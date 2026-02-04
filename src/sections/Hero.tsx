@@ -23,29 +23,29 @@ export function Hero() {
           <div>
             <Animate delay={0}>
               <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
-                Commercial Snow &amp; Grounds | Greater Cincinnati
+                Greater Cincinnati&apos;s Year-Round Outdoor Partner
               </p>
             </Animate>
             <Animate delay={100}>
               <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-slate block">Your property cleared.</span>
+                <span className="text-slate block">Professional outdoor spaces.</span>
                 <span className="block mt-2">
-                  <span className="text-sun-ochre headline-underline">Your grounds</span>
-                  <span className="text-gradient"> maintained.</span>
+                  <span className="text-sun-ochre headline-underline">Built right</span>
+                  <span className="text-gradient"> the first time.</span>
                 </span>
               </h1>
             </Animate>
             <Animate delay={200}>
               <p className="mt-6 text-xl text-slate/70 leading-relaxed max-w-xl">
-                Commercial snow removal and grounds maintenance for property managers
-                who need reliability. One vendor, year-round.
+                Landscaping, hardscapes, grounds maintenance, and snow removal — one reliable
+                team for every season. We show up when we say we will.
               </p>
             </Animate>
 
             <Animate delay={300}>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button href="/snow-emergency" size="lg">
-                  Need Snow Service?
+                <Button href="/contact" size="lg">
+                  Request a Quote
                 </Button>
                 <Button
                   href="/services/commercial-grounds"
@@ -53,7 +53,7 @@ export function Hero() {
                   size="lg"
                   className="border-slate text-slate hover:bg-slate hover:text-white"
                 >
-                  Commercial Grounds
+                  Commercial Services
                 </Button>
               </div>
             </Animate>
@@ -82,14 +82,14 @@ export function Hero() {
           </div>
 
           {/* Image/Visual */}
-          {/* TODO: REPLACE hero-firepit.jpg with a photo of YOUR snow removal work */}
-          {/* Ideal: Commercial parking lot being plowed, or a cleared property */}
+          {/* TODO: REPLACE hero-firepit.jpg with a real photo of YOUR best project */}
+          {/* Ideal: A stunning patio, fire pit, or hardscape you actually built */}
           {/* Size: At least 1200px wide, landscape orientation */}
           <Animate delay={200} className="relative">
             <div className="aspect-[4/3] rounded-2xl bg-eucalyptus/20 overflow-hidden relative group">
               <Image
                 src="/images/hero-firepit.jpg"
-                alt="Professional commercial snow and grounds maintenance services"
+                alt="Outdoor fire pit with stone seating area"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
                 priority
@@ -97,9 +97,9 @@ export function Hero() {
             </div>
             {/* Floating card - glassmorphism for premium feel */}
             <div className="absolute -bottom-6 -left-6 bg-white/80 backdrop-blur-md rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-eucalyptus">
-              <p className="text-gradient font-semibold text-lg">Snow now. Grounds in spring.</p>
+              <p className="text-gradient font-semibold text-lg">Four seasons. One call.</p>
               <p className="text-slate/70 text-sm mt-1">
-                One vendor for your property, year-round.
+                Stop coordinating multiple vendors. We handle it all.
               </p>
             </div>
             </Animate>
