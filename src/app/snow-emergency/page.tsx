@@ -5,9 +5,9 @@ import Link from "next/link";
 import { Button } from "@/components/Button";
 
 const propertyTypes = [
-  { value: "residential", label: "Residential Driveway", price: "$95" },
-  { value: "estate", label: "Estate / Long Driveway", price: "$150/hr" },
-  { value: "commercial", label: "Commercial Lot", price: "$200+" },
+  { value: "residential", label: "Residential Driveway" },
+  { value: "estate", label: "Estate / Long Driveway" },
+  { value: "commercial", label: "Commercial Lot" },
 ];
 
 export default function SnowEmergencyPage() {
@@ -173,34 +173,31 @@ export default function SnowEmergencyPage() {
         </div>
       </section>
 
-      {/* Pricing */}
+      {/* Service Types */}
       <section className="py-12 px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate text-center mb-8">
-            Transparent pricing. No surprises.
+            We handle properties of all sizes
           </h2>
           <div className="grid sm:grid-cols-3 gap-4">
             <div className="bg-white rounded-2xl p-6 shadow-card text-center">
               <p className="text-sm text-slate/60 uppercase tracking-wide mb-2">Standard Driveway</p>
-              <p className="text-3xl font-bold text-slate mb-1">$95</p>
-              <p className="text-sm text-slate/60">Up to 6&quot; snow</p>
-              <p className="text-xs text-slate/40 mt-2">$165 for 6-12&quot; | $250 for 12&quot;+</p>
+              <p className="text-lg font-bold text-slate mb-1">Residential</p>
+              <p className="text-sm text-slate/60">Quick turnaround</p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-card text-center border-2 border-sun-ochre">
               <p className="text-sm text-sun-ochre uppercase tracking-wide mb-2 font-semibold">Estate / Long Drive</p>
-              <p className="text-3xl font-bold text-slate mb-1">$150</p>
-              <p className="text-sm text-slate/60">Per hour</p>
-              <p className="text-xs text-slate/40 mt-2">Driveways over 100ft</p>
+              <p className="text-lg font-bold text-slate mb-1">Large Properties</p>
+              <p className="text-sm text-slate/60">Driveways over 100ft</p>
             </div>
             <div className="bg-white rounded-2xl p-6 shadow-card text-center">
               <p className="text-sm text-slate/60 uppercase tracking-wide mb-2">Commercial</p>
-              <p className="text-3xl font-bold text-slate mb-1">$200+</p>
-              <p className="text-sm text-slate/60">Per event</p>
-              <p className="text-xs text-slate/40 mt-2">Lots, storefronts, HOAs</p>
+              <p className="text-lg font-bold text-slate mb-1">Business Lots</p>
+              <p className="text-sm text-slate/60">Lots, storefronts, HOAs</p>
             </div>
           </div>
           <p className="text-center text-sm text-slate/50 mt-6">
-            Ice melt application +$35-50. Payment due on completion.
+            Contact us for pricing. Payment due on completion.
           </p>
         </div>
       </section>
@@ -283,7 +280,7 @@ export default function SnowEmergencyPage() {
               >
                 {propertyTypes.map((type) => (
                   <option key={type.value} value={type.value}>
-                    {type.label} ({type.price})
+                    {type.label}
                   </option>
                 ))}
               </select>

@@ -217,7 +217,7 @@ export default function AreasPage() {
       <CTA
         variant="secondary"
         title="Ready to get started?"
-        description="Get a free quote for your property. We respond within 4 hours."
+        description="Request a quote for your property. We respond within 4 hours."
       />
     </>
   );

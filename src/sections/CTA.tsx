@@ -13,7 +13,7 @@ interface CTAProps {
 export function CTA({
   variant = "primary",
   title = "Ready to get started?",
-  description = "Get a free, no-obligation quote for your property. We respond within 4 hours during business hours.",
+  description = "Request a quote for your property. We respond within 4 hours during business hours.",
 }: CTAProps) {
   if (variant === "secondary") {
     return (

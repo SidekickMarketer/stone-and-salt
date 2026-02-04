@@ -126,7 +126,7 @@ export default function HardscapesPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Get a Free Consultation
+                Request a Quote
               </Button>
               <a
                 href="tel:+15135550123"
