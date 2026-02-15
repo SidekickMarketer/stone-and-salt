@@ -62,7 +62,7 @@ export function Services() {
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
         {/* Header */}
         <FadeIn>
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <div className="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
             <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
               What We Do
             </p>
@@ -77,14 +77,14 @@ export function Services() {
         </FadeIn>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <FadeIn key={service.title} delay={index * 100}>
               <Link
                 href={service.href}
-                className="group block bg-white rounded-2xl p-6 lg:p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 border border-slate/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2"
+                className="group block bg-white rounded-2xl px-6 sm:px-8 py-6 lg:py-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 focus-visible:shadow-card-hover focus-visible:-translate-y-1 transition-all duration-300 border border-slate/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 space-y-4"
               >
-                <div className="flex items-start gap-4 lg:gap-5">
+                <div className="flex items-start gap-4 lg:gap-5 mb-6">
                   <div className="flex-shrink-0 w-12 h-12 lg:w-14 lg:h-14 rounded-xl bg-eucalyptus/20 flex items-center justify-center text-slate group-hover:bg-sun-ochre group-hover:text-white transition-colors duration-300">
                     {service.icon}
                   </div>
@@ -92,26 +92,26 @@ export function Services() {
                     <h3 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-slate group-hover:text-sun-ochre transition-colors">
                       {service.title}
                     </h3>
-                    <p className="mt-2 text-slate/70 leading-relaxed">
-                      {service.description}
-                    </p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                      {service.features.map((feature) => (
-                        <span
-                          key={feature}
-                          className="inline-block px-3 py-1 text-xs font-medium bg-slate/5 text-slate/70 rounded-full"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                    <div className="mt-4 flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                      {service.cta}
-                      <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
                   </div>
+                </div>
+                <p className="text-slate/70 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="border-t border-slate/10 pt-4 mt-4 flex flex-wrap gap-2 space-y-2.5">
+                  {service.features.map((feature) => (
+                    <span
+                      key={feature}
+                      className="inline-block px-3 py-1 text-xs font-medium bg-slate/5 text-slate/70 rounded-full"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+                <div className="mt-4 flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                  {service.cta}
+                  <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
               </Link>
             </FadeIn>

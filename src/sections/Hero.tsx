@@ -8,7 +8,7 @@ export function Hero() {
     <>
     <section className="relative bg-eucalyptus overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03]">
+      <div className="absolute inset-0 opacity-[0.05]">
         <div
           className="absolute inset-0"
           style={{
@@ -27,10 +27,10 @@ export function Hero() {
               </p>
             </Animate>
             <Animate delay={100}>
-              <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="font-[family-name:var(--font-montserrat)] text-[2.25rem] sm:text-5xl lg:text-6xl font-bold leading-[1.15] sm:leading-tight lg:leading-[1.1] max-w-4xl">
                 <span className="text-slate block">One vendor. Four seasons.</span>
                 <span className="block mt-2">
-                  <span className="text-sun-ochre headline-underline">Zero coverage</span>
+                  <span className="text-slate headline-underline">Zero coverage</span>
                   <span className="text-gradient"> gaps.</span>
                 </span>
               </h1>
@@ -45,14 +45,17 @@ export function Hero() {
 
             <Animate delay={300}>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button href="/contact" size="lg">
+                <Button href="/contact" size="lg" className="shadow-lg w-full sm:w-auto group">
                   Request Site Assessment
+                  <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
                 </Button>
                 <Button
                   href="/services/commercial-grounds"
                   variant="outline"
-                  size="lg"
-                  className="border-white text-white hover:bg-white hover:text-slate"
+                  size="md"
+                  className="border-white text-white hover:bg-white hover:text-slate backdrop-blur-sm bg-white/10 w-full sm:w-auto"
                 >
                   See Our Commercial Services
                 </Button>
@@ -61,7 +64,7 @@ export function Hero() {
 
             {/* Trust Signals - inline with hero */}
             <Animate delay={400}>
-              <div className="mt-12 flex flex-wrap gap-6 sm:gap-8">
+              <div className="mt-10 lg:mt-12 flex flex-col sm:flex-row flex-wrap gap-5 sm:gap-7 lg:gap-8">
                 {[
                   { label: "$2M Liability Coverage" },
                   { label: "Documented Service Logs" },
@@ -75,7 +78,7 @@ export function Hero() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="text-white/90 text-sm font-medium">{signal.label}</span>
+                    <span className="text-white/90 text-sm font-medium py-1">{signal.label}</span>
                   </div>
                 ))}
               </div>
@@ -143,7 +146,7 @@ export function Hero() {
       </div>
     </section>
     {/* Gradient transition from eucalyptus hero into content sections */}
-    <div className="h-16 sm:h-20 bg-gradient-to-b from-eucalyptus to-soft-cream" aria-hidden="true" />
+    <div className="h-20 sm:h-24 lg:h-28 bg-gradient-to-b from-eucalyptus via-eucalyptus/90 to-soft-cream" aria-hidden="true" />
     </>
   );
 }

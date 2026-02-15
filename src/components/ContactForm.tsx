@@ -137,9 +137,10 @@ export function ContactForm() {
             id="name"
             name="name"
             required
+            aria-required="true"
             value={formState.name}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white"
             placeholder="Your name"
           />
         </div>
@@ -154,7 +155,7 @@ export function ContactForm() {
             required
             value={formState.phone}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white"
             placeholder="(513) 555-1234"
           />
         </div>
@@ -171,7 +172,7 @@ export function ContactForm() {
           required
           value={formState.email}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+          className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white"
           placeholder="you@example.com"
         />
       </div>
@@ -187,7 +188,7 @@ export function ContactForm() {
             required
             value={formState.propertyType}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white"
           >
             <option value="">Select...</option>
             {propertyTypes.map((type) => (
@@ -207,7 +208,7 @@ export function ContactForm() {
             required
             value={formState.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white"
           >
             <option value="">Select...</option>
             {services.map((service) => (
@@ -229,7 +230,7 @@ export function ContactForm() {
             name="timeline"
             value={formState.timeline}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white"
           >
             <option value="">Select...</option>
             <option value="immediate">Need service now</option>
@@ -247,7 +248,7 @@ export function ContactForm() {
             name="currentVendor"
             value={formState.currentVendor}
             onChange={handleChange}
-            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white"
           >
             <option value="">Select...</option>
             <option value="none">New property / No vendor</option>
@@ -267,7 +268,7 @@ export function ContactForm() {
           name="referralSource"
           value={formState.referralSource}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+          className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white"
         >
           <option value="">Select...</option>
           <option value="google-search">Google Search</option>
@@ -289,7 +290,7 @@ export function ContactForm() {
           rows={4}
           value={formState.message}
           onChange={handleChange}
-          className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white resize-none"
+          className="w-full px-4 py-3 rounded-lg border border-slate/20 focus-visible:border-sun-ochre focus-visible:ring-2 focus-visible:ring-sun-ochre/50 outline-none transition-colors bg-white resize-none"
           placeholder="Property address, approximate size, any specific concerns or requirements..."
         />
       </div>

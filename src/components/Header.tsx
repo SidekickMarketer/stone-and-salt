@@ -38,16 +38,16 @@ export function Header() {
     <>
       {/* Seasonal Banner - Dismissible */}
       {SEASONAL_BANNER && !bannerDismissed && (
-        <div className="bg-slate text-white py-2 px-4 text-center text-sm relative">
+        <div className="bg-slate text-white py-3 px-4 pr-14 sm:pr-4 text-center text-sm relative">
           <span className="hidden sm:inline font-medium">{SEASONAL_BANNER.message}</span>
           <span className="sm:hidden font-medium">{SEASONAL_BANNER.shortMessage}</span>
           <span className="mx-2 text-white/40">|</span>
-          <a href={SEASONAL_BANNER.ctaLink} className="text-sun-ochre hover:text-sun-ochre/80 font-medium">
+          <a href={SEASONAL_BANNER.ctaLink} className="text-sun-ochre hover:text-sun-ochre/80 hover:underline font-medium px-2 py-1">
             {SEASONAL_BANNER.ctaText}
           </a>
           <button
             onClick={() => setBannerDismissed(true)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-white/60 hover:text-white transition-colors"
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-white/40 hover:text-white transition-colors"
             aria-label="Dismiss banner"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,7 +57,7 @@ export function Header() {
         </div>
       )}
 
-      <header className="sticky top-0 z-50 bg-soft-cream/95 backdrop-blur-sm border-b border-slate/10">
+      <header className="sticky top-0 z-50 bg-soft-cream border-b border-slate/10 md:bg-soft-cream/95 md:backdrop-blur-sm">
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
@@ -97,12 +97,13 @@ export function Header() {
                   </button>
                   {servicesOpen && (
                     <div className="absolute left-0 top-full pt-2">
-                      <div className="bg-white rounded-lg shadow-lg ring-1 ring-slate/10 py-2 min-w-[220px]">
-                        {item.submenu.map((subitem) => (
+                      <div className="bg-white rounded-lg shadow-lg ring-1 ring-slate/10 py-2 min-w-[220px] transition-all duration-200 ease-out origin-top opacity-100 scale-y-100 translate-y-0">
+                        {item.submenu.map((subitem, idx) => (
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="block px-4 py-3 text-sm text-slate hover:bg-eucalyptus/20 hover:text-slate transition-colors min-h-[40px]"
+                            className="block px-4 py-3 text-sm text-slate hover:bg-eucalyptus/20 hover:text-slate hover:border-l-4 hover:border-sun-ochre transition-all min-h-[40px]"
+                            style={{ transitionDelay: `${idx * 50}ms` }}
                           >
                             {subitem.name}
                           </Link>
@@ -127,8 +128,11 @@ export function Header() {
           <div className="hidden lg:flex lg:items-center lg:gap-6">
             <a
               href={PHONE_NUMBER_HREF}
-              className="text-sm font-medium text-slate hover:text-sun-ochre transition-colors"
+              className="flex items-center gap-2 text-base font-semibold tracking-tight text-slate px-3 py-2 rounded-md border border-slate/10 hover:border-sun-ochre/30 hover:bg-sun-ochre/5 hover:underline transition-all min-h-[44px]"
             >
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
               {PHONE_NUMBER}
             </a>
             <Button href="/contact">Request Site Assessment</Button>
@@ -158,49 +162,66 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-slate/10">
-            <div className="space-y-1">
-              {navigation.map((item) =>
-                item.submenu ? (
-                  <div key={item.name}>
-                    <div className="px-3 py-2 text-base font-medium text-slate/60">
-                      {item.name}
-                    </div>
-                    {item.submenu.map((subitem) => (
-                      <Link
-                        key={subitem.name}
-                        href={subitem.href}
-                        className="block px-6 py-3 text-base text-slate hover:bg-eucalyptus/20 min-h-[44px] flex items-center"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {subitem.name}
-                      </Link>
-                    ))}
-                  </div>
-                ) : (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className="block px-3 py-3 text-base font-medium text-slate hover:bg-eucalyptus/20 min-h-[44px] flex items-center"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )
-              )}
-            </div>
-            <div className="mt-4 px-3 space-y-3">
-              <a
-                href={PHONE_NUMBER_HREF}
-                className="block text-center py-2 text-base font-medium text-slate"
+          <>
+            {/* Backdrop */}
+            <div className="fixed inset-0 bg-slate/20 backdrop-blur-sm z-40" onClick={() => setMobileMenuOpen(false)} />
+
+            {/* Menu Panel */}
+            <div className="lg:hidden py-4 border-t border-slate/10 relative z-50 bg-soft-cream">
+              {/* Close button */}
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="absolute right-4 top-4 p-2 min-w-[44px] min-h-[44px] text-slate hover:text-sun-ochre transition-colors"
+                aria-label="Close menu"
               >
-                {PHONE_NUMBER}
-              </a>
-              <Button href="/contact" className="w-full justify-center">
-                Request Site Assessment
-              </Button>
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <div className="space-y-1">
+                {navigation.map((item) =>
+                  item.submenu ? (
+                    <div key={item.name}>
+                      <div className="px-3 py-2 text-base font-medium text-slate/60">
+                        {item.name}
+                      </div>
+                      {item.submenu.map((subitem) => (
+                        <Link
+                          key={subitem.name}
+                          href={subitem.href}
+                          className="block px-6 py-3 text-base text-slate hover:bg-eucalyptus/20 min-h-[44px] flex items-center border-l-2 border-eucalyptus/20 ml-3"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {subitem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  ) : (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="block px-3 py-3 text-base font-medium text-slate hover:bg-eucalyptus/20 min-h-[44px] flex items-center"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  )
+                )}
+              </div>
+              <div className="mt-4 px-3 space-y-3">
+                <a
+                  href={PHONE_NUMBER_HREF}
+                  className="block text-center py-3 px-4 text-base font-semibold text-slate bg-eucalyptus/10 border border-eucalyptus/20 rounded-lg"
+                >
+                  {PHONE_NUMBER}
+                </a>
+                <Button href="/contact" className="w-full justify-center">
+                  Request Site Assessment
+                </Button>
+              </div>
             </div>
-          </div>
+          </>
         )}
       </nav>
     </header>
@@ -208,7 +229,7 @@ export function Header() {
     {/* Sticky Mobile Call Button - positioned left to not conflict with chat widget */}
     <a
       href={PHONE_NUMBER_HREF}
-      className="lg:hidden fixed bottom-6 left-6 z-50 bg-sun-ochre text-white p-4 rounded-full shadow-lg hover:bg-sun-ochre/90 transition-colors"
+      className="lg:hidden fixed bottom-6 left-6 z-40 bg-sun-ochre text-white p-4 rounded-full shadow-lg hover:bg-sun-ochre/90 transition-colors"
       aria-label="Call us"
     >
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

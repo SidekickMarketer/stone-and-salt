@@ -14,7 +14,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-sun-ochre text-white hover:bg-sun-ochre-bright hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] focus:ring-sun-ochre/50",
+    "bg-sun-ochre text-white border border-sun-ochre-bright/20 hover:bg-sun-ochre-bright hover:scale-[1.02] hover:shadow-cta active:scale-[0.98] focus:ring-sun-ochre/50",
   secondary:
     "bg-slate text-white hover:bg-slate/90 hover:scale-[1.02] hover:shadow-lg active:scale-[0.98] focus:ring-slate/50",
   outline:
@@ -24,7 +24,7 @@ const variantStyles: Record<ButtonVariant, string> = {
 const sizeStyles: Record<ButtonSize, string> = {
   sm: "px-4 py-2 text-sm min-h-[36px]",
   md: "px-6 py-3 text-base min-h-[44px]",
-  lg: "px-8 py-4 text-lg min-h-[48px]",
+  lg: "px-8 py-4 sm:px-10 sm:py-5 text-lg min-h-[48px]",
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -40,7 +40,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ref
   ) => {
     const baseStyles =
-      "inline-flex items-center font-semibold rounded-md transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
+      "inline-flex items-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
     const styles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
     if (href) {

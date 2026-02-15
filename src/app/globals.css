@@ -36,6 +36,13 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  letter-spacing: -0.01em;
+  line-height: 1.7;
+}
+
+/* Paragraph spacing */
+p + p {
+  margin-top: 1.5em;
 }
 
 /* Typography */
@@ -43,6 +50,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--slate);
+}
+
+h2 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+/* Prose max-width for readability */
+.prose {
+  max-width: 65ch;
+}
+
+/* Enhanced link styling */
+a {
+  text-decoration-color: currentColor;
+  text-underline-offset: 2px;
 }
 
 /* Smooth scrolling */
@@ -91,9 +114,15 @@ html {
 }
 
 .shadow-glow {
-  box-shadow: 
+  box-shadow:
     0 0 40px rgba(213, 160, 86, 0.15),
     0 0 80px rgba(213, 160, 86, 0.1);
+}
+
+.shadow-cta {
+  box-shadow:
+    0 2px 8px rgba(213, 160, 86, 0.2),
+    0 8px 24px rgba(213, 160, 86, 0.15);
 }
 
 /* ===== TYPOGRAPHY POLISH ===== */
@@ -190,6 +219,13 @@ h3 {
   animation: float 4s ease-in-out infinite;
 }
 
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float {
+    animation: none;
+  }
+}
+
 /* ===== GLOW EFFECTS ===== */
 .glow-ochre {
   position: relative;
@@ -229,9 +265,22 @@ h3 {
   height: 0.2em;
   background: var(--sun-ochre);
   opacity: 0.3;
-  transform: scaleX(0);
   transform-origin: left;
-  animation: underline-reveal 0.6s ease-out 0.8s forwards;
+}
+
+/* Only animate if user hasn't requested reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .headline-underline::after {
+    transform: scaleX(0);
+    animation: underline-reveal 0.6s ease-out 0.8s forwards;
+  }
+}
+
+/* For reduced motion users, show underline immediately */
+@media (prefers-reduced-motion: reduce) {
+  .headline-underline::after {
+    transform: scaleX(1);
+  }
 }
 
 @keyframes underline-reveal {
