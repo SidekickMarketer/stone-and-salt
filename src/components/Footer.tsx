@@ -29,7 +29,7 @@ export function Footer() {
     <footer className="bg-slate text-white relative overflow-hidden">
       {/* Subtle gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
         {/* Main Footer */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand Column */}
@@ -49,7 +49,7 @@ export function Footer() {
             <div className="mt-6">
               <a
                 href={PHONE_NUMBER_HREF}
-                className="text-xl font-semibold text-sun-ochre hover:text-sun-ochre/80 transition-colors"
+                className="text-xl font-semibold text-sun-ochre hover:text-sun-ochre/80 transition-colors inline-block"
               >
                 {PHONE_NUMBER}
               </a>
@@ -58,6 +58,17 @@ export function Footer() {
                   {EMAIL}
                 </a>
               </p>
+              <p className="mt-2 text-xs text-white/50">
+                Mon-Fri 7am-6pm, Sat 8am-2pm
+              </p>
+            </div>
+            <div className="mt-6">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold rounded-md bg-sun-ochre text-white hover:bg-sun-ochre/90 transition-colors"
+              >
+                Request Site Assessment
+              </Link>
             </div>
           </div>
 
@@ -127,13 +138,24 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white/50">
-            &copy; {new Date().getFullYear()} Stone &amp; Salt. All rights reserved.
-          </p>
-          <p className="text-sm text-white/50">
-            Licensed &amp; Insured in Ohio | $2M Liability Coverage
-          </p>
+        <div className="border-t border-white/10 py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-4">
+            <p className="text-sm text-white/50">
+              &copy; {new Date().getFullYear()} Stone &amp; Salt. All rights reserved.
+            </p>
+            <p className="text-sm text-white/50">
+              Licensed &amp; Insured in Ohio | $2M Liability Coverage
+            </p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-white/40">
+            <span>GPS-Documented Service</span>
+            <span className="text-white/20">|</span>
+            <span>4-Hour Response Guarantee</span>
+            <span className="text-white/20">|</span>
+            <span>Fixed Annual Pricing</span>
+            <span className="text-white/20">|</span>
+            <span>Owner-Operated</span>
+          </div>
         </div>
       </div>
     </footer>

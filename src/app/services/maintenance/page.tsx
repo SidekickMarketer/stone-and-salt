@@ -6,11 +6,11 @@ import { PHONE_NUMBER, PHONE_NUMBER_HREF, PHONE_NUMBER_SCHEMA } from "@/lib/cons
 export const metadata: Metadata = {
   title: "Select Residential Services | Cincinnati",
   description:
-    "Professional lawn care and landscape maintenance for select Greater Cincinnati homes. Same crew, consistent quality, reliable service. Available when commercial capacity allows.",
+    "Professional lawn care for select Cincinnati homes. Same crew every visit, consistent quality. Available when commercial capacity allows.",
   openGraph: {
     title: "Select Residential Services | Stone & Salt",
     description:
-      "Professional lawn care and landscape maintenance for select Greater Cincinnati homes.",
+      "Professional lawn care and maintenance for select Greater Cincinnati homes.",
   },
 };
 
@@ -217,7 +217,7 @@ export default function MaintenancePage() {
       </section>
 
       {/* Packages */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
@@ -238,7 +238,7 @@ export default function MaintenancePage() {
                 className={`rounded-2xl p-6 lg:p-8 ${
                   pkg.popular
                     ? "bg-slate text-white ring-4 ring-sun-ochre shadow-card-hover"
-                    : "bg-soft-cream"
+                    : "bg-white shadow-card"
                 }`}
               >
                 {pkg.popular && (
@@ -407,6 +407,36 @@ export default function MaintenancePage() {
       <CTA
         title="Interested in residential service?"
         description="Residential availability depends on our commercial schedule. Contact us to check current capacity and discuss your property needs."
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://stoneandsaltohio.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://stoneandsaltohio.com/services/maintenance",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Select Residential Services",
+              },
+            ],
+          }),
+        }}
       />
 
       {/* Service Schema */}

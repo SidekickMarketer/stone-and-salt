@@ -112,10 +112,21 @@ export function CTA({
             </div>
           </Animate>
 
-          <Animate delay={300}>
-            <p className="mt-8 text-white/70 text-sm">
-              Currently accepting commercial contracts for Spring 2026.
+          <Animate delay={250}>
+            <p className="mt-6 text-white/60 text-sm">
+              Not ready yet? <Link href="/services/commercial-grounds" className="text-white/90 underline hover:text-white transition-colors">See detailed service breakdown</Link> or <Link href="/about" className="text-white/90 underline hover:text-white transition-colors">learn about our team</Link>.
             </p>
+          </Animate>
+
+          <Animate delay={300}>
+            <div className="mt-8">
+              <p className="text-white/70 text-sm">
+                Currently accepting commercial contracts for Spring 2026.
+              </p>
+              <p className="text-white/50 text-xs mt-2">
+                Site assessments scheduled within 7 days • Proposals delivered within 72 hours
+              </p>
+            </div>
           </Animate>
         </div>
       </div>

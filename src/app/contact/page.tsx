@@ -184,7 +184,7 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">

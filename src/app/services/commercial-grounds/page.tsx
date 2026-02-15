@@ -6,11 +6,11 @@ import { PHONE_NUMBER, PHONE_NUMBER_HREF, PHONE_NUMBER_SCHEMA } from "@/lib/cons
 export const metadata: Metadata = {
   title: "Commercial Grounds Management | Cincinnati",
   description:
-    "Year-round grounds maintenance for office parks, retail centers, and commercial properties. Annual contracts from $12K-$60K. Documented service. 4-hour response guarantee.",
+    "Year-round grounds maintenance for Cincinnati office parks and retail centers. Annual contracts $12K-$60K. Documented service, 4-hour response.",
   openGraph: {
     title: "Commercial Grounds Management | Stone & Salt",
     description:
-      "Year-round grounds maintenance for office parks, retail centers, and commercial properties in Greater Cincinnati.",
+      "Year-round grounds maintenance for office parks and commercial properties in Greater Cincinnati.",
   },
 };
 
@@ -56,38 +56,58 @@ const tiers = [
   {
     name: "Standard",
     range: "$12,000-25,000/year",
+    visits: "28 scheduled visits/season",
     features: [
-      "Weekly mowing",
-      "Seasonal cleanup (2x)",
-      "Bed maintenance",
-      "Snow removal",
+      "28 mowing visits (approx. weekly, April-October)",
+      "Seasonal cleanup (2x: spring + fall)",
+      "Annual mulch application",
+      "Monthly bed weeding",
+      "Edging, trimming, and blowing each visit",
+      "Snow removal (seasonal contract included)",
+    ],
+    exclusions: [
+      "Irrigation repair",
+      "Tree pruning above 10 ft",
+      "Pest/disease treatment",
     ],
   },
   {
     name: "Premium",
     range: "$25,000-45,000/year",
+    visits: "32 scheduled visits/season",
     features: [
-      "Weekly mowing",
-      "Seasonal cleanup (4x)",
-      "Bed maintenance",
-      "Snow removal",
-      "Monthly property report",
-      "Priority response",
+      "32 mowing visits (extended season: late March-mid November)",
+      "Seasonal cleanup (4x per year)",
+      "Mulch application + mid-season refresh",
+      "Bi-monthly shrub/hedge trimming",
+      "Monthly property condition report with photos",
+      "Priority scheduling (serviced before 10:00 AM)",
+      "Snow removal (seasonal contract included)",
+    ],
+    exclusions: [
+      "Irrigation repair (monitoring included)",
+      "Tree pruning above 10 ft",
+      "Pest/disease treatment",
     ],
     popular: true,
   },
   {
     name: "Enterprise",
     range: "$45,000-60,000/year",
+    visits: "32+ visits with dedicated crew",
     features: [
-      "Weekly mowing",
-      "Continuous maintenance",
-      "Bed maintenance",
-      "Snow removal",
-      "Weekly property report",
-      "Priority response",
-      "Dedicated crew assignment",
-      "Quarterly site review",
+      "Everything in Premium, plus:",
+      "Dedicated crew assignment (same crew every visit)",
+      "Weekly property condition report",
+      "Quarterly on-site review meeting",
+      "Irrigation monitoring + seasonal activation/winterization",
+      "Annual landscape enhancement recommendation",
+      "24-hour emergency storm response",
+      "Named account manager with direct cell",
+    ],
+    exclusions: [
+      "Irrigation repair (billed separately)",
+      "Landscape design/new installation (quoted separately)",
     ],
   },
 ];
@@ -234,7 +254,7 @@ export default function CommercialGroundsPage() {
               Predictable Annual Pricing
             </h2>
             <p className="mt-4 text-lg text-slate/70">
-              All tiers include: $2M liability coverage, GPS-documented service, 4-hour response guarantee, direct owner access.
+              All tiers include: $2M liability coverage, GPS-documented service, 4-hour response guarantee, direct owner access. Multi-year agreements available with annual escalation caps -- ask about 2- and 3-year terms.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -258,6 +278,9 @@ export default function CommercialGroundsPage() {
                 <p className={`mt-2 text-lg font-semibold ${tier.popular ? "text-eucalyptus" : "text-sun-ochre"}`}>
                   {tier.range}
                 </p>
+                <p className={`mt-1 text-sm font-medium ${tier.popular ? "text-white/70" : "text-slate/60"}`}>
+                  {tier.visits}
+                </p>
                 <ul className="mt-6 space-y-3">
                   {tier.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
@@ -268,6 +291,23 @@ export default function CommercialGroundsPage() {
                     </li>
                   ))}
                 </ul>
+                {tier.exclusions && tier.exclusions.length > 0 && (
+                  <div className={`mt-4 pt-4 border-t ${tier.popular ? "border-white/10" : "border-slate/10"}`}>
+                    <p className={`text-xs font-semibold uppercase tracking-wide mb-2 ${tier.popular ? "text-white/50" : "text-slate/40"}`}>
+                      Not Included
+                    </p>
+                    <ul className="space-y-1.5">
+                      {tier.exclusions.map((exclusion) => (
+                        <li key={exclusion} className="flex items-start gap-2">
+                          <svg className={`w-4 h-4 flex-shrink-0 mt-0.5 ${tier.popular ? "text-white/30" : "text-slate/30"}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                          <span className={`text-xs ${tier.popular ? "text-white/50" : "text-slate/50"}`}>{exclusion}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <div className="mt-8">
                   <Button
                     href="/contact"
@@ -310,6 +350,60 @@ export default function CommercialGroundsPage() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-8">
+              <div className="border-b border-slate/10 pb-8">
+                <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate text-lg">
+                  We already have a vendor. Why would we switch?
+                </h3>
+                <p className="mt-3 text-slate/70 leading-relaxed">
+                  Most property managers we talk to are not unhappy with their mowing -- they are frustrated
+                  by the gaps. The landscaper disappears in November. The snow contractor starts late in
+                  December. Nobody owns the transition. We solve this with a single year-round contract
+                  that covers grounds maintenance and snow removal under one team, one invoice, and one
+                  point of accountability. If your current vendor already does that reliably and documents
+                  every visit, you may not need us. But if you are coordinating multiple seasonal vendors,
+                  that is exactly the problem we built this company to fix.
+                </p>
+              </div>
+              <div className="border-b border-slate/10 pb-8">
+                <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate text-lg">
+                  How do your prices adjust year over year?
+                </h3>
+                <p className="mt-3 text-slate/70 leading-relaxed">
+                  Annual contracts include a scope review each year. If your property needs have not changed,
+                  price adjustments are capped at a pre-agreed percentage written into your contract --
+                  typically 3-5% to account for labor and material cost changes. Multi-year agreements (2-
+                  or 3-year terms) lock in escalation caps for the full term, so you know your maximum cost
+                  increase before you sign. No surprise renegotiations.
+                </p>
+              </div>
+              <div className="border-b border-slate/10 pb-8">
+                <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate text-lg">
+                  What is the difference between 28 and 32 visits?
+                </h3>
+                <p className="mt-3 text-slate/70 leading-relaxed">
+                  Our Standard tier includes 28 scheduled visits, covering weekly mowing from April through
+                  October plus spring and fall cleanups. The Premium tier includes 32 visits with an extended
+                  season starting in late March and running through mid-November -- plus more frequent
+                  cleanups, bi-monthly hedge trimming, and monthly condition reports with photos. The right
+                  choice depends on your property type: a Class A office park that needs to look sharp for
+                  tenant tours year-round typically needs the extended season. A warehouse park with simpler
+                  grounds can do well with the Standard schedule. We will recommend the right fit during
+                  your site assessment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Signals */}
       <section className="py-16 lg:py-24 bg-slate">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
@@ -331,9 +425,61 @@ export default function CommercialGroundsPage() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              Complete Property Solutions
+            </h2>
+            <p className="mt-6 text-lg text-slate/70 leading-relaxed">
+              Need more than grounds management? We also provide site improvements and snow removal.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+              <Button href="/services/hardscapes" variant="secondary">
+                View Hardscapes & Site Improvements
+              </Button>
+              <Button href="/services/snow-removal" variant="outline">
+                Learn About Snow Removal
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <CTA
         title="Let us walk your property."
         description="Schedule a no-obligation site assessment. You will receive a custom proposal with fixed annual pricing within 72 hours."
+      />
+
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://stoneandsaltohio.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://stoneandsaltohio.com/services/commercial-grounds",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Commercial Grounds Management",
+              },
+            ],
+          }),
+        }}
       />
 
       {/* Service Schema */}

@@ -7,9 +7,9 @@ import { PHONE_NUMBER, PHONE_NUMBER_HREF } from "@/lib/constants";
 
 // Configure seasonal banner here - set to null to hide
 const SEASONAL_BANNER = {
-  message: "Now accepting commercial contracts for Spring 2026",
-  shortMessage: "Spring contracts open",
-  ctaText: "Request site assessment",
+  message: "Spring 2026 Commercial Contracts — Site assessments booking now for March-April starts",
+  shortMessage: "Spring 2026 slots filling",
+  ctaText: "Request assessment →",
   ctaLink: "/contact",
 };
 
@@ -47,7 +47,7 @@ export function Header() {
           </a>
           <button
             onClick={() => setBannerDismissed(true)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 p-1 text-white/60 hover:text-white transition-colors"
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 min-w-[44px] min-h-[44px] flex items-center justify-center text-white/60 hover:text-white transition-colors"
             aria-label="Dismiss banner"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -102,7 +102,7 @@ export function Header() {
                           <Link
                             key={subitem.name}
                             href={subitem.href}
-                            className="block px-4 py-2 text-sm text-slate hover:bg-eucalyptus/20 hover:text-slate transition-colors"
+                            className="block px-4 py-3 text-sm text-slate hover:bg-eucalyptus/20 hover:text-slate transition-colors min-h-[40px]"
                           >
                             {subitem.name}
                           </Link>

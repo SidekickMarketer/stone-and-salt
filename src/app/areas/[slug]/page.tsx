@@ -177,12 +177,12 @@ export default async function AreaPage({ params }: { params: PageParams }) {
   return (
     <>
       {/* Hero */}
-      <section className="bg-soft-cream py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="bg-soft-cream py-20 lg:py-28">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
             <Link
               href="/areas"
-              className="inline-flex items-center gap-2 text-eucalyptus hover:text-sun-ochre transition-colors mb-6"
+              className="inline-flex items-center gap-2 text-eucalyptus hover:text-sun-ochre transition-colors mb-6 min-h-[44px] focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -203,8 +203,8 @@ export default async function AreaPage({ params }: { params: PageParams }) {
       </section>
 
       {/* About the Area */}
-      <section className="py-16 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate">
               Serving {area.name}
@@ -237,24 +237,24 @@ export default async function AreaPage({ params }: { params: PageParams }) {
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="font-[family-name:var(--font-montserrat)] text-3xl font-bold text-slate mb-12">
+      <section className="py-16 lg:py-24 bg-soft-cream">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate mb-12">
             Services in {area.name}
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {services.map((service) => (
               <Link
                 key={service.title}
                 href={service.href}
-                className="group bg-soft-cream rounded-xl p-8 hover:bg-eucalyptus/10 transition-colors"
+                className="group bg-white rounded-xl p-6 lg:p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 hover:bg-eucalyptus/10 transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2"
               >
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl group-hover:text-sun-ochre transition-colors">
                   {service.title}
                 </h3>
                 <p className="mt-3 text-slate/70">{service.description}</p>
-                <span className="mt-4 inline-flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform">
+                <span className="mt-4 inline-flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform min-h-[44px]">
                   Learn more
                   <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -267,8 +267,8 @@ export default async function AreaPage({ params }: { params: PageParams }) {
       </section>
 
       {/* Why Local Matters */}
-      <section className="py-16 bg-eucalyptus/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section className="py-16 lg:py-24 bg-eucalyptus/10">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate">
               Why Local Matters

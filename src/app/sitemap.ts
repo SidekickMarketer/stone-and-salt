@@ -13,6 +13,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "anderson-township",
     "hyde-park",
     "montgomery",
+    "oxford",
+    "waynesville",
   ];
 
   return [
@@ -63,6 +65,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/services/estate-maintenance`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/snow-emergency`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     ...areas.map((area) => ({
       url: `${baseUrl}/areas/${area}`,

@@ -6,11 +6,11 @@ import { PHONE_NUMBER, PHONE_NUMBER_HREF, PHONE_NUMBER_SCHEMA } from "@/lib/cons
 export const metadata: Metadata = {
   title: "Hardscapes & Site Improvements | Cincinnati",
   description:
-    "Commercial site improvements and residential outdoor construction in Greater Cincinnati. Patios, retaining walls, walkways. Belgard pavers. $25K residential min, $50K commercial min.",
+    "Commercial hardscaping and residential paver patios in Cincinnati. Belgard pavers, retaining walls, walkways. $25K residential, $50K commercial min.",
   openGraph: {
     title: "Hardscapes & Site Improvements | Stone & Salt",
     description:
-      "Commercial site improvements and residential outdoor construction in Greater Cincinnati.",
+      "Commercial site improvements and residential hardscaping in Greater Cincinnati.",
   },
 };
 
@@ -275,6 +275,36 @@ export default function HardscapesPage() {
         description="Commercial site assessments and residential design consultations are complimentary. Tell us about your project and we will schedule a visit within the week."
       />
 
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://stoneandsaltohio.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://stoneandsaltohio.com/services/hardscapes",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Hardscapes & Site Improvements",
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Service Schema */}
       <script
         type="application/ld+json"
@@ -300,6 +330,25 @@ export default function HardscapesPage() {
             description:
               "Commercial site improvements and residential outdoor construction in Greater Cincinnati.",
             serviceType: "Hardscape Installation",
+          }),
+        }}
+      />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
           }),
         }}
       />

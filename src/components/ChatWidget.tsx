@@ -211,7 +211,8 @@ export function ChatWidget() {
               <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
-                className="p-2 rounded-full bg-sun-ochre text-white hover:bg-sun-ochre/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                aria-label="Send message"
+                className="p-2.5 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-full bg-sun-ochre text-white hover:bg-sun-ochre/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />

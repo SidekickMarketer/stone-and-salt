@@ -94,8 +94,13 @@ export default function AboutPage() {
                   Documented service that protects you when it matters.
                 </p>
                 <p>
-                  We are not trying to be the biggest grounds management company in
-                  Cincinnati. We are trying to be the most reliable one.
+                  Yes, we are a new company. We are not going to pretend otherwise. But new
+                  means something specific here: it means every property we take on gets owner-level
+                  attention because we are building our reputation one contract at a time. It means we
+                  are not stretched across 200 accounts with crews you have never met. It means the people
+                  who sold you the contract are the same people making sure it gets delivered. We have the
+                  insurance, the equipment, and the systems. What we are earning is your trust -- and that
+                  starts with the first site assessment.
                 </p>
               </div>
             </div>
@@ -109,7 +114,7 @@ export default function AboutPage() {
       </section>
 
       {/* Partnership */}
-      <section className="py-16 lg:py-24 bg-white">
+      <section className="py-16 lg:py-24 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-8">

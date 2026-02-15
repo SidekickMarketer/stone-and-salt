@@ -7,6 +7,7 @@ import { PHONE_NUMBER, PHONE_NUMBER_HREF } from "@/lib/constants";
 const services = [
   { value: "commercial-grounds", label: "Commercial Grounds Management" },
   { value: "snow", label: "Snow & Ice Management" },
+  { value: "year-round", label: "Year-Round (Grounds + Snow)" },
   { value: "hardscape", label: "Hardscapes & Site Improvements" },
   { value: "residential", label: "Residential Maintenance" },
   { value: "other", label: "Other / Not Sure" },
@@ -28,6 +29,9 @@ export function ContactForm() {
     phone: "",
     propertyType: "",
     service: "",
+    timeline: "",
+    currentVendor: "",
+    referralSource: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -215,6 +219,66 @@ export function ContactForm() {
         </div>
       </div>
 
+      <div className="grid sm:grid-cols-2 gap-6">
+        <div>
+          <label htmlFor="timeline" className="block text-sm font-medium text-slate mb-2">
+            Timeline
+          </label>
+          <select
+            id="timeline"
+            name="timeline"
+            value={formState.timeline}
+            onChange={handleChange}
+            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+          >
+            <option value="">Select...</option>
+            <option value="immediate">Need service now</option>
+            <option value="1-month">Within 1 month</option>
+            <option value="next-season">Next season (planning ahead)</option>
+            <option value="budget-cycle">Budget planning (6+ months)</option>
+          </select>
+        </div>
+        <div>
+          <label htmlFor="currentVendor" className="block text-sm font-medium text-slate mb-2">
+            Current Vendor Status
+          </label>
+          <select
+            id="currentVendor"
+            name="currentVendor"
+            value={formState.currentVendor}
+            onChange={handleChange}
+            className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+          >
+            <option value="">Select...</option>
+            <option value="none">New property / No vendor</option>
+            <option value="unhappy">Have vendor, exploring options</option>
+            <option value="contract-ending">Contract ending soon</option>
+            <option value="emergency">Vendor just quit / Emergency</option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <label htmlFor="referralSource" className="block text-sm font-medium text-slate mb-2">
+          How did you hear about us?
+        </label>
+        <select
+          id="referralSource"
+          name="referralSource"
+          value={formState.referralSource}
+          onChange={handleChange}
+          className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white"
+        >
+          <option value="">Select...</option>
+          <option value="google-search">Google Search</option>
+          <option value="referral">Referral</option>
+          <option value="direct-mail">Direct Mail</option>
+          <option value="industry-event">Industry Event</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-slate mb-2">
           Tell us about your property
@@ -226,7 +290,7 @@ export function ContactForm() {
           value={formState.message}
           onChange={handleChange}
           className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white resize-none"
-          placeholder="Property address, approximate size, current vendor situation, timeline..."
+          placeholder="Property address, approximate size, any specific concerns or requirements..."
         />
       </div>
 

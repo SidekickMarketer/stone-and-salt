@@ -6,11 +6,11 @@ import { PHONE_NUMBER, PHONE_NUMBER_HREF, PHONE_NUMBER_SCHEMA } from "@/lib/cons
 export const metadata: Metadata = {
   title: "Commercial Snow & Ice Management | Cincinnati",
   description:
-    "GPS-documented commercial snow removal in Greater Cincinnati. Seasonal contracts, 24/7 response, $2M liability coverage. Documented service for property managers.",
+    "GPS-documented commercial snow removal in Cincinnati. 24/7 response, seasonal contracts, $2M liability coverage. Serving property managers.",
   openGraph: {
     title: "Commercial Snow & Ice Management | Stone & Salt",
     description:
-      "GPS-documented commercial snow removal in Greater Cincinnati. Seasonal contracts and 24/7 response.",
+      "GPS-documented commercial snow removal in Cincinnati. 24/7 response and seasonal contracts.",
   },
 };
 
@@ -43,8 +43,8 @@ const trustSignals = [
     ),
   },
   {
-    title: "Documented Service",
-    description: "GPS tracking, timestamped photos, and detailed service logs for every visit. Critical for slip-and-fall liability protection.",
+    title: "Documented Every Push",
+    description: "GPS tracking, timestamped photos, arrival/departure logs, and materials applied -- recorded for every visit. When a tenant files a slip-and-fall claim, your documentation is ready the same day. This is not a nice-to-have. It is your liability defense.",
     icon: (
       <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -81,7 +81,7 @@ const faqs = [
   {
     question: "Do you offer seasonal contracts or per-push pricing?",
     answer:
-      "Both. Commercial clients typically prefer seasonal contracts for budget predictability. Residential clients can choose seasonal or per-push pricing. We'll recommend what makes sense for your situation.",
+      "We offer two commercial contract structures. Option A is a fixed seasonal contract -- one flat fee covers the entire winter regardless of snowfall, giving you complete budget certainty. Option B is a hybrid: a fixed seasonal readiness fee (covering equipment staging, pre-treatment, and guaranteed availability) plus a variable per-event charge based on accumulation and materials used. Most property managers prefer Option A for the simplicity. Option B can be a better fit if you want to manage costs in lighter winters. Residential clients can choose seasonal or per-push pricing. We will walk through both options during your site assessment.",
   },
   {
     question: "What triggers a service visit?",
@@ -92,6 +92,11 @@ const faqs = [
     question: "Do you provide documentation for liability purposes?",
     answer:
       "Yes. Commercial clients receive timestamped service documentation including photos, arrival/departure times, and materials used. This is critical for slip-and-fall liability protection.",
+  },
+  {
+    question: "Are salt and materials included in the contract price?",
+    answer:
+      "For fixed seasonal contracts (Option A), salt and ice melt are included in the contract price at current market rates. We source bulk salt locally from Butler County at competitive pricing. If material costs rise significantly during the season (above a threshold defined in your contract), we will notify you before applying any surcharge. For hybrid contracts (Option B), materials are billed per application at agreed-upon rates. Either way, you will never see a surprise material charge -- every cost trigger is spelled out before you sign.",
   },
   {
     question: "How do I sign up for next winter?",
@@ -334,6 +339,36 @@ export default function SnowRemovalPage() {
         description="Commercial seasonal contracts and year-round management agreements available. Contact us for a site assessment and custom proposal."
       />
 
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://stoneandsaltohio.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Services",
+                item: "https://stoneandsaltohio.com/services/snow-removal",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Snow & Ice Management",
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Service Schema */}
       <script
         type="application/ld+json"
@@ -359,6 +394,25 @@ export default function SnowRemovalPage() {
             description:
               "Reliable commercial and residential snow removal in Greater Cincinnati.",
             serviceType: "Snow Removal",
+          }),
+        }}
+      />
+
+      {/* FAQPage Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
           }),
         }}
       />
