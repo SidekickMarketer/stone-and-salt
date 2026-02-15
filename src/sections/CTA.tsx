@@ -60,14 +60,17 @@ export function CTA({
   return (
     <section className="py-16 lg:py-24 relative overflow-hidden">
       {/* Gradient background with depth */}
-      <div className="absolute inset-0 bg-gradient-to-br from-sun-ochre via-sun-ochre to-sun-ochre-bright" />
+      <div className="absolute inset-0 bg-gradient-to-br from-sun-ochre/95 via-sun-ochre to-sun-ochre-bright/90" />
+
+      {/* Soft cream tint to reduce intensity */}
+      <div className="absolute inset-0 bg-soft-cream/5" />
 
       {/* Decorative glows */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-sun-ochre-bright/30 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/15 rounded-full blur-[80px]" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-sun-ochre-bright/30 rounded-full blur-[80px]" />
 
       {/* Subtle pattern overlay */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-[0.08]">
         <div
           className="absolute inset-0"
           style={{

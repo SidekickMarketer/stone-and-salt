@@ -31,7 +31,7 @@ export function Footer() {
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20" />
       <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
         {/* Main Footer */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block">
@@ -46,19 +46,19 @@ export function Footer() {
             <p className="mt-4 text-lg font-semibold text-eucalyptus">
               Four seasons. One call.
             </p>
-            <div className="mt-6">
+            <div className="mt-6 bg-white/5 rounded-lg p-4">
               <a
                 href={PHONE_NUMBER_HREF}
                 className="text-xl font-semibold text-sun-ochre hover:text-sun-ochre/80 transition-colors inline-block"
               >
                 {PHONE_NUMBER}
               </a>
-              <p className="mt-1 text-sm text-white/70">
+              <p className="mt-2 text-sm text-white/70">
                 <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors">
                   {EMAIL}
                 </a>
               </p>
-              <p className="mt-2 text-xs text-white/50">
+              <p className="mt-2 text-sm text-white/50">
                 Mon-Fri 7am-6pm, Sat 8am-2pm
               </p>
             </div>
@@ -74,7 +74,7 @@ export function Footer() {
 
           {/* Services Column */}
           <div>
-            <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-white mb-4">
+            <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-white mb-4 tracking-wide">
               Services
             </h3>
             <ul className="space-y-3">
@@ -82,7 +82,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-white/70 hover:text-white transition-colors"
+                    className="text-sm text-white/70 hover:text-white hover:translate-x-1 transition-all duration-200 inline-block"
                   >
                     {item.name}
                   </Link>
@@ -93,7 +93,7 @@ export function Footer() {
 
           {/* Areas Column */}
           <div>
-            <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-white mb-4">
+            <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-white mb-4 tracking-wide">
               Service Areas
             </h3>
             <ul className="space-y-3">
@@ -101,7 +101,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-white/70 hover:text-white transition-colors"
+                    className="text-sm text-white/70 hover:text-white hover:translate-x-1 transition-all duration-200 inline-block"
                   >
                     {item.name}
                   </Link>
@@ -112,7 +112,7 @@ export function Footer() {
 
           {/* Company Column */}
           <div>
-            <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-white mb-4">
+            <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-white mb-4 tracking-wide">
               Company
             </h3>
             <ul className="space-y-3">
@@ -120,7 +120,7 @@ export function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-white/70 hover:text-white transition-colors"
+                    className="text-sm text-white/70 hover:text-white hover:translate-x-1 transition-all duration-200 inline-block"
                   >
                     {item.name}
                   </Link>

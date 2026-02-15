@@ -96,8 +96,8 @@ export default function RootLayout({
         className={`${montserrat.variable} ${openSans.variable} antialiased bg-soft-cream text-slate`}
       >
         {/* Google Analytics 4 */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-SM66W3MPTS" strategy="afterInteractive" />
-        <Script id="ga4-script" strategy="afterInteractive">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-SM66W3MPTS" strategy="lazyOnload" />
+        <Script id="ga4-script" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -106,7 +106,7 @@ export default function RootLayout({
           `}
         </Script>
         {/* Microsoft Clarity Analytics */}
-        <Script id="clarity-script" strategy="afterInteractive">
+        <Script id="clarity-script" strategy="lazyOnload">
           {`
             (function(c,l,a,r,i,t,y){
               c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};

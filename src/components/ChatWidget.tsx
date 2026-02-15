@@ -120,12 +120,13 @@ export function ChatWidget() {
       {/* Chat Toggle Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`fixed bottom-6 right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-300 ${
+        className={`fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 p-4 rounded-full shadow-lg transition-all duration-300 focus-visible:ring-4 focus-visible:ring-sun-ochre/30 ${
           isOpen
             ? "bg-slate text-white"
             : "bg-sun-ochre text-white hover:bg-sun-ochre/90"
         }`}
         aria-label={isOpen ? "Close chat" : "Open chat"}
+        title={isOpen ? "Close chat" : "Chat with us"}
       >
         {isOpen ? (
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

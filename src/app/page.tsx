@@ -68,9 +68,24 @@ export default function Home() {
                 closes: "14:00",
               },
             ],
-            priceRange: "$$",
+            priceRange: "$12,000 - $60,000 annual contracts",
+            foundingDate: "2026",
+            numberOfEmployees: {
+              "@type": "QuantitativeValue",
+              minValue: 2,
+              maxValue: 10,
+            },
             image: "https://stoneandsaltohio.com/og-image.jpg",
-            sameAs: [],
+            sameAs: [
+              "https://www.linkedin.com/company/stone-and-salt",
+            ],
+            knowsAbout: [
+              "Commercial grounds management",
+              "Snow and ice removal",
+              "Hardscape construction",
+              "Property maintenance",
+              "GPS-documented service",
+            ],
             hasOfferCatalog: {
               "@type": "OfferCatalog",
               name: "Grounds Management Services",
