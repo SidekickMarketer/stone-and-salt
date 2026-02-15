@@ -67,8 +67,8 @@ html {
   transform: scale(1.02);
 }
 
-/* Soften transitions globally */
-* {
+/* Soften transitions globally — scoped to elements that already have transitions */
+*[class*="transition"] {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 

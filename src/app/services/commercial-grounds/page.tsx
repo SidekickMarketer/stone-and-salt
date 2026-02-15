@@ -1,109 +1,130 @@
 import { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { CTA } from "@/sections/CTA";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF, PHONE_NUMBER_SCHEMA } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Commercial Grounds Maintenance | Cincinnati",
+  title: "Commercial Grounds Management | Cincinnati",
   description:
-    "Professional commercial grounds maintenance for Cincinnati businesses, HOAs, and property managers. Consistent quality, one vendor, year-round service.",
+    "Year-round grounds maintenance for office parks, retail centers, and commercial properties. Annual contracts from $12K-$60K. Documented service. 4-hour response guarantee.",
   openGraph: {
-    title: "Commercial Grounds Maintenance | Stone & Salt",
+    title: "Commercial Grounds Management | Stone & Salt",
     description:
-      "Professional commercial grounds maintenance for Cincinnati businesses, HOAs, and property managers.",
+      "Year-round grounds maintenance for office parks, retail centers, and commercial properties in Greater Cincinnati.",
   },
 };
 
-const services = [
+const benefits = [
   {
-    title: "Corporate Campuses",
+    title: "Documented Service for Liability Protection",
     description:
-      "First impressions matter. We keep corporate properties looking sharp with consistent, professional grounds care that reflects your company's standards.",
+      "Every service visit is logged with GPS coordinates, timestamps, and photos. When a tenant files a slip-and-fall claim or an insurance company requests proof of maintenance, your records are ready. We carry $2M in general liability coverage, and your property can be added as additional insured.",
   },
   {
-    title: "Office Parks",
+    title: "Fixed Annual Pricing",
     description:
-      "Multi-building properties need reliable, coordinated care. One vendor, one point of contact, consistent results across your entire portfolio.",
+      "Your grounds management cost is the same every month -- January through December. Annual contracts range from $12,000 to $60,000 depending on property size and service scope. No per-event surprises. No seasonal renegotiation. One line item in your annual budget.",
   },
   {
-    title: "HOA & Condominium Communities",
+    title: "Single-Vendor Year-Round Management",
     description:
-      "Common areas that make residents proud. We understand board expectations and deliver documented service you can report on.",
-  },
-  {
-    title: "Retail Centers",
-    description:
-      "Customer-facing properties demand attention to detail. Clean, inviting grounds that support your tenants' success.",
-  },
-  {
-    title: "Medical Facilities",
-    description:
-      "Healthcare properties require reliable, professional care. We maintain grounds that reflect the quality of care inside.",
-  },
-  {
-    title: "Industrial Properties",
-    description:
-      "Practical, efficient grounds care for warehouses, distribution centers, and manufacturing facilities.",
+      "Grounds maintenance from March through November. Snow and ice management from November through March. Same team. Same standards. No handoffs between seasonal contractors. No gaps in December when the mowing crew has gone home and the snow crew has not started yet.",
   },
 ];
 
-const included = [
-  "Lawn mowing and edging",
-  "Seasonal fertilization programs",
-  "Mulch and bed maintenance",
+const groundsServices = [
+  "Mowing and edging (weekly or bi-weekly based on contract)",
+  "Seasonal bed maintenance and mulching",
+  "Spring and fall cleanup",
   "Shrub and hedge trimming",
-  "Seasonal color rotations",
-  "Leaf removal and fall cleanup",
-  "Spring cleanup and preparation",
-  "Irrigation monitoring",
-  "Snow removal integration",
-  "Monthly property walks",
+  "Weed control and fertilization",
+  "Irrigation monitoring (where applicable)",
+  "Parking lot and sidewalk maintenance",
+  "Trash and debris removal",
 ];
 
-const professionalStandards = [
+const snowServices = [
+  "Lot plowing at 2-inch trigger (customizable)",
+  "Sidewalk clearing before business hours",
+  "Salt and ice melt application",
+  "Pre-treatment before forecasted events",
+  "GPS-documented service with timestamps",
+  "24/7 emergency response for contract clients",
+];
+
+const tiers = [
   {
-    title: "Uniformed Crews",
-    description: "Branded trucks and uniformed crew members. Your tenants will always know who we are.",
+    name: "Standard",
+    range: "$12,000-25,000/year",
+    features: [
+      "Weekly mowing",
+      "Seasonal cleanup (2x)",
+      "Bed maintenance",
+      "Snow removal",
+    ],
   },
   {
-    title: "Consistent Teams",
-    description: "The same crew services your property every visit. They know your property and your expectations.",
+    name: "Premium",
+    range: "$25,000-45,000/year",
+    features: [
+      "Weekly mowing",
+      "Seasonal cleanup (4x)",
+      "Bed maintenance",
+      "Snow removal",
+      "Monthly property report",
+      "Priority response",
+    ],
+    popular: true,
   },
   {
-    title: "Documented Service",
-    description: "Service logs, photos, and regular reports. You'll always know what was done and when.",
-  },
-  {
-    title: "Responsive Communication",
-    description: "Direct line to your account manager. Calls returned within 4 hours, issues addressed immediately.",
+    name: "Enterprise",
+    range: "$45,000-60,000/year",
+    features: [
+      "Weekly mowing",
+      "Continuous maintenance",
+      "Bed maintenance",
+      "Snow removal",
+      "Weekly property report",
+      "Priority response",
+      "Dedicated crew assignment",
+      "Quarterly site review",
+    ],
   },
 ];
 
-const faqs = [
+const process = [
   {
-    question: "How is commercial pricing structured?",
-    answer:
-      "We provide annual contracts with predictable monthly billing. No surprise invoices. Your budget stays consistent, and service levels stay high. Contact us for a custom quote based on your property size and service needs.",
+    step: "1",
+    title: "Site Assessment",
+    description:
+      "We walk your property and assess scope, access points, problem areas, and seasonal requirements. Takes 30-45 minutes. No cost. No obligation.",
   },
   {
-    question: "Can you handle multiple properties?",
-    answer:
-      "Yes. Many of our clients manage portfolios of properties across Greater Cincinnati. You get one point of contact, one invoice, and consistent service standards across all locations.",
+    step: "2",
+    title: "Custom Proposal",
+    description:
+      "Within 48-72 hours, you receive a detailed proposal with fixed annual pricing, service schedule, and contract terms. No hidden fees.",
   },
   {
-    question: "What happens in winter?",
-    answer:
-      "Unlike companies that disappear after leaf season, we offer integrated snow and ice management. Same vendor, same reliability, year-round. Your grounds contract and snow contract work together seamlessly.",
+    step: "3",
+    title: "Contract & Onboarding",
+    description:
+      "Sign the agreement and we schedule an onboarding walkthrough with your on-site team. We document property specifics, access procedures, and communication preferences.",
   },
   {
-    question: "How do you handle service documentation?",
-    answer:
-      "We provide regular service reports and are happy to join board meetings or provide documentation for property management reporting. You'll always know what was done and when.",
+    step: "4",
+    title: "Year-Round Service",
+    description:
+      "Your property is maintained to contract specifications with documented service logs available on request. Monthly invoicing. Annual review to adjust scope if needed.",
   },
-  {
-    question: "What's your response time for issues?",
-    answer:
-      "We respond to all service inquiries within 4 hours during business hours. For urgent issues, you have direct access to your account manager's cell phone.",
-  },
+];
+
+const trustSignals = [
+  "$2M general liability insurance (your property named as additional insured)",
+  "GPS-tracked, timestamped service documentation",
+  "4-hour response guarantee during business hours",
+  "Seasonal contracts with fixed monthly billing",
+  "Direct owner access -- not a call center",
 ];
 
 export default function CommercialGroundsPage() {
@@ -114,156 +135,84 @@ export default function CommercialGroundsPage() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
-              Commercial Services
+              Commercial Grounds Management
             </p>
             <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-slate leading-tight">
-              Stop chasing your landscaping company.
+              Your property managed year-round. One vendor. One contract. Documented.
             </h1>
             <p className="mt-6 text-xl text-slate/70 leading-relaxed">
-              One vendor. Consistent quality. Year-round reliability. Serving office parks, retail centers,
-              and HOAs across Blue Ash, Mason, West Chester, and Greater Cincinnati.
+              Stone &amp; Salt provides integrated grounds maintenance and snow removal for
+              commercial properties across Greater Cincinnati. Annual contracts. Fixed budgets.
+              Every visit logged.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Request a Quote
+                Request Site Assessment
               </Button>
               <a
-                href="tel:+15135550123"
+                href={PHONE_NUMBER_HREF}
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-slate/70 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                  />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                (513) 555-0123
+                Call {PHONE_NUMBER}
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem/Solution */}
-      <section className="py-16 lg:py-24 bg-soft-cream">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-            <div>
-              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-                Managing vendors shouldn&apos;t be your full-time job.
-              </h2>
-              <p className="mt-6 text-lg text-slate/70 leading-relaxed">
-                You know the drill. The landscaping crew shows up when they feel like it. Quality
-                varies depending on who&apos;s on the truck. Calls go to voicemail. And when winter
-                hits, you&apos;re scrambling for a separate snow contractor.
-              </p>
-              <p className="mt-4 text-lg text-slate/70 leading-relaxed">
-                Stone & Salt handles your grounds differently. One relationship. One point of
-                contact. One vendor who actually answers when you call. Your property gets the same
-                crew, same standards, every visit.
-              </p>
-            </div>
-            <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-card">
-              <h3 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-slate mb-6">
-                What Property Managers Tell Us
-              </h3>
-              <ul className="space-y-4">
-                {[
-                  "\"I need a vendor I don't have to manage.\"",
-                  "\"Coordinating landscaping and snow is a headache.\"",
-                  "\"Quality is inconsistent — different crew every time.\"",
-                  "\"I can never get anyone on the phone.\"",
-                  "\"Budget surprises kill me.\"",
-                ].map((quote, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <svg
-                      className="w-5 h-5 text-sun-ochre flex-shrink-0 mt-0.5"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                    <span className="text-slate/70">{quote}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-slate font-semibold">
-                Sound familiar? We built Stone & Salt to solve exactly this.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Property Types */}
+      {/* Three Key Benefits */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
-              Who We Serve
-            </p>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-              Properties We Serve
-            </h2>
-            <p className="mt-4 text-lg text-slate/70">
-              From corporate headquarters to community common areas, we tailor our approach to your
-              property&apos;s specific needs.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service) => (
-              <div key={service.title} className="p-6 rounded-xl bg-soft-cream hover:bg-eucalyptus/10 transition-colors duration-300">
-                <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate text-lg">
-                  {service.title}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {benefits.map((benefit) => (
+              <div key={benefit.title} className="bg-soft-cream rounded-2xl p-6 lg:p-8">
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-xl mb-4">
+                  {benefit.title}
                 </h3>
-                <p className="mt-3 text-slate/70">{service.description}</p>
+                <p className="text-slate/70 leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* What's Included */}
+      {/* Service Scope */}
       <section className="py-16 lg:py-24 bg-eucalyptus/10">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <div>
               <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
-                Comprehensive Care
+                Year-Round Grounds Services
               </p>
-              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate mb-6">
                 Complete grounds care. Nothing falls through the cracks.
               </h2>
-              <p className="mt-6 text-lg text-slate/70 leading-relaxed">
-                Our commercial maintenance contracts cover everything your property needs to look
-                professional year-round. And if it&apos;s not in the contract, we&apos;ll tell you —
-                no surprise bills.
-              </p>
-              <div className="mt-8">
-                <Button href="/contact">Request a Quote</Button>
-              </div>
+              <ul className="space-y-3">
+                {groundsServices.map((item) => (
+                  <li key={item} className="flex items-center gap-3 min-h-[32px]">
+                    <svg className="w-5 h-5 text-eucalyptus flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div>
-              <ul className="grid sm:grid-cols-2 gap-4">
-                {included.map((item) => (
-                  <li key={item} className="flex items-center gap-3 min-h-[44px]">
-                    <svg
-                      className="w-5 h-5 text-eucalyptus flex-shrink-0"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
+              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+                Integrated Snow &amp; Ice Services
+              </p>
+              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate mb-6">
+                Same team. Same standards. Winter covered.
+              </h2>
+              <ul className="space-y-3">
+                {snowServices.map((item) => (
+                  <li key={item} className="flex items-center gap-3 min-h-[32px]">
+                    <svg className="w-5 h-5 text-eucalyptus flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     <span className="text-slate">{item}</span>
                   </li>
@@ -274,59 +223,117 @@ export default function CommercialGroundsPage() {
         </div>
       </section>
 
-      {/* Professional Standards */}
-      <section className="py-16 lg:py-24 bg-slate">
+      {/* Contract Tiers */}
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
-              Our Standards
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              Contract Tiers
             </p>
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-white">
-              Professional Standards, Every Visit
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              Predictable Annual Pricing
             </h2>
-            <p className="mt-4 text-lg text-white/70">
-              The difference between a vendor and a partner is in the details.
+            <p className="mt-4 text-lg text-slate/70">
+              All tiers include: $2M liability coverage, GPS-documented service, 4-hour response guarantee, direct owner access.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {professionalStandards.map((standard) => (
-              <div key={standard.title} className="bg-white/10 rounded-xl p-6 hover:bg-white/15 transition-colors duration-300">
-                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-white text-lg">
-                  {standard.title}
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+            {tiers.map((tier) => (
+              <div
+                key={tier.name}
+                className={`rounded-2xl p-6 lg:p-8 ${
+                  tier.popular
+                    ? "bg-slate text-white ring-4 ring-sun-ochre shadow-card-hover"
+                    : "bg-soft-cream"
+                }`}
+              >
+                {tier.popular && (
+                  <p className="text-sun-ochre text-xs font-semibold uppercase tracking-wide mb-2">
+                    Most Popular
+                  </p>
+                )}
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-2xl">
+                  {tier.name}
                 </h3>
-                <p className="mt-2 text-sm text-white/70 leading-relaxed">
-                  {standard.description}
+                <p className={`mt-2 text-lg font-semibold ${tier.popular ? "text-eucalyptus" : "text-sun-ochre"}`}>
+                  {tier.range}
                 </p>
+                <ul className="mt-6 space-y-3">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3">
+                      <svg className={`w-5 h-5 flex-shrink-0 mt-0.5 ${tier.popular ? "text-eucalyptus" : "text-sun-ochre"}`} fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className={`text-sm ${tier.popular ? "text-white/90" : "text-slate/70"}`}>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-8">
+                  <Button
+                    href="/contact"
+                    variant={tier.popular ? "primary" : "outline"}
+                    className={`w-full justify-center ${tier.popular ? "bg-white text-slate hover:bg-white/90" : ""}`}
+                  >
+                    Request Site Assessment
+                  </Button>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 lg:py-24 bg-white">
+      {/* Process */}
+      <section className="py-16 lg:py-24 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">
-              Frequently Asked Questions
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+              How We Work
+            </p>
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+              From Assessment to Year-Round Service
             </h2>
-            <div className="space-y-8">
-              {faqs.map((faq, index) => (
-                <div key={index} className="border-b border-slate/10 pb-8">
-                  <h3 className="font-[family-name:var(--font-montserrat)] font-semibold text-slate text-lg">
-                    {faq.question}
-                  </h3>
-                  <p className="mt-3 text-slate/70 leading-relaxed">{faq.answer}</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {process.map((item) => (
+              <div key={item.step} className="relative">
+                <div className="w-12 h-12 rounded-full bg-sun-ochre text-white flex items-center justify-center font-bold text-xl mb-4">
+                  {item.step}
                 </div>
+                <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate text-lg">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-slate/70">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust Signals */}
+      <section className="py-16 lg:py-24 bg-slate">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-white mb-8">
+              What You Can Count On
+            </h2>
+            <ul className="space-y-4 text-left">
+              {trustSignals.map((signal) => (
+                <li key={signal} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-eucalyptus flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-white/80">{signal}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </section>
 
       <CTA
-        title="Get your commercial grounds quote"
-        description="We'll walk your property and build a customized plan that fits your needs and budget. Response within 4 hours."
+        title="Let us walk your property."
+        description="Schedule a no-obligation site assessment. You will receive a custom proposal with fixed annual pricing within 72 hours."
       />
 
       {/* Service Schema */}
@@ -336,11 +343,11 @@ export default function CommercialGroundsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Commercial Grounds Maintenance",
+            name: "Commercial Grounds Management",
             provider: {
               "@type": "LocalBusiness",
               name: "Stone & Salt",
-              telephone: "+1-513-555-0123",
+              telephone: PHONE_NUMBER_SCHEMA,
             },
             areaServed: {
               "@type": "GeoCircle",
@@ -352,8 +359,8 @@ export default function CommercialGroundsPage() {
               geoRadius: "45 miles",
             },
             description:
-              "Professional commercial grounds maintenance for Cincinnati businesses, HOAs, and property managers.",
-            serviceType: "Commercial Landscaping",
+              "Year-round grounds maintenance for office parks, retail centers, and commercial properties in Greater Cincinnati. Annual contracts from $12K-$60K.",
+            serviceType: "Commercial Grounds Management",
           }),
         }}
       />

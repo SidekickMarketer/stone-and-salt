@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { Animate } from "@/components/Animate";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF } from "@/lib/constants";
 
 interface CTAProps {
   variant?: "primary" | "secondary";
@@ -12,15 +13,15 @@ interface CTAProps {
 
 export function CTA({
   variant = "primary",
-  title = "Ready to get started?",
-  description = "Request a quote for your property. We respond within 4 hours during business hours.",
+  title = "Protect your property year-round.",
+  description = "Request a site assessment and receive a custom proposal with fixed annual pricing. No obligation. Response within 4 hours.",
 }: CTAProps) {
   if (variant === "secondary") {
     return (
       <section className="py-12 lg:py-16 bg-eucalyptus/10 relative overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 bg-grid opacity-50" />
-        
+
         <div className="relative mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <Animate>
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
@@ -32,10 +33,10 @@ export function CTA({
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button href="/contact" size="lg">
-                  Request a Quote
+                  Request Site Assessment
                 </Button>
                 <a
-                  href="tel:+15135550123"
+                  href={PHONE_NUMBER_HREF}
                   className="inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] text-slate/80 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -46,7 +47,7 @@ export function CTA({
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  (513) 555-0123
+                  {PHONE_NUMBER}
                 </a>
               </div>
             </div>
@@ -60,11 +61,11 @@ export function CTA({
     <section className="py-16 lg:py-24 relative overflow-hidden">
       {/* Gradient background with depth */}
       <div className="absolute inset-0 bg-gradient-to-br from-sun-ochre via-sun-ochre to-sun-ochre-bright" />
-      
+
       {/* Decorative glows */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-sun-ochre-bright/30 rounded-full blur-3xl" />
-      
+
       {/* Subtle pattern overlay */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -92,10 +93,10 @@ export function CTA({
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-md bg-white text-sun-ochre hover:bg-white/90 shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/50"
               >
-                Request a Quote
+                Request Site Assessment
               </Link>
               <a
-                href="tel:+15135550123"
+                href={PHONE_NUMBER_HREF}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 min-h-[52px] text-white font-semibold border-2 border-white rounded-md hover:bg-white hover:text-sun-ochre transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] focus-visible:outline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -106,14 +107,14 @@ export function CTA({
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                Call (513) 555-0123
+                Call {PHONE_NUMBER}
               </a>
             </div>
           </Animate>
 
           <Animate delay={300}>
             <p className="mt-8 text-white/70 text-sm">
-              No obligation • Response within 4 hours
+              Currently accepting commercial contracts for Spring 2026.
             </p>
           </Animate>
         </div>

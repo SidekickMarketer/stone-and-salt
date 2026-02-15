@@ -1,15 +1,16 @@
 import { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { CTA } from "@/sections/CTA";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF, PHONE_NUMBER_SCHEMA } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Snow & Ice Removal | Cincinnati",
+  title: "Commercial Snow & Ice Management | Cincinnati",
   description:
-    "Reliable commercial and residential snow removal in Greater Cincinnati. 24/7 response, professional equipment, and the reliability your property needs.",
+    "GPS-documented commercial snow removal in Greater Cincinnati. Seasonal contracts, 24/7 response, $2M liability coverage. Documented service for property managers.",
   openGraph: {
-    title: "Snow & Ice Removal | Stone & Salt",
+    title: "Commercial Snow & Ice Management | Stone & Salt",
     description:
-      "Reliable commercial and residential snow removal in Greater Cincinnati.",
+      "GPS-documented commercial snow removal in Greater Cincinnati. Seasonal contracts and 24/7 response.",
   },
 };
 
@@ -95,7 +96,7 @@ const faqs = [
   {
     question: "How do I sign up for next winter?",
     answer:
-      "We begin booking snow contracts in September. Commercial contracts are typically finalized by October 31. Residential spots fill quickly — early booking ensures you're covered.",
+      "We begin booking snow contracts in September for the following season. Commercial contracts are typically finalized by October 31. Properties on year-round grounds management contracts receive automatic snow coverage -- no separate negotiation needed. Contact us to discuss your property's needs.",
   },
 ];
 
@@ -118,10 +119,10 @@ export default function SnowRemovalPage() {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Get a Snow Contract Quote
+                Request Seasonal Contract Details
               </Button>
               <a
-                href="tel:+15135550123"
+                href={PHONE_NUMBER_HREF}
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-slate/70 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -132,7 +133,7 @@ export default function SnowRemovalPage() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                (513) 555-0123
+                {PHONE_NUMBER}
               </a>
             </div>
           </div>
@@ -155,13 +156,13 @@ export default function SnowRemovalPage() {
               </div>
             </div>
             <a
-              href="tel:+15135550123"
+              href={PHONE_NUMBER_HREF}
               className="inline-flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] bg-slate text-white font-semibold rounded-md hover:bg-slate/90 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              (513) 555-0123
+              {PHONE_NUMBER}
             </a>
           </div>
         </div>
@@ -243,7 +244,7 @@ export default function SnowRemovalPage() {
                 Contact us for a custom quote based on your property
               </p>
               <Button href="/contact" className="w-full justify-center">
-                Request Commercial Quote
+                Request Seasonal Contract Details
               </Button>
             </div>
 
@@ -274,7 +275,7 @@ export default function SnowRemovalPage() {
                 Seasonal and per-push options available
               </p>
               <Button href="/contact" variant="secondary" className="w-full justify-center">
-                Request Residential Quote
+                Check Residential Availability
               </Button>
             </div>
           </div>
@@ -289,17 +290,18 @@ export default function SnowRemovalPage() {
               Year-Round Service
             </p>
             <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-              One vendor. Every season.
+              Snow clients get grounds management priority.
             </h2>
             <p className="mt-6 text-lg text-slate/70 leading-relaxed">
-              Snow removal clients get priority consideration for landscaping and grounds
-              maintenance. One relationship that covers your property year-round. No more scrambling
-              to find contractors each season.
+              Properties on snow contracts receive priority consideration for spring and summer
+              grounds maintenance. One vendor, one contract, one relationship that covers your
+              property 12 months a year. This is the model we recommend for any commercial client
+              tired of coordinating seasonal vendor handoffs.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
-              <Button href="/services/commercial-grounds">Commercial Grounds</Button>
-              <Button href="/services/maintenance" variant="outline">
-                Residential Maintenance
+              <Button href="/services/commercial-grounds">Learn About Commercial Grounds Management</Button>
+              <Button href="/contact" variant="outline">
+                Request Year-Round Contract Details
               </Button>
             </div>
           </div>
@@ -328,8 +330,8 @@ export default function SnowRemovalPage() {
       </section>
 
       <CTA
-        title="Need snow service this season?"
-        description="Commercial and residential snow contracts available. Contact us to discuss your property's needs and get a quote."
+        title="Need reliable snow service for your property?"
+        description="Commercial seasonal contracts and year-round management agreements available. Contact us for a site assessment and custom proposal."
       />
 
       {/* Service Schema */}
@@ -343,7 +345,7 @@ export default function SnowRemovalPage() {
             provider: {
               "@type": "LocalBusiness",
               name: "Stone & Salt",
-              telephone: "+1-513-555-0123",
+              telephone: PHONE_NUMBER_SCHEMA,
             },
             areaServed: {
               "@type": "GeoCircle",

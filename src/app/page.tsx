@@ -1,25 +1,19 @@
 import { Hero } from "@/sections/Hero";
-import { TrustBar } from "@/sections/TrustBar";
 import { Services } from "@/sections/Services";
 import { WhyUs } from "@/sections/WhyUs";
-import { BeforeAfter } from "@/sections/BeforeAfter";
 import { Testimonials } from "@/sections/Testimonials";
 import { CTA } from "@/sections/CTA";
 import { BackToTop } from "@/components/BackToTop";
+import { PHONE_NUMBER_SCHEMA } from "@/lib/constants";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <TrustBar />
       <Services />
       <WhyUs />
-      <BeforeAfter />
       <Testimonials />
-      <CTA
-        title="Ready to get started?"
-        description="Whether you need commercial snow service or year-round grounds care, we respond within 4 hours."
-      />
+      <CTA />
       <BackToTop />
 
       {/* LocalBusiness Schema */}
@@ -32,9 +26,9 @@ export default function Home() {
             "@id": "https://stoneandsaltohio.com",
             name: "Stone & Salt",
             description:
-              "Year-round outdoor services for Greater Cincinnati. Professional landscaping, hardscape installation, grounds maintenance, and snow removal.",
+              "Year-round commercial grounds management and snow removal for Greater Cincinnati. One vendor. Four seasons. Documented service. $2M insured.",
             url: "https://stoneandsaltohio.com",
-            telephone: "+1-513-555-0123",
+            telephone: PHONE_NUMBER_SCHEMA,
             email: "hello@stoneandsaltohio.com",
             address: {
               "@type": "PostalAddress",
@@ -79,11 +73,11 @@ export default function Home() {
             sameAs: [],
             hasOfferCatalog: {
               "@type": "OfferCatalog",
-              name: "Outdoor Services",
+              name: "Grounds Management Services",
               itemListElement: [
                 {
                   "@type": "OfferCatalog",
-                  name: "Commercial Grounds Maintenance",
+                  name: "Commercial Grounds Management",
                   itemListElement: [
                     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Corporate Campus Maintenance" } },
                     { "@type": "Offer", itemOffered: { "@type": "Service", name: "HOA Grounds Care" } },
@@ -92,7 +86,7 @@ export default function Home() {
                 },
                 {
                   "@type": "OfferCatalog",
-                  name: "Snow & Ice Removal",
+                  name: "Snow & Ice Management",
                   itemListElement: [
                     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Snow Plowing" } },
                     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Residential Snow Removal" } },
@@ -101,11 +95,11 @@ export default function Home() {
                 },
                 {
                   "@type": "OfferCatalog",
-                  name: "Hardscape Installation",
+                  name: "Hardscapes & Site Improvements",
                   itemListElement: [
+                    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Site Improvements" } },
                     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Paver Patios" } },
                     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Retaining Walls" } },
-                    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Outdoor Living Spaces" } },
                   ],
                 },
               ],

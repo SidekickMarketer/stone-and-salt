@@ -18,11 +18,11 @@ export function BeforeAfter() {
             </h2>
             <p className="mt-6 text-lg text-slate/70 leading-relaxed">
               Our portfolio is growing. Be one of our first clients and get the
-              attention your project deserves — not just another job in the queue.
+              attention your property deserves -- not just another job in the queue.
             </p>
             <div className="mt-8">
               <Button href="/contact" size="lg">
-                Start Your Project
+                Request Site Assessment
               </Button>
             </div>
           </div>

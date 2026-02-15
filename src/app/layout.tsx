@@ -21,11 +21,11 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://stoneandsaltohio.com"),
   title: {
-    default: "Stone & Salt | Commercial Snow Removal & Grounds | Cincinnati",
+    default: "Stone & Salt | Commercial Grounds Management | Greater Cincinnati",
     template: "%s | Stone & Salt",
   },
   description:
-    "Commercial snow removal and grounds maintenance for Greater Cincinnati property managers. 24/7 snow service, year-round grounds care. One vendor.",
+    "Year-round commercial grounds management and snow removal in Greater Cincinnati. One vendor. Four seasons. Documented service. $2M insured.",
   keywords: [
     "commercial snow removal Cincinnati",
     "snow plowing Cincinnati",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://stoneandsaltohio.com",
     siteName: "Stone & Salt",
-    title: "Stone & Salt | Commercial Snow Removal & Grounds | Cincinnati",
+    title: "Stone & Salt | Commercial Grounds Management | Greater Cincinnati",
     description:
-      "Commercial snow removal and grounds maintenance for Greater Cincinnati property managers. One vendor, year-round.",
+      "Year-round commercial grounds management and snow removal in Greater Cincinnati. One vendor. Four seasons. Documented service.",
     images: [
       {
         url: "/og-image.jpg",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stone & Salt | Commercial Snow & Grounds",
-    description: "Commercial snow removal and grounds maintenance. One vendor, year-round.",
+    title: "Stone & Salt | Commercial Grounds Management",
+    description: "Year-round commercial grounds management and snow removal. One vendor. Four seasons.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -108,8 +108,14 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "v7jsazisjy");
           `}
         </Script>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-sun-ochre focus:text-white focus:px-4 focus:py-2 focus:rounded-md focus:text-sm focus:font-semibold"
+        >
+          Skip to main content
+        </a>
         <Header />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
         <ChatWidget />
       </body>

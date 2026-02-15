@@ -1,11 +1,11 @@
 import Link from "next/link";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF, EMAIL } from "@/lib/constants";
 
 const services = [
   { name: "Commercial Grounds", href: "/services/commercial-grounds" },
-  { name: "Estate & Acreage", href: "/services/estate-maintenance" },
-  { name: "Snow & Ice Removal", href: "/services/snow-removal" },
-  { name: "Residential Hardscapes", href: "/services/hardscapes" },
-  { name: "Lawn & Maintenance", href: "/services/maintenance" },
+  { name: "Snow & Ice Management", href: "/services/snow-removal" },
+  { name: "Hardscapes", href: "/services/hardscapes" },
+  { name: "Residential Services", href: "/services/maintenance" },
 ];
 
 const areas = [
@@ -40,22 +40,22 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
-              Greater Cincinnati&apos;s year-round outdoor partner. Professional landscaping,
-              hardscapes, and snow removal.
+              Year-round commercial grounds management for Greater Cincinnati.
+              One vendor. Four seasons. Documented service.
             </p>
             <p className="mt-4 text-lg font-semibold text-eucalyptus">
               Four seasons. One call.
             </p>
             <div className="mt-6">
               <a
-                href="tel:+15135550123"
+                href={PHONE_NUMBER_HREF}
                 className="text-xl font-semibold text-sun-ochre hover:text-sun-ochre/80 transition-colors"
               >
-                (513) 555-0123
+                {PHONE_NUMBER}
               </a>
               <p className="mt-1 text-sm text-white/70">
-                <a href="mailto:hello@stoneandsaltohio.com" className="hover:text-white transition-colors">
-                  hello@stoneandsaltohio.com
+                <a href={`mailto:${EMAIL}`} className="hover:text-white transition-colors">
+                  {EMAIL}
                 </a>
               </p>
             </div>
@@ -129,10 +129,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-white/50">
-            © {new Date().getFullYear()} Stone & Salt. All rights reserved.
+            &copy; {new Date().getFullYear()} Stone &amp; Salt. All rights reserved.
           </p>
           <p className="text-sm text-white/50">
-            Licensed & Insured in Ohio
+            Licensed &amp; Insured in Ohio | $2M Liability Coverage
           </p>
         </div>
       </div>

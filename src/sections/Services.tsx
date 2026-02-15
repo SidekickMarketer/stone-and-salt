@@ -3,64 +3,56 @@ import { FadeIn } from "@/components/FadeIn";
 
 const services = [
   {
-    title: "Commercial Grounds",
+    title: "Commercial Grounds Management",
     description:
-      "Consistent, professional care for corporate campuses, office parks, retail centers, and HOA common areas. One vendor, one invoice, year-round reliability.",
+      "Year-round property care under a single contract. Mowing, seasonal cleanup, bed maintenance, and snow removal -- documented, insured, and managed by the same team every visit. Your property stays professional. Your budget stays predictable.",
     href: "/services/commercial-grounds",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
       </svg>
     ),
-    features: ["Corporate Campuses", "Office Parks", "HOA Communities", "Retail Centers"],
+    features: ["Office Parks", "Retail Centers", "Medical Facilities", "HOA Common Areas"],
+    cta: "Request Site Assessment",
   },
   {
-    title: "Snow & Ice Removal",
+    title: "Snow & Ice Management",
     description:
-      "24/7 response when winter hits. Documented service, professional equipment, and the reliability your property needs. Your lot cleared before you get there.",
+      "Lots cleared before your tenants arrive. GPS-documented, fully insured, and responsive at 2-inch accumulation. Seasonal contracts for budget certainty or per-event pricing when you need flexibility.",
     href: "/services/snow-removal",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
       </svg>
     ),
-    features: ["24/7 Response", "Commercial & Residential", "Salt & Ice Management", "Documented Service"],
+    features: ["24/7 Response", "GPS Documentation", "Seasonal Contracts", "Salt Management"],
+    cta: "Get Snow Contract Details",
   },
   {
-    title: "Residential Hardscapes",
+    title: "Hardscapes & Site Improvements",
     description:
-      "Patios, walkways, retaining walls, and outdoor living spaces. Expert design, quality materials, and results that last. Built right the first time.",
+      "Commercial site enhancements and residential outdoor construction. Patios, retaining walls, walkways, and gathering spaces built with Belgard pavers and professional-grade materials.",
     href: "/services/hardscapes",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
       </svg>
     ),
-    features: ["Paver Patios", "Retaining Walls", "Outdoor Kitchens", "Fire Pits"],
+    features: ["Paver Patios", "Retaining Walls", "Commercial Walkways", "Outdoor Living"],
+    cta: "Discuss Your Project",
   },
   {
-    title: "Lawn & Maintenance",
+    title: "Select Residential Services",
     description:
-      "Professional grounds care that maintains your property's curb appeal. Same crew, same standards, every visit. Your property gets treated like our name depends on it.",
+      "Professional grounds care for homes in Liberty Township, Indian Hill, Mason, and surrounding communities. Available when commercial capacity allows. Same crew, same standards as our commercial clients.",
     href: "/services/maintenance",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
       </svg>
     ),
-    features: ["Lawn Care", "Seasonal Cleanup", "Mulching & Beds", "Irrigation"],
-  },
-  {
-    title: "Estate & Acreage",
-    description:
-      "Large property maintenance for estates, farms, and rural homes. Commercial equipment for 10-30+ acre properties. Your land deserves more than a guy with a riding mower.",
-    href: "/services/estate-maintenance",
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
-    features: ["10+ Acre Properties", "Oxford & Waynesville", "Bi-Weekly Mowing", "Year-Round Care"],
+    features: ["Lawn Care", "Seasonal Cleanup", "Estate Properties", "Irrigation"],
+    cta: "Check Availability",
   },
 ];
 
@@ -75,11 +67,11 @@ export function Services() {
               What We Do
             </p>
             <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-              Complete Outdoor Services
+              Year-Round Property Management
             </h2>
             <p className="mt-4 text-lg text-slate/70">
-              From spring landscaping to winter snow removal, we handle every season.
-              One team, one relationship, year-round results.
+              From spring cleanup to winter plowing, one team manages it all.
+              One contract. One invoice. One phone call when you need something.
             </p>
           </div>
         </FadeIn>
@@ -114,7 +106,7 @@ export function Services() {
                       ))}
                     </div>
                     <div className="mt-4 flex items-center text-sun-ochre font-semibold text-sm group-hover:translate-x-1 transition-transform">
-                      Learn More
+                      {service.cta}
                       <svg className="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>

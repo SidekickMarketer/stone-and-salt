@@ -1,15 +1,16 @@
 import { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { CTA } from "@/sections/CTA";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF, PHONE_NUMBER_SCHEMA } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Lawn & Landscape Maintenance | Cincinnati",
+  title: "Select Residential Services | Cincinnati",
   description:
-    "Professional lawn care and landscape maintenance for Greater Cincinnati homes. Same crew, consistent quality, reliable service. Keep your property looking its best.",
+    "Professional lawn care and landscape maintenance for select Greater Cincinnati homes. Same crew, consistent quality, reliable service. Available when commercial capacity allows.",
   openGraph: {
-    title: "Lawn & Landscape Maintenance | Stone & Salt",
+    title: "Select Residential Services | Stone & Salt",
     description:
-      "Professional lawn care and landscape maintenance for Greater Cincinnati homes.",
+      "Professional lawn care and landscape maintenance for select Greater Cincinnati homes.",
   },
 };
 
@@ -133,12 +134,12 @@ const faqs = [
   {
     question: "How do you handle billing?",
     answer:
-      "Monthly billing with consistent amounts — no surprise invoices. You know what you're paying each month, and we deliver consistent service.",
+      "Monthly billing with consistent amounts -- no surprise invoices. You know what you are paying each month, and we deliver consistent service.",
   },
   {
-    question: "What if I need extra work done?",
+    question: "How do I know if you have availability?",
     answer:
-      "One-off requests are easy. Need extra cleanup before a party? Additional plantings? Just let us know. We handle most requests without formal quotes.",
+      "Our commercial contracts take priority, so residential availability varies by season. Contact us and we will let you know our current capacity and timeline.",
   },
 ];
 
@@ -150,21 +151,22 @@ export default function MaintenancePage() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
-              Lawn & Landscape
+              Select Residential Services
             </p>
             <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-slate leading-tight">
-              Same crew. Every week. Finally.
+              Same crew. Same standards. Every visit.
             </h1>
             <p className="mt-6 text-xl text-slate/70 leading-relaxed">
-              Same crew. Same standards. Every visit. Professional lawn care and landscape
-              maintenance for Greater Cincinnati homeowners who expect more.
+              Available when commercial capacity allows. Professional lawn care and landscape
+              maintenance for Greater Cincinnati homeowners who expect more. Same crew, same
+              equipment, same standards we bring to our commercial clients.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Button href="/contact" size="lg">
-                Get a Maintenance Quote
+                Check Availability
               </Button>
               <a
-                href="tel:+15135550123"
+                href={PHONE_NUMBER_HREF}
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 min-h-[52px] text-slate/70 font-semibold hover:text-sun-ochre transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-md"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -175,7 +177,7 @@ export default function MaintenancePage() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                (513) 555-0123
+                Call {PHONE_NUMBER}
               </a>
             </div>
           </div>
@@ -183,7 +185,7 @@ export default function MaintenancePage() {
       </section>
 
       {/* Services */}
-      <section className="py-16 lg:py-24 bg-soft-cream">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
@@ -280,7 +282,7 @@ export default function MaintenancePage() {
                       pkg.popular ? "bg-white text-slate hover:bg-white/90" : ""
                     }`}
                   >
-                    Get a Quote
+                    Check Availability
                   </Button>
                 </div>
               </div>
@@ -288,7 +290,7 @@ export default function MaintenancePage() {
           </div>
 
           <p className="mt-8 text-center text-slate/60 text-sm">
-            Pricing based on property size, complexity, and specific needs. Contact us for a custom quote.
+            Pricing based on property size, complexity, and specific needs. Residential availability depends on commercial scheduling capacity.
           </p>
         </div>
       </section>
@@ -298,20 +300,20 @@ export default function MaintenancePage() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
-              Why choose Stone & Salt?
+              Commercial standards. Residential care.
             </h2>
             <p className="mt-6 text-lg text-slate/70 leading-relaxed">
-              The same crew servicing your property every time. They learn your preferences, maintain
-              consistent standards, and take ownership of results. That&apos;s the difference between
-              a vendor and a partner.
+              The same crew servicing your property every time. The same commercial-grade equipment.
+              The same standards we bring to office parks and retail centers. That is the difference
+              between a vendor and a partner.
             </p>
           </div>
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: "Same Crew", desc: "Your assigned team knows your property inside out" },
-              { title: "Consistent Quality", desc: "Same standards, same results, every visit" },
+              { title: "Commercial Equipment", desc: "Professional-grade equipment on every visit" },
               { title: "Clear Communication", desc: "Easy to reach when you need us" },
-              { title: "Year-Round Partner", desc: "Maintenance, hardscapes, and snow — one vendor" },
+              { title: "Year-Round Partner", desc: "Maintenance, hardscapes, and snow -- one vendor" },
             ].map((item) => (
               <div key={item.title} className="bg-white rounded-xl p-6 shadow-card text-center">
                 <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-slate">
@@ -324,8 +326,65 @@ export default function MaintenancePage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Estate & Acreage Sub-section */}
       <section className="py-16 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div>
+              <p className="text-sun-ochre font-semibold tracking-wide uppercase text-sm mb-4">
+                Large Properties
+              </p>
+              <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate">
+                Estate and acreage maintenance
+              </h2>
+              <p className="mt-6 text-lg text-slate/70 leading-relaxed">
+                Professional maintenance for large estates, farms, and rural properties in Oxford,
+                Waynesville, and surrounding areas. Commercial equipment that covers ground
+                efficiently. Crews who know how to handle acreage.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  "10-30+ acre residential estates",
+                  "Hobby farms and horse properties",
+                  "Rural homes with significant acreage",
+                  "Bi-weekly service during growing season",
+                  "Year-round care including snow removal",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-3 min-h-[32px]">
+                    <svg className="w-5 h-5 text-eucalyptus flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-slate">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <Button href="/contact" variant="secondary">
+                  Check Availability
+                </Button>
+              </div>
+            </div>
+            <div className="bg-eucalyptus/10 rounded-2xl p-8 lg:p-10">
+              <h3 className="font-[family-name:var(--font-montserrat)] font-bold text-xl text-slate mb-4">
+                Serving Oxford, Waynesville &amp; Surrounding Areas
+              </h3>
+              <p className="text-slate/70 mb-6">
+                We focus on the rural corridor between Cincinnati and Dayton -- the area with
+                beautiful large properties and not enough professional options to maintain them.
+              </p>
+              <ul className="space-y-2 text-sm text-slate/70">
+                <li>Oxford &amp; Miami University area</li>
+                <li>Waynesville &amp; Oregonia</li>
+                <li>Lebanon &amp; Morrow</li>
+                <li>Rural Butler, Warren &amp; Clinton counties</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-[family-name:var(--font-montserrat)] text-3xl sm:text-4xl font-bold text-slate text-center mb-12">
@@ -346,8 +405,8 @@ export default function MaintenancePage() {
       </section>
 
       <CTA
-        title="Ready to experience consistent service?"
-        description="Tell us about your property and we'll recommend the right maintenance package. Free consultations — we're adding limited new clients for spring."
+        title="Interested in residential service?"
+        description="Residential availability depends on our commercial schedule. Contact us to check current capacity and discuss your property needs."
       />
 
       {/* Service Schema */}
@@ -357,11 +416,11 @@ export default function MaintenancePage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Lawn & Landscape Maintenance",
+            name: "Select Residential Services",
             provider: {
               "@type": "LocalBusiness",
               name: "Stone & Salt",
-              telephone: "+1-513-555-0123",
+              telephone: PHONE_NUMBER_SCHEMA,
             },
             areaServed: {
               "@type": "GeoCircle",
@@ -373,7 +432,7 @@ export default function MaintenancePage() {
               geoRadius: "45 miles",
             },
             description:
-              "Professional lawn care and landscape maintenance for Greater Cincinnati homes.",
+              "Professional lawn care and landscape maintenance for select Greater Cincinnati homes.",
             serviceType: "Lawn Care",
           }),
         }}

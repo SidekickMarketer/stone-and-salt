@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/Button";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF } from "@/lib/constants";
 
 const propertyTypes = [
   { value: "residential", label: "Residential Driveway" },
@@ -88,10 +89,10 @@ export default function SnowEmergencyPage() {
           <div className="bg-white rounded-2xl p-6 shadow-card mb-8">
             <p className="text-sm text-slate/60 uppercase tracking-wide mb-2">Need us sooner?</p>
             <a
-              href="tel:+15135550123"
+              href={PHONE_NUMBER_HREF}
               className="text-2xl font-bold text-sun-ochre hover:text-sun-ochre-dark transition-colors"
             >
-              (513) 555-0123
+              {PHONE_NUMBER}
             </a>
           </div>
           <Link href="/" className="text-slate/60 hover:text-slate text-sm underline">
@@ -111,13 +112,13 @@ export default function SnowEmergencyPage() {
             Stone & Salt
           </Link>
           <a
-            href="tel:+15135550123"
+            href={PHONE_NUMBER_HREF}
             className="flex items-center gap-2 text-sm font-medium hover:text-sun-ochre transition-colors"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            (513) 555-0123
+            {PHONE_NUMBER}
           </a>
         </div>
       </header>
@@ -331,10 +332,10 @@ export default function SnowEmergencyPage() {
             Stone & Salt Landscaping &middot; Greater Cincinnati
           </p>
           <a
-            href="tel:+15135550123"
+            href={PHONE_NUMBER_HREF}
             className="text-lg font-bold text-sun-ochre hover:text-sun-ochre-bright transition-colors"
           >
-            (513) 555-0123
+            {PHONE_NUMBER}
           </a>
         </div>
       </footer>
@@ -342,7 +343,7 @@ export default function SnowEmergencyPage() {
       {/* Mobile Sticky Bar */}
       <div className="fixed bottom-0 left-0 w-full bg-white border-t border-slate/10 p-4 flex gap-3 sm:hidden z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.1)]">
         <a
-          href="tel:+15135550123"
+          href={PHONE_NUMBER_HREF}
           className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-slate text-white font-semibold rounded-lg"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">

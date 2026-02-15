@@ -2,18 +2,22 @@
 
 import { useState } from "react";
 import { Button } from "./Button";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF } from "@/lib/constants";
 
 const services = [
-  { value: "commercial", label: "Commercial Grounds Maintenance" },
-  { value: "snow", label: "Snow & Ice Removal" },
-  { value: "hardscape", label: "Residential Hardscapes" },
-  { value: "maintenance", label: "Lawn & Maintenance" },
+  { value: "commercial-grounds", label: "Commercial Grounds Management" },
+  { value: "snow", label: "Snow & Ice Management" },
+  { value: "hardscape", label: "Hardscapes & Site Improvements" },
+  { value: "residential", label: "Residential Maintenance" },
   { value: "other", label: "Other / Not Sure" },
 ];
 
 const propertyTypes = [
-  { value: "commercial", label: "Commercial Property" },
+  { value: "office-park", label: "Office Park / Corporate Campus" },
+  { value: "retail", label: "Retail Center / Shopping" },
+  { value: "medical", label: "Medical / Healthcare Facility" },
   { value: "hoa", label: "HOA / Community" },
+  { value: "commercial-other", label: "Other Commercial" },
   { value: "residential", label: "Residential" },
 ];
 
@@ -95,16 +99,16 @@ export function ContactForm() {
           </svg>
         </div>
         <h3 className="font-[family-name:var(--font-montserrat)] text-xl font-bold text-slate">
-          Thanks for reaching out!
+          We have received your request.
         </h3>
         <p className="mt-3 text-slate/70">
-          We&apos;ve received your message and will get back to you within 4 hours during business
-          hours.
+          We will get back to you within 4 hours during business hours to discuss your
+          property and schedule a site assessment.
         </p>
         <p className="mt-4 text-sm text-slate/60">
           Need immediate assistance? Call us at{" "}
-          <a href="tel:+15135550123" className="text-sun-ochre font-semibold">
-            (513) 555-0123
+          <a href={PHONE_NUMBER_HREF} className="text-sun-ochre font-semibold">
+            {PHONE_NUMBER}
           </a>
         </p>
       </div>
@@ -213,7 +217,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-slate mb-2">
-          Tell us about your project
+          Tell us about your property
         </label>
         <textarea
           id="message"
@@ -222,7 +226,7 @@ export function ContactForm() {
           value={formState.message}
           onChange={handleChange}
           className="w-full px-4 py-3 rounded-lg border border-slate/20 focus:border-sun-ochre focus:ring-2 focus:ring-sun-ochre/20 outline-none transition-colors bg-white resize-none"
-          placeholder="Property address, what you're looking for, timeline, budget range (if known)..."
+          placeholder="Property address, approximate size, current vendor situation, timeline..."
         />
       </div>
 
@@ -253,7 +257,7 @@ export function ContactForm() {
               Sending...
             </>
           ) : (
-            "Send Message"
+            "Request Site Assessment"
           )}
         </Button>
       </div>

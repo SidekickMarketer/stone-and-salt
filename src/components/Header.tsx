@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "./Button";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF } from "@/lib/constants";
 
 // Configure seasonal banner here - set to null to hide
 const SEASONAL_BANNER = {
-  message: "Early bird spring scheduling now open",
-  shortMessage: "Spring scheduling open",
-  ctaText: "Book now & save →",
+  message: "Now accepting commercial contracts for Spring 2026",
+  shortMessage: "Spring contracts open",
+  ctaText: "Request site assessment",
   ctaLink: "/contact",
 };
 
@@ -18,10 +19,9 @@ const navigation = [
     href: "#",
     submenu: [
       { name: "Commercial Grounds", href: "/services/commercial-grounds" },
-      { name: "Estate & Acreage", href: "/services/estate-maintenance" },
-      { name: "Snow & Ice Removal", href: "/services/snow-removal" },
-      { name: "Residential Hardscapes", href: "/services/hardscapes" },
-      { name: "Lawn & Maintenance", href: "/services/maintenance" },
+      { name: "Snow & Ice", href: "/services/snow-removal" },
+      { name: "Hardscapes", href: "/services/hardscapes" },
+      { name: "Residential", href: "/services/maintenance" },
     ],
   },
   { name: "Areas We Serve", href: "/areas" },
@@ -80,8 +80,10 @@ export function Header() {
                   onMouseLeave={() => setServicesOpen(false)}
                 >
                   <button
-                    className="flex items-center gap-1 text-sm font-medium text-slate hover:text-sun-ochre transition-colors"
+                    className="flex items-center gap-1 text-sm font-medium text-slate hover:text-sun-ochre transition-colors min-h-[44px]"
                     aria-expanded={servicesOpen}
+                    aria-haspopup="true"
+                    onClick={() => setServicesOpen(!servicesOpen)}
                   >
                     {item.name}
                     <svg
@@ -124,19 +126,19 @@ export function Header() {
           {/* CTA + Phone */}
           <div className="hidden lg:flex lg:items-center lg:gap-6">
             <a
-              href="tel:+15135550123"
+              href={PHONE_NUMBER_HREF}
               className="text-sm font-medium text-slate hover:text-sun-ochre transition-colors"
             >
-              (513) 555-0123
+              {PHONE_NUMBER}
             </a>
-            <Button href="/contact">Request a Quote</Button>
+            <Button href="/contact">Request Site Assessment</Button>
           </div>
 
           {/* Mobile menu button */}
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-md p-2.5 text-slate"
+              className="inline-flex items-center justify-center rounded-md p-3 min-w-[44px] min-h-[44px] text-slate"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-expanded={mobileMenuOpen}
             >
@@ -168,7 +170,7 @@ export function Header() {
                       <Link
                         key={subitem.name}
                         href={subitem.href}
-                        className="block px-6 py-2 text-base text-slate hover:bg-eucalyptus/20"
+                        className="block px-6 py-3 text-base text-slate hover:bg-eucalyptus/20 min-h-[44px] flex items-center"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {subitem.name}
@@ -179,7 +181,7 @@ export function Header() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="block px-3 py-2 text-base font-medium text-slate hover:bg-eucalyptus/20"
+                    className="block px-3 py-3 text-base font-medium text-slate hover:bg-eucalyptus/20 min-h-[44px] flex items-center"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
@@ -189,13 +191,13 @@ export function Header() {
             </div>
             <div className="mt-4 px-3 space-y-3">
               <a
-                href="tel:+15135550123"
+                href={PHONE_NUMBER_HREF}
                 className="block text-center py-2 text-base font-medium text-slate"
               >
-                (513) 555-0123
+                {PHONE_NUMBER}
               </a>
               <Button href="/contact" className="w-full justify-center">
-                Request a Quote
+                Request Site Assessment
               </Button>
             </div>
           </div>
@@ -205,7 +207,7 @@ export function Header() {
 
     {/* Sticky Mobile Call Button - positioned left to not conflict with chat widget */}
     <a
-      href="tel:+15135550123"
+      href={PHONE_NUMBER_HREF}
       className="lg:hidden fixed bottom-6 left-6 z-50 bg-sun-ochre text-white p-4 rounded-full shadow-lg hover:bg-sun-ochre/90 transition-colors"
       aria-label="Call us"
     >

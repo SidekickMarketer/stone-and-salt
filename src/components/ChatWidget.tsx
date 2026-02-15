@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { PHONE_NUMBER, EMAIL } from "@/lib/constants";
 
 interface Message {
   id: string;
@@ -9,13 +10,13 @@ interface Message {
   timestamp: Date;
 }
 
-// Business context for the AI - customize as needed
+// Business context for the AI
 const BUSINESS_CONTEXT = {
   name: "Stone & Salt",
   services: ["Commercial Grounds Maintenance", "Snow & Ice Removal", "Residential Hardscapes", "Lawn & Maintenance"],
   serviceAreas: ["Liberty Township", "Mason", "West Chester", "Blue Ash", "Loveland", "Indian Hill", "Anderson Township", "Hyde Park", "Montgomery"],
-  phone: "(513) 555-0123", // TODO: Replace with real number
-  email: "hello@stoneandsaltohio.com",
+  phone: PHONE_NUMBER,
+  email: EMAIL,
   hours: "Mon-Fri 7am-6pm, Sat 8am-2pm",
   responseTime: "4 hours during business hours",
 };
@@ -83,7 +84,7 @@ export function ChatWidget() {
     const q = query.toLowerCase();
 
     if (q.includes("price") || q.includes("cost") || q.includes("quote") || q.includes("estimate")) {
-      return `We provide free estimates for all our services! The best way to get an accurate quote is to:\n\n1. Call us at ${BUSINESS_CONTEXT.phone}\n2. Fill out our contact form at /contact\n3. Tell us about your project\n\nWe respond within ${BUSINESS_CONTEXT.responseTime}.`;
+      return `We provide complimentary site assessments for all commercial properties. The best way to get started is to:\n\n1. Call us at ${BUSINESS_CONTEXT.phone}\n2. Fill out our contact form at /contact\n3. Tell us about your property\n\nWe respond within ${BUSINESS_CONTEXT.responseTime}.`;
     }
 
     if (q.includes("area") || q.includes("serve") || q.includes("location") || q.includes("where")) {
@@ -203,6 +204,7 @@ export function ChatWidget() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Type your message..."
+                aria-label="Type your message"
                 className="flex-1 px-4 py-2 rounded-full border border-slate/20 focus:outline-none focus:border-sun-ochre focus:ring-1 focus:ring-sun-ochre text-sm"
                 disabled={isLoading}
               />

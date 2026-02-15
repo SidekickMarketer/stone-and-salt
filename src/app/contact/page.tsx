@@ -1,14 +1,15 @@
 import { Metadata } from "next";
 import { ContactForm } from "@/components/ContactForm";
+import { PHONE_NUMBER, PHONE_NUMBER_HREF, EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get a Quote",
+  title: "Request Site Assessment | Contact Stone & Salt",
   description:
-    "Contact Stone & Salt for commercial snow removal or grounds maintenance in Greater Cincinnati. We respond within 4 hours during business hours.",
+    "Request a site assessment for commercial grounds management or snow removal in Greater Cincinnati. We respond within 4 hours during business hours.",
   openGraph: {
     title: "Contact Stone & Salt",
     description:
-      "Get a quote on commercial snow removal or grounds maintenance in Greater Cincinnati.",
+      "Request a site assessment for commercial grounds management in Greater Cincinnati.",
   },
 };
 
@@ -16,22 +17,22 @@ const faqs = [
   {
     question: "How quickly will I hear back?",
     answer:
-      "We respond to all inquiries within 4 hours during business hours (Mon-Fri 7am-6pm, Sat 8am-2pm). If you reach out on a weekend evening or holiday, you'll hear from us first thing the next business day.",
+      "We respond to all inquiries within 4 hours during business hours (Mon-Fri 7am-6pm, Sat 8am-2pm). If you reach out on a weekend evening or holiday, you will hear from us first thing the next business day.",
   },
   {
-    question: "How do consultations work?",
+    question: "How do site assessments work?",
     answer:
-      "We provide complimentary consultations for all commercial services. For larger projects, we'll schedule a site visit to properly assess your needs and provide an accurate quote.",
+      "We provide complimentary site assessments for all commercial properties. We walk your property, assess scope, identify problem areas, and discuss your requirements. You receive a detailed proposal with fixed annual pricing within 48-72 hours.",
   },
   {
     question: "What areas do you serve?",
     answer:
-      "We serve Greater Cincinnati within approximately 45 minutes of Liberty Township, including Mason, West Chester, Blue Ash, Loveland, Indian Hill, Anderson Township, Hyde Park, Montgomery, Oxford, and Waynesville.",
+      "We serve Greater Cincinnati within approximately 45 minutes of Liberty Township, including Mason, West Chester, Blue Ash, Loveland, Indian Hill, Anderson Township, Hyde Park, and Montgomery.",
   },
   {
-    question: "What's the best way to reach you for urgent issues?",
+    question: "What is the best way to reach you for urgent issues?",
     answer:
-      "For existing clients with urgent issues, call our main line at (513) 555-0123. For snow emergencies during winter, this line is monitored 24/7.",
+      "For existing clients with urgent issues, call our main line. For snow emergencies during winter, this line is monitored 24/7.",
   },
 ];
 
@@ -43,25 +44,25 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="max-w-2xl">
             <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl lg:text-6xl font-bold text-slate leading-tight">
-              Let&apos;s talk about your property.
+              Request a Site Assessment
             </h1>
             <p className="mt-6 text-xl text-slate/70 leading-relaxed">
-              Tell us about your project or service needs. We respond within 4 hours during
-              business hours.
+              Tell us about your property. We respond within 4 hours during business hours
+              and schedule a complimentary walkthrough within the week.
             </p>
           </div>
         </div>
       </section>
 
       {/* Contact Content */}
-      <section className="py-16 lg:py-24 bg-soft-cream">
+      <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* Form */}
             <div>
               <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-card">
                 <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate mb-6">
-                  Request a Quote
+                  Tell Us About Your Property
                 </h2>
                 <ContactForm />
               </div>
@@ -93,10 +94,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-slate">Phone</h3>
                       <a
-                        href="tel:+15135550123"
+                        href={PHONE_NUMBER_HREF}
                         className="text-lg text-sun-ochre font-semibold hover:text-sun-ochre/80 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-sm"
                       >
-                        (513) 555-0123
+                        {PHONE_NUMBER}
                       </a>
                       <p className="text-sm text-slate/60 mt-1">
                         Mon-Fri 7am-6pm, Sat 8am-2pm
@@ -123,10 +124,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-slate">Email</h3>
                       <a
-                        href="mailto:hello@stoneandsaltohio.com"
+                        href={`mailto:${EMAIL}`}
                         className="text-sun-ochre hover:text-sun-ochre/80 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-sun-ochre focus-visible:outline-offset-2 rounded-sm"
                       >
-                        hello@stoneandsaltohio.com
+                        {EMAIL}
                       </a>
                     </div>
                   </div>
@@ -157,7 +158,7 @@ export default function ContactPage() {
                       <h3 className="font-semibold text-slate">Service Area</h3>
                       <p className="text-slate/70">
                         Based in Liberty Township<br />
-                        Serving Greater Cincinnati
+                        Serving Greater Cincinnati within 45 minutes
                       </p>
                     </div>
                   </div>
@@ -169,10 +170,10 @@ export default function ContactPage() {
                 <div className="flex items-start gap-4">
                   <div className="text-3xl font-bold text-gradient">4hr</div>
                   <div>
-                    <h3 className="font-semibold text-slate">Response Commitment</h3>
+                    <h3 className="font-semibold text-slate">Response Guarantee</h3>
                     <p className="text-sm text-slate/70 mt-1">
-                      We respond to every inquiry within 4 hours during business hours. You won&apos;t
-                      be left wondering if we got your message.
+                      We respond to every inquiry within 4 hours during business hours. You will
+                      not be left wondering if we got your message.
                     </p>
                   </div>
                 </div>

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 import { CTA } from "@/sections/CTA";
+import { PHONE_NUMBER_SCHEMA } from "@/lib/constants";
 
 const areas: Record<
   string,
@@ -40,7 +41,7 @@ const areas: Record<
       "Mason consistently ranks among Ohio's best places to live, with excellent schools and well-maintained neighborhoods. The community's pride in property appearance makes professional landscaping and hardscape services essential. From routine maintenance to custom patio installations, we help Mason homeowners maintain and enhance their outdoor spaces.",
     zone: "core",
     zipCodes: ["45040"],
-    neighborhoods: ["Heritage Club", "Traditionsn", "Mason Heights", "Crooked Tree"],
+    neighborhoods: ["Heritage Club", "Traditions", "Mason Heights", "Crooked Tree"],
   },
   "blue-ash": {
     name: "Blue Ash",
@@ -133,11 +134,11 @@ export async function generateMetadata({ params }: { params: PageParams }): Prom
   }
 
   return {
-    title: `${area.name} Landscaping & Snow Removal | Stone & Salt`,
-    description: `Professional landscaping, hardscapes, and snow removal in ${area.name}, OH. Local service from a team you can trust. Get a free quote.`,
+    title: `${area.name} Grounds Management & Snow Removal | Stone & Salt`,
+    description: `Commercial grounds management, hardscapes, and snow removal in ${area.name}, OH. Year-round service from a local team. Request a site assessment.`,
     openGraph: {
-      title: `${area.name} Landscaping Services | Stone & Salt`,
-      description: `Serving ${area.name} with professional landscaping, hardscapes, and snow removal.`,
+      title: `${area.name} Grounds Management | Stone & Salt`,
+      description: `Serving ${area.name} with commercial grounds management, hardscapes, and snow removal.`,
     },
   };
 }
@@ -152,24 +153,24 @@ export default async function AreaPage({ params }: { params: PageParams }) {
 
   const services = [
     {
-      title: "Lawn & Grounds Maintenance",
-      description: `Regular maintenance to keep your ${area.name} property looking its best year-round.`,
-      href: "/services/maintenance",
+      title: "Commercial Grounds Management",
+      description: `Year-round grounds management for ${area.name} commercial properties. One vendor. One contract.`,
+      href: "/services/commercial-grounds",
     },
     {
-      title: "Hardscape Installation",
-      description: `Custom patios, walkways, and retaining walls for ${area.name} homes.`,
-      href: "/services/hardscapes",
-    },
-    {
-      title: "Snow & Ice Removal",
-      description: `Reliable snow removal to keep your ${area.name} property safe and accessible.`,
+      title: "Snow & Ice Management",
+      description: `GPS-documented snow removal to keep your ${area.name} property safe and accessible.`,
       href: "/services/snow-removal",
     },
     {
-      title: "Commercial Grounds",
-      description: `Professional grounds care for ${area.name} businesses and properties.`,
-      href: "/services/commercial-grounds",
+      title: "Hardscapes & Site Improvements",
+      description: `Commercial site improvements and residential hardscapes for ${area.name} properties.`,
+      href: "/services/hardscapes",
+    },
+    {
+      title: "Residential Maintenance",
+      description: `Select residential lawn care and landscape maintenance in ${area.name}.`,
+      href: "/services/maintenance",
     },
   ];
 
@@ -189,12 +190,12 @@ export default async function AreaPage({ params }: { params: PageParams }) {
               All Service Areas
             </Link>
             <h1 className="font-[family-name:var(--font-montserrat)] text-4xl sm:text-5xl font-bold text-slate leading-tight">
-              {area.name} Landscaping & Outdoor Services
+              {area.name} Grounds Management &amp; Outdoor Services
             </h1>
             <p className="mt-6 text-xl text-slate/70 leading-relaxed">{area.description}</p>
             <div className="mt-8">
               <Button href="/contact" size="lg">
-                Get a Free Quote
+                Request Site Assessment
               </Button>
             </div>
           </div>
@@ -202,7 +203,7 @@ export default async function AreaPage({ params }: { params: PageParams }) {
       </section>
 
       {/* About the Area */}
-      <section className="py-16 bg-soft-cream">
+      <section className="py-16 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h2 className="font-[family-name:var(--font-montserrat)] text-2xl font-bold text-slate">
@@ -282,8 +283,8 @@ export default async function AreaPage({ params }: { params: PageParams }) {
       </section>
 
       <CTA
-        title={`Ready to get started in ${area.name}?`}
-        description="Get a free quote for your property. We respond within 4 hours."
+        title={`Protect your ${area.name} property year-round.`}
+        description="Request a site assessment for your property. We respond within 4 hours."
       />
 
       {/* Local Business Schema */}
@@ -294,8 +295,8 @@ export default async function AreaPage({ params }: { params: PageParams }) {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Stone & Salt",
-            description: `Professional landscaping, hardscapes, and snow removal serving ${area.name}, Ohio.`,
-            telephone: "+1-513-555-0123",
+            description: `Commercial grounds management, hardscapes, and snow removal serving ${area.name}, Ohio.`,
+            telephone: PHONE_NUMBER_SCHEMA,
             areaServed: {
               "@type": "City",
               name: area.name,

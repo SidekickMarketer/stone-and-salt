@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { CTA } from "@/sections/CTA";
 
 export const metadata: Metadata = {
@@ -10,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Service Areas | Stone & Salt",
     description:
-      "Professional landscaping, hardscapes, and snow removal serving Greater Cincinnati.",
+      "Commercial grounds management and snow removal serving Greater Cincinnati.",
   },
 };
 
@@ -97,23 +96,28 @@ export default function AreasPage() {
               Serving Greater Cincinnati
             </h1>
             <p className="mt-6 text-xl text-slate/70 leading-relaxed">
-              Based in Liberty Township, we serve residential and commercial properties within
-              approximately 45 minutes. Quality work for neighbors we&apos;re proud to serve.
+              Based in Liberty Township, we serve commercial and residential properties within
+              approximately 45 minutes. Year-round grounds management, snow removal, and
+              hardscape services for properties across Greater Cincinnati.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
+      {/* Coverage Overview */}
       <section className="py-12 bg-soft-cream">
         <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-8">
-          <div className="aspect-[16/9] max-w-4xl mx-auto bg-eucalyptus/10 rounded-2xl overflow-hidden relative">
-            <Image
-              src="/images/about-neighborhood.jpg"
-              alt="Suburban home with manicured lawn in Greater Cincinnati"
-              fill
-              className="object-cover"
-            />
+          <div className="max-w-4xl mx-auto bg-eucalyptus/10 rounded-2xl p-8 lg:p-12 text-center">
+            <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-eucalyptus/20 flex items-center justify-center">
+              <svg className="w-8 h-8 text-eucalyptus" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <p className="text-lg text-slate/70 leading-relaxed">
+              <span className="font-semibold text-slate">45-minute service radius</span> from Liberty Township, covering
+              Butler, Warren, and Hamilton counties across Greater Cincinnati.
+            </p>
           </div>
         </div>
       </section>
@@ -216,8 +220,8 @@ export default function AreasPage() {
 
       <CTA
         variant="secondary"
-        title="Ready to get started?"
-        description="Request a quote for your property. We respond within 4 hours."
+        title="Protect your property year-round."
+        description="Request a site assessment for your commercial or residential property. We respond within 4 hours."
       />
     </>
   );
