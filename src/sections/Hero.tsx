@@ -5,6 +5,7 @@ import { Animate } from "@/components/Animate";
 
 export function Hero() {
   return (
+    <>
     <section className="relative bg-eucalyptus overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
@@ -51,7 +52,7 @@ export function Hero() {
                   href="/services/commercial-grounds"
                   variant="outline"
                   size="lg"
-                  className="border-slate text-slate hover:bg-slate hover:text-white"
+                  className="border-white text-white hover:bg-white hover:text-slate"
                 >
                   See Our Commercial Services
                 </Button>
@@ -67,14 +68,14 @@ export function Hero() {
                   { label: "4-Hour Response Guarantee" },
                 ].map((signal) => (
                   <div key={signal.label} className="flex items-center gap-2 min-h-[44px]">
-                    <svg className="h-5 w-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-5 w-5 text-sun-ochre flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="text-slate/80 text-sm font-medium">{signal.label}</span>
+                    <span className="text-white/90 text-sm font-medium">{signal.label}</span>
                   </div>
                 ))}
               </div>
@@ -101,17 +102,17 @@ export function Hero() {
               </div>
 
               {/* Eucalyptus accent lines */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#B3C3AD] to-transparent opacity-50" />
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#B3C3AD] to-transparent opacity-50" />
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-eucalyptus-light to-transparent opacity-50" />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-eucalyptus-light to-transparent opacity-50" />
 
               {/* Decorative corner accents */}
-              <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-[#B3C3AD]/20 rounded-tl-lg" />
-              <div className="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-[#B3C3AD]/20 rounded-br-lg" />
+              <div className="absolute top-6 left-6 w-12 h-12 border-t-2 border-l-2 border-eucalyptus-light/20 rounded-tl-lg" />
+              <div className="absolute bottom-6 right-6 w-12 h-12 border-b-2 border-r-2 border-eucalyptus-light/20 rounded-br-lg" />
 
               {/* Central icon and text */}
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-8">
                 {/* Building icon */}
-                <div className="text-[#B3C3AD]/30 mb-5">
+                <div className="text-eucalyptus-light/30 mb-5">
                   <svg className="w-16 h-16" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={0.75}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z" />
                   </svg>
@@ -119,14 +120,14 @@ export function Hero() {
                 <p className="text-white/25 text-sm font-medium tracking-widest uppercase">
                   Commercial Property Photography
                 </p>
-                <div className="mt-4 w-16 h-px bg-[#B3C3AD]/20" />
+                <div className="mt-4 w-16 h-px bg-eucalyptus-light/20" />
               </div>
 
               {/* Subtle radial glow */}
               <div
                 className="absolute inset-0 opacity-10"
                 style={{
-                  background: "radial-gradient(ellipse at center, #B3C3AD 0%, transparent 70%)",
+                  background: "radial-gradient(ellipse at center, var(--eucalyptus-light) 0%, transparent 70%)",
                 }}
               />
             </div>
@@ -141,5 +142,8 @@ export function Hero() {
         </div>
       </div>
     </section>
+    {/* Gradient transition from eucalyptus hero into content sections */}
+    <div className="h-16 sm:h-20 bg-gradient-to-b from-eucalyptus to-soft-cream" aria-hidden="true" />
+    </>
   );
 }
