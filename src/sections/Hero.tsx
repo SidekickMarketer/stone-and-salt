@@ -5,7 +5,7 @@ import { Animate } from "@/components/Animate";
 
 export function Hero() {
   return (
-    <section className="relative bg-soft-cream overflow-hidden">
+    <section className="relative bg-eucalyptus overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.03]">
         <div
@@ -21,7 +21,7 @@ export function Hero() {
           {/* Content */}
           <div>
             <Animate delay={0}>
-              <p className="text-eucalyptus font-semibold tracking-wide uppercase text-sm mb-4">
+              <p className="text-white font-semibold tracking-wide uppercase text-sm mb-4">
                 Commercial Grounds Management | Greater Cincinnati
               </p>
             </Animate>
@@ -35,7 +35,7 @@ export function Hero() {
               </h1>
             </Animate>
             <Animate delay={200}>
-              <p className="mt-6 text-xl text-slate/70 leading-relaxed max-w-xl">
+              <p className="mt-6 text-xl text-slate/80 leading-relaxed max-w-xl">
                 Stone &amp; Salt manages commercial properties year-round &mdash; grounds
                 maintenance, snow and ice removal, and hardscapes under a single contract.
                 Documented service. Predictable budgets. An owner who answers the phone.
@@ -67,14 +67,14 @@ export function Hero() {
                   { label: "4-Hour Response Guarantee" },
                 ].map((signal) => (
                   <div key={signal.label} className="flex items-center gap-2 min-h-[44px]">
-                    <svg className="h-5 w-5 text-eucalyptus flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-5 w-5 text-white flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path
                         fillRule="evenodd"
                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                         clipRule="evenodd"
                       />
                     </svg>
-                    <span className="text-slate/70 text-sm font-medium">{signal.label}</span>
+                    <span className="text-slate/80 text-sm font-medium">{signal.label}</span>
                   </div>
                 ))}
               </div>
@@ -131,7 +131,7 @@ export function Hero() {
               />
             </div>
             {/* Floating card - glassmorphism for premium feel */}
-            <div className="absolute -bottom-6 -left-6 hidden sm:block bg-white/80 backdrop-blur-md rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-eucalyptus">
+            <div className="absolute -bottom-6 -left-6 hidden sm:block bg-white/90 backdrop-blur-md rounded-xl shadow-card-hover p-6 max-w-xs border-l-4 border-sun-ochre">
               <p className="text-gradient font-semibold text-lg">Four seasons. One call.</p>
               <p className="text-slate/70 text-sm mt-1">
                 Your property managed year-round under a single contract.
