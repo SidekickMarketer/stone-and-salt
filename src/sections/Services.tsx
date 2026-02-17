@@ -97,7 +97,7 @@ export function Services() {
                 <p className="text-slate/70 leading-relaxed">
                   {service.description}
                 </p>
-                <div className="border-t border-slate/10 pt-4 mt-4 flex flex-wrap gap-2 space-y-2.5">
+                <div className="border-t border-slate/10 pt-4 mt-4 flex flex-wrap gap-2">
                   {service.features.map((feature) => (
                     <span
                       key={feature}
